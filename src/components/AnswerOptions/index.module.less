@@ -1,0 +1,87 @@
+@import "../../utils/global.less";
+
+.optionContent {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-width: 20%;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  border-radius: 8px;
+}
+
+.optionContent:hover {
+  background-color: rgba(1, 17, 61, 0.0375);
+}
+
+.optionHandle {
+  font-size: 14px;
+  line-height: 26px;
+  border: 1px solid rgba(1, 17, 61, 0.4487);
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  text-align: center;
+  color: #0b1b45;
+  margin-right: 7px;
+  flex-shrink: 0;
+}
+
+.completionList {
+  min-height: 20px;
+  margin-right: 10px;
+  min-width: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.checkedOption {
+  background: rgba(4, 69, 252, 0.1);
+  border: 1px solid #0445fc;
+  color: #0445fc;
+}
+
+.judgeOption {
+  display: flex;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 3px 14px 3px 12px;
+
+  .judgeIcon {
+    font-size: 13px;
+    margin-right: 8px;
+  }
+
+  .judgeLabel {
+    font-family: "PingFang SC";
+    font-size: 14px;
+    color: rgba(11, 27, 69, 0.6474);
+    line-height: normal;
+  }
+}
+
+.judgeOption.checkedOption {
+  border-color: #0445fc;
+  color: #0445fc;
+
+  .judgeLabel {
+    color: #0445fc;
+  }
+}
+
+.gapfilling {
+  outline: none;
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #01113d;
+  width: 100%;
+}
+
+.completionList {
+  :global {
+    img {
+      max-width: 800px;
+    }
+  }
+}

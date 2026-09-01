@@ -1,0 +1,322 @@
+.aiAssessment {
+  background: linear-gradient(303deg, #d8d8d8 -2%, #f7f3ff -2%, #ffffff 100%);
+  height: 100vh;
+  width: 100vw;
+  padding: 12px 24px;
+  font-family: "PingFang SC";
+  display: flex;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aiMain {
+    flex: 1;
+
+    .aiAgent {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+
+      span {
+        font-size: 18px;
+        color: rgba(1, 17, 61, 0.85);
+        font-weight: 500;
+        vertical-align: middle;
+      }
+    }
+
+    .aiContent {
+      display: flex;
+      height: calc(~"100vh - 80px");
+      overflow: hidden;
+
+      .dialogue {
+        //会话
+        display: flex;
+        flex: 1;
+        margin: 0 50px;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .dialogueCard {
+          display: flex;
+
+          .cardContent {
+            width: auto;
+            max-width: 80%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 18px 21px;
+            border-radius: 15px;
+            font-size: 14px;
+            color: rgba(1, 17, 61, 0.85);
+            margin-bottom: 17px;
+
+            p {
+              margin-bottom: 5px;
+            }
+          }
+        }
+
+        .questionCard {
+          justify-content: flex-end;
+
+          .cardContent {
+            background: #612aee;
+            color: #fff;
+          }
+        }
+
+        .answerCard {
+          justify-content: flex-start;
+
+          .cardContent {
+            background: #fff;
+            position: relative;
+            z-index: 1;
+
+            .conversationTools {
+              position: absolute;
+              z-index: 10;
+              bottom: 10px;
+              right: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .rightTool {
+                display: flex;
+                align-items: center;
+
+                span {
+                  margin-right: 10px;
+                  color: rgba(1, 17, 61, 0.65);
+                  cursor: pointer;
+                  font-size: 12px;
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+
+                  i {
+                    font-size: 12px;
+                    margin-right: 2px;
+                  }
+
+                  em {
+                    font-style: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.aiShortCuts {
+  //快捷区域
+  width: 253px;
+  display: flex;
+  flex-direction: column;
+  height: calc(~"100vh - 24px");
+  overflow: hidden;
+
+  .createNewConversation {
+    width: 100%;
+    border: 1px solid #612aee;
+    display: flex;
+    color: #612aee;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    height: 40px;
+    min-height: 40px;
+
+    i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    em {
+      font-size: 16px;
+      font-style: normal;
+    }
+  }
+}
+
+.shortCutsList {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  // flex: 1;
+  max-height: 100%;
+  overflow-y: scroll;
+
+  /* 滚动条整体样式 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+
+    /* 竖向滚动条宽度 */
+    height: 3px;
+
+    /* 横向滚动条高度 */
+  }
+
+  /* 滚动条轨道 */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+
+    /* 轨道颜色 */
+    border-radius: 4px;
+  }
+
+  /* 滚动条滑块 */
+  &::-webkit-scrollbar-thumb {
+    background: #f7f3ff;
+
+    /* 滑块颜色 */
+    border-radius: 3px;
+  }
+
+  /* 滑块悬停时 */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #f7f3ff;
+  }
+
+  // .agentName {
+  //     font-size: 18px;
+  //     font-weight: 500;
+  //     color: rgba(1, 17, 61, 0.85);
+  //     margin-bottom: 18px;
+  //     display: block;
+  // }
+
+  .shortCutsModule {
+    margin-bottom: 20px;
+
+    .moduleTitle {
+      font-size: 14px;
+      color: rgba(1, 17, 61, 0.85);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .tagArea {
+      span {
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        border-radius: 9px;
+        display: inline-block;
+        padding: 5px 8px;
+        color: rgba(1, 17, 61, 0.85);
+        font-size: 12px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        cursor: pointer;
+
+        &.selected {
+          background: #f7f4ff;
+          color: #612aee;
+          border: 1px solid #612aee;
+        }
+      }
+    }
+  }
+
+  .otherDescription {
+    .textAreaStyle {
+      height: 172px;
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      border-radius: 20px;
+      font-size: 14px;
+      color: rgba(1, 17, 61, 0.85);
+      padding: 16px;
+      resize: none;
+    }
+  }
+
+  .generateAgain {
+    margin-top: 18px;
+
+    span {
+      background: #612aee;
+      color: #fff;
+      border-radius: 9px;
+      font-size: 14px;
+      cursor: pointer;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.regularText {
+  font-size: 14px;
+  color: rgba(1, 17, 61, 0.85);
+  cursor: pointer;
+  display: block;
+}
+
+.modeSelect {
+  width: 160px;
+  margin-left: 43px;
+
+  :global {
+    .ant-select-selection {
+      border-radius: 35px;
+      background-color: rgba(1, 17, 61, 0.0506);
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.65);
+      height: 28px;
+      line-height: 28px;
+      box-shadow: none;
+    }
+
+    .ant-select-selection__rendered {
+      color: rgba(1, 17, 61, 0.851);
+      font-family: "PingFang SC";
+      height: 28px;
+      line-height: 28px;
+      font-size: 11px;
+    }
+
+    .anticon-down {
+      font-size: 13px;
+      font-family: "PingFang SC";
+      color: rgba(1, 17, 61, 0.65);
+    }
+  }
+}
+
+.modeDropdownContent {
+  :global {
+    .ant-select-dropdown-menu-item {
+      font-size: 12px;
+      font-family: "PingFang SC";
+    }
+  }
+}

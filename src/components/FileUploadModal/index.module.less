@@ -1,0 +1,114 @@
+.fileUploadModal {
+  :global {
+    .ant-modal-header {
+      padding: 0 16px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: none;
+    }
+
+    .ant-modal-title {
+      font-family: "PingFang SC";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: #01113d;
+    }
+
+    .ant-modal-body {
+      padding: 16px 32px;
+      overflow: auto;
+    }
+
+    .ant-modal-close {
+      right: 16px;
+
+      .ant-modal-close-x {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .ant-modal-footer {
+      padding: 12px 16px;
+      border-top: none;
+    }
+
+    .ant-btn {
+      background: #edeef1;
+      border: none;
+      border-radius: 7px;
+      color: #01113d;
+    }
+
+    .ant-btn.ant-btn-primary {
+      background: #0445fc;
+      border: none;
+      color: #ffffff;
+    }
+  }
+
+  .uploadButton {
+    width: 336px;
+    height: 116px;
+    border-radius: 7px;
+
+    /* 自动布局 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    background: #fcfcfd;
+    border: 1px solid #e6e7ec;
+  }
+
+  .uploadIcon {
+    font-size: 40px;
+    color: #0445fc;
+  }
+
+  .uploadText {
+    font-family: "PingFang SC";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-top: 20px;
+  }
+
+  .uploadedFiles {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    .fileIcon {
+      color: #01113d;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    .fileNameBox {
+      font-family: "PingFang SC";
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #0445fc;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 280px;
+      cursor: pointer;
+    }
+  }
+
+  :global {
+    .ant-upload-list {
+      .ant-upload-list-item-name {
+        color: #0445fc;
+      }
+    }
+  }
+}

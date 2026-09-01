@@ -1,0 +1,96 @@
+@import "../../../../utils/global.less";
+
+.downloadConfig {
+  :global {
+    .ant-form {
+      .ant-form-item .ant-form-item-label {
+        line-height: 25px;
+      }
+
+      .ant-form-item .ant-form-item-control {
+        line-height: 25px;
+      }
+    }
+  }
+
+  .tag {
+    border-radius: 5px;
+    width: 90%;
+    opacity: 1;
+    background: rgba(252, 138, 30, 0.1);
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 26px;
+    padding: 5px 10px;
+    color: #01113d;
+    margin-bottom: 12px;
+    display: flex;
+    align-content: flex-start;
+  }
+
+  .showErrorQuBox {
+    width: 399px;
+    border-radius: 7px;
+    border: 1px solid rgba(1, 17, 61, 0.12);
+
+    .tableHeader {
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      background: rgba(1, 17, 61, 0.05);
+      box-shadow: inset 0 -1px 0 0 rgba(1, 17, 61, 0.12);
+      display: flex;
+      justify-content: space-between;
+      padding: 0 11px;
+    }
+
+    .modalHeader {
+      height: 36px;
+      padding: 0 12px;
+      background: rgba(1, 17, 61, 0.03);
+      line-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hang {
+      font-family: "PingFang SC";
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 17px;
+      color: #01113d;
+    }
+
+    .questionItem {
+      height: 36px;
+      padding-left: 27px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 12px;
+    }
+
+    .modalContent {
+      // height: 363px;
+      // overflow-y: auto;
+    }
+
+    :global {
+      .ant-input-number {
+        line-height: 1;
+        height: 24px;
+        border-radius: 5px;
+
+        .ant-input-number-input-wrap {
+          .ant-input-number-input {
+            width: 83px;
+            height: 24px;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}

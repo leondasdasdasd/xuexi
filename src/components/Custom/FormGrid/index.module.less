@@ -1,0 +1,50 @@
+.formItemContent {
+  margin-bottom: 12px;
+}
+
+.label {
+  margin-bottom: 12px;
+  font-family: var(--regular-text);
+  color: #01113d;
+  font-weight: 500;
+  text-align: right;
+  margin-left: 0;
+  padding: 5px 10px 5px 0;
+  margin-right: 12px;
+  height: max-content;
+  font-size: 14px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.label.required::after {
+  content: "*";
+  color: #f34137;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+// 垂直布局样式
+.verticalLayout {
+  .verticalFormItem {
+    display: flex;
+    flex-direction: column;
+
+    .label {
+      text-align: left;
+      margin-right: 0;
+      margin-bottom: 5px;
+      padding: 0;
+    }
+
+    .requiredIcon {
+      color: #f34137;
+      margin-left: 4px;
+    }
+
+    .formItemContent {
+      margin-bottom: 0;
+    }
+  }
+}

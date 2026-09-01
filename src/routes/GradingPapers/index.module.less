@@ -1,0 +1,330 @@
+@import "../../utils/global.less";
+
+.gradingPapersBox {
+  height: 100%;
+  background: #fff;
+
+  .header {
+    z-index: 999;
+    height: 60px;
+    width: 100%;
+    background: #2a3553;
+    line-height: 60px;
+    font-family: PingFangSC-Regular;
+    color: #ffffff;
+
+    .closeIcon {
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 20px;
+      display: inline-block;
+      font-family: PingFangSC-Medium;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .colorfff {
+      color: #fff;
+    }
+
+    .row {
+      margin-left: 20px;
+
+      :global(.ant-select-selection) {
+        border: none;
+        border-radius: 8px;
+        margin-right: 12px;
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        font-size: 14px;
+      }
+
+      .progress {
+        display: inline-block;
+        width: 200px;
+        margin-left: 20px;
+      }
+    }
+
+    .rightBtn {
+      float: right;
+      margin-right: 20px;
+
+      span {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 15px;
+        background: #fff;
+        font-family: PingFangSC-Medium;
+        color: #01113d;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      .seeTest {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .changeScoreBox {
+    height: calc(~"100% - 60px");
+    padding: 12px;
+    display: flex;
+    background-color: #f5f6f7;
+
+    .gradingLeft {
+      width: calc(~"100% - 348px");
+      height: 100%;
+      overflow: auto;
+      display: flex;
+
+      .canvasBox {
+        width: calc(~"100% - 58px");
+        height: 100%;
+        display: flex;
+        // align-items: center;
+        text-align: center;
+        justify-content: center;
+        overflow: scroll;
+        margin-right: 10px;
+
+        // &::-webkit-scrollbar {
+        //   display: none;
+        // }
+
+        .containerWrapper {
+          position: relative;
+          display: inline-block;
+          // margin: 0 auto;
+          min-width: 100%;
+          min-height: 100%;
+        }
+
+        .imageContainer {
+          position: relative;
+          display: inline-block;
+        }
+
+        .annotationCanvas {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .gradingRight {
+      background: #ffffff;
+      // border: 1px solid rgba(151, 151, 151, 0.17);
+      box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.05);
+      width: 338px;
+      border-radius: 10px;
+      margin-left: 10px;
+      padding: 16px;
+      height: 100%;
+
+      .rightTopScore {
+        height: 44px;
+        display: flex;
+        align-items: center;
+        background: #f7f8f9;
+        border: 1px solid #e9eaee;
+        margin-top: 20px;
+        width: 100%;
+
+        .activeScore {
+          cursor: pointer;
+          width: 50%;
+          text-align: center;
+        }
+
+        .activeScore:hover {
+          color: #0445fc;
+        }
+      }
+
+      .countScoreBox {
+        .arithmetic {
+          display: flex;
+          flex-flow: row wrap;
+          font-family: PingFangSC-Regular;
+          font-size: 20px;
+          color: #01113d;
+
+          .scoreNum:nth-child(5n + 1) {
+            border-left: 1px #e9eaee solid;
+          }
+
+          .scoreNum {
+            user-select: none;
+            box-sizing: content-box;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 55px;
+            cursor: pointer;
+            border-right: 1px #e9eaee solid;
+            border-bottom: 1px #e9eaee solid;
+          }
+
+          .scoreNumZero {
+            color: #e02020;
+          }
+
+          .scoreNumTotal {
+            color: #03cc36;
+          }
+
+          .scoreNum.active {
+            background: #0445fc;
+            color: #fff;
+          }
+        }
+      }
+
+      .nextBox {
+        position: absolute;
+        bottom: 5px;
+        left: 20px;
+
+        .isAuto {
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.85);
+
+          .autoNext {
+            margin-left: 12px;
+          }
+        }
+
+        .nextBtn {
+          margin-top: 7px;
+
+          span {
+            display: inline-block;
+            background: #ecedf0;
+            width: 140px;
+            text-align: center;
+            height: 36px;
+            line-height: 36px;
+            font-family: PingFangSC-Medium;
+            color: #01113d;
+            border-radius: 8px;
+            cursor: pointer;
+          }
+
+          .feedback {
+            margin-right: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.toolBoxItem.active {
+  color: #0445fc;
+}
+
+.toolBoxItem {
+  /* Safari */
+
+  /* Firefox */
+
+  /* IE/Edge */
+  user-select: none;
+
+  /* 标准语法 */
+}
+
+.cursor_follow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #ff0000;
+  font-size: 32px;
+  font-weight: 500;
+  border-radius: 50%;
+  // pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
+
+.remark {
+  font-size: 16px;
+  color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.pointer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(252, 73, 30, 0.4);
+  color: #ff0000;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  width: 14px;
+  height: 14px;
+}
+
+.remarkBox {
+  width: 36px;
+  height: 36px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5px;
+  padding-top: 4px;
+}
+
+.scoreResult {
+  border: 1px solid rgba(1, 17, 61, 0.2);
+  border-radius: 4px;
+  padding: 8px 5px;
+  height: 36px;
+  line-height: 36px;
+  width: 87px;
+  display: flex;
+  align-items: center;
+}
+
+// .submitBtn {
+//   background: #0445FC;
+//   width: 100%;
+//   height: 40px;
+//   color: #fff;
+//   text-align: center;
+//   line-height: 40px;
+//   border-radius: 6px;
+//   font-size: 14px;
+//   font-weight: 500;
+// }
+
+.errMessageBox {
+  font-size: 12px;
+  color: red;
+  padding-left: 97px;
+  line-height: 17px;
+  display: none;
+}
+
+:global {
+  .gradingPapersQuestionScoreNumber {
+    margin-right: 5px;
+    width: 103px;
+    height: 36px;
+
+    /* 隐藏上下按钮 */
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+  }
+}
+
+.inputToolIcon:hover {
+  color: #0445fc;
+  cursor: pointer;
+}

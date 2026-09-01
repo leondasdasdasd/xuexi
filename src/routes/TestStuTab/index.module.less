@@ -1,0 +1,354 @@
+@import "../../utils/global.less";
+
+:global(.stuPopover) {
+  :global(.ant-popover-inner-content) {
+    width: auto !important;
+  }
+}
+
+.analysis {
+  width: 100%;
+  height: 100%;
+
+  .disNone {
+    display: none;
+  }
+
+  .header {
+    text-align: center;
+    height: 50px;
+    background: #fff;
+    position: relative;
+    padding-top: 10px;
+    // >i {
+    //   font-family: PingFangSC-Medium;
+    // 	color: #01113D;
+    //   position: absolute;
+    //   font-size: 18px;
+    //   top: 11px;
+    //   left: 15px;
+    //   cursor: pointer;
+    // }
+    .headerLeft {
+      // display: inline-block;
+      position: absolute;
+      top: 13px;
+      left: 10px;
+      font-family: PingFangSC-Medium;
+      color: #01113d;
+      font-size: 16px;
+      // padding: 0 10px;
+      cursor: pointer;
+
+      .back {
+        font-size: 16px;
+        font-family: PingFangSC-Medium;
+        color: #01113d;
+      }
+    }
+
+    .tabBar {
+      // margin-left: 60px;
+      display: inline-block;
+      color: #999;
+      font-size: 16px;
+      cursor: pointer;
+
+      span {
+        display: inline-block;
+        padding-bottom: 7px;
+        min-width: 80px;
+        margin-right: 20px;
+        text-align: center;
+
+        &.activeBar {
+          font-family: PingFangSC-Semibold;
+          color: #4d7fff;
+          border-bottom: 2px solid #4d7fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .myTestImg {
+    background-color: #fff;
+    margin: 20px;
+    margin-top: 25px;
+    // border-radius: 10px;
+    // padding-right: 20px;
+    height: 100%;
+    overflow-y: scroll;
+
+    .imgBox {
+      display: inline-block;
+      margin-bottom: 5px;
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.analysisContent {
+  width: 100%;
+  height: calc(~"100vh - 130px");
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+
+  h2 {
+    text-align: center;
+  }
+
+  .contentRight {
+    width: 260px;
+    padding: 10px;
+    padding-top: 0;
+
+    .contentRightOption {
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+
+      .optionTitleBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .optionTitleLeft {
+          font-family: PingFangSC-Medium;
+          color: #000000 100%;
+          font-size: 16px;
+        }
+
+        .optionTitleRight {
+          font-family: PingFangSC-Light;
+          color: #666666;
+          font-size: 16px;
+          cursor: pointer;
+
+          i {
+            font-size: 16px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .moveList {
+        border-radius: 10px;
+        border: 1px solid rgba(230, 230, 230, 1);
+        margin-bottom: 12px;
+
+        .moveListTitle {
+          display: flex;
+          flex-direction: row;
+          padding: 10px;
+          justify-content: space-between;
+          border-bottom: 1px solid rgba(230, 230, 230, 1);
+
+          .contentVisible {
+            display: inline-block;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: top;
+          }
+
+          .modultScore {
+            color: #4d7fff;
+
+            .score {
+              margin: 0 5px;
+              display: inline-block;
+            }
+          }
+        }
+
+        .moveListContent {
+          display: flex;
+          flex-flow: row wrap;
+          padding: 5px;
+
+          .optionBox {
+            width: 32px;
+            height: 32px;
+            background: #ffffff;
+            border: 1px solid rgba(230, 230, 230, 1);
+            border-radius: 4px;
+            text-align: center;
+            line-height: 32px;
+            margin-right: 10px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            position: relative;
+
+            i {
+              position: absolute;
+              right: 0;
+              bottom: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contentLeft {
+    flex: 1;
+    padding-left: 20px;
+    overflow: scroll;
+
+    .testList {
+      background: #fff;
+      margin-top: 10px;
+      padding: 10px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+
+      .testName {
+        background: #fff;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+
+        .testNameLeft {
+          font-family: PingFangSC-Regular;
+          width: 100px;
+          height: 100%;
+          line-height: 50px;
+          color: #666;
+          font-size: 14px;
+          border-right: 1px solid #ccc;
+          text-align: center;
+        }
+
+        .testNameSwitch {
+          line-height: 50px;
+
+          .switchTitle {
+            font-family: PingFangSC-Regular;
+            color: #666666 100%;
+            font-size: 14px;
+            margin-right: 12px;
+          }
+        }
+
+        .testNameRight {
+          flex: 1;
+          width: 100%;
+
+          :global(.ant-input) {
+            width: calc(~"100% - 30px");
+            outline: none;
+            height: 99%;
+            border: none;
+            padding: 0;
+            padding-left: 20px;
+            text-align: center;
+            box-shadow: 0 0 0 transparent;
+          }
+
+          h2 {
+            margin: 0 !important;
+            height: 50px;
+            line-height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rowBox {
+  border: 1px solid #cccfd8;
+  padding: 8px;
+  border-bottom: none;
+}
+
+.rowBox:last-child {
+  border-bottom: 1px solid #cccfd8;
+}
+
+.projectStyle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #01113d;
+  display: flex;
+  margin: 0 0 4px 16px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .itemContent {
+    line-height: 22px;
+
+    .chapterSort {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .chapterItem {
+      display: inline-block;
+      border-radius: 5px;
+      border: 1px solid rgba(1, 17, 61, 0.2);
+      font-family: "PingFang SC";
+      font-size: 12px;
+      font-weight: normal;
+      height: 22px;
+      line-height: 22px;
+      padding: 0 8px;
+      letter-spacing: 0;
+      color: #01113d;
+      margin-right: 12px;
+      text-wrap: nowrap;
+      white-space: pre;
+    }
+  }
+
+  .labelStyle {
+    display: inline-block;
+    min-width: 84px;
+    margin-right: 14px;
+    text-wrap: nowrap;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: rgba(1, 17, 61, 0.7477);
+  }
+
+  .projectDetail {
+    flex-grow: 1;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    color: rgba(1, 17, 61, 0.7477);
+
+    :global {
+      .ant-checkbox-group-item {
+        color: rgba(1, 17, 61, 0.7477);
+      }
+    }
+  }
+
+  // img {
+  //     max-width: 300px;
+  // }
+}
+
+.questName {
+  margin-bottom: 16px;
+}

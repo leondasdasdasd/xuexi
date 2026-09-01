@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 51备份 4</title>
+    <defs>
+        <filter x="-65.6%" y="-65.6%" width="231.2%" height="231.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="逐题分析" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-51备份-4" filter="url(#filter-1)" transform="translate(8.000000, 8.000000)">
+            <path d="M7.84188612,1.76172633 C8.3203705,1.83723623 8.39883174,1.91569748 8.4472136,2.01246118 L14.8291796,14.7763932 C14.8909269,14.8998878 14.8967725,15.0367193 14.8563077,15.1581139 C14.82555,15.2503867 14.768036,15.3337408 14.6879775,15.3955398 L1.61803399,15.5 C1.4799628,15.5 1.3549628,15.4440356 1.2644806,15.3535534 C1.19574656,15.2848194 1.1469312,15.1961666 1.12743574,15.0969965 L7.5527864,2.01246118 C7.61453372,1.88896656 7.7204915,1.8021912 7.84188612,1.76172633 Z" id="三角形" stroke="#9DA4B5" fill="#FFFFFF"></path>
+            <line x1="8" y1="6.93333333" x2="8" y2="11.2" id="直线" stroke="#9DA4B5" stroke-linecap="round"></line>
+            <circle id="椭圆形" fill="#9DA4B5" cx="8" cy="13.3333333" r="1"></circle>
+        </g>
+    </g>
+</svg>

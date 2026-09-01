@@ -1,0 +1,271 @@
+.dataViewContent {
+  width: 60%;
+  flex: 0 0 25%;
+  height: 50%;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-right: 10px;
+  margin-top: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  // border: 1px solid rgb(33, 111, 138);
+  .viewHeader {
+    height: 38px;
+    background: rgba(24, 36, 90, 0.4);
+    position: relative;
+
+    .headerCon {
+      height: 50px;
+      width: 50px;
+      // background: rgb(67, 100, 239);
+      border: 0 solid transparent;
+      border-bottom: 3px solid rgb(67, 100, 239);
+      border-right: 6px solid transparent;
+      position: absolute;
+      top: -47px;
+    }
+
+    .more {
+      color: #fff;
+      font-size: 14px;
+      height: 38px;
+      line-height: 38px;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+  }
+
+  .viewChartDom {
+    background: rgba(82, 125, 243, 0.14);
+    height: calc(~"100% - 38px");
+    display: flex;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+    padding: 0 10px;
+    justify-content: space-around;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .soonBox {
+      width: 120px;
+      height: 180px;
+      border: 1px dashed rgba(216, 171, 51, 1);
+      margin-top: 20px;
+      margin-right: 10px;
+
+      .headerTitle {
+        font-family: PingFangSC-Regular;
+        color: #feab01;
+        font-size: 16px;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        margin-top: 12px;
+        text-align: center;
+        // margin-bottom: 10px;
+      }
+
+      .soonContent {
+        height: calc(~"100% - 42px");
+        overflow-y: scroll;
+        padding: 0 12px;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .soonTitle {
+          font-family: PingFangSC-Regular;
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 12px;
+          margin-bottom: 6px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .soonLabel {
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            margin-right: 3px;
+            background: rgba(255, 255, 255, 0.6);
+          }
+        }
+
+        .soonDetail {
+          font-family: PingFangSC-Regular;
+          color: #ffffff;
+          font-size: 12px;
+          margin-bottom: 14px;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .boxTitle {
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: PingFangSC-Medium;
+
+    .titleCon {
+      width: 4px;
+      height: 16px;
+      margin-right: 10px;
+      border-radius: 1px;
+      background: rgb(34, 131, 221);
+    }
+  }
+}
+
+.fengTotal {
+  width: 40%;
+  height: 50%;
+
+  .fengTile {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    font-family: PingFangSC-Semibold;
+    margin-top: 20px;
+  }
+
+  .fengContent {
+    background: rgb(7, 13, 39);
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+    margin: 10px auto;
+    font-family: PingFangSC-Regular;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.dataViewContent1 {
+  width: 40%;
+  // padding-top: 2%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+
+  .tableBox {
+    width: 70%;
+    height: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tableTh {
+      display: flex;
+      border-bottom: 1px solid #e8e8e8;
+
+      .honorName {
+        color: #fff;
+        font-weight: 500;
+        width: 50%;
+        padding: 16px;
+      }
+
+      .honorScore {
+        color: #fff;
+        width: 16.6%;
+        padding: 16px;
+      }
+    }
+
+    .tableTrTd {
+      display: flex;
+      border-bottom: 1px solid #e8e8e8;
+
+      .honorName {
+        color: #fff;
+        // font-weight: 500;
+        width: 50%;
+        padding: 10px;
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+
+        .boxDom {
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      .honorScore {
+        color: #fff;
+        width: 16.6%;
+        padding: 10px;
+        padding-left: 16px;
+      }
+    }
+  }
+}
+
+.echartsDoms {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(~"40% - 40px");
+  width: 100%;
+  align-items: center;
+  align-content: center;
+
+  .viewChart {
+    width: 15%;
+    height: 40%;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 9px;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    position: relative;
+
+    .boxTitle {
+      color: #fff;
+      font-size: 16px;
+      height: 40px;
+      line-height: 40px;
+      text-align: left;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      font-family: PingFangSC-Medium;
+
+      .titleCon {
+        width: 4px;
+        height: 16px;
+        margin-right: 10px;
+        border-radius: 1px;
+        background: #2283dd;
+      }
+    }
+
+    .echartsDom {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.editorModal {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  width: 100vw !important;
+}
+
+.editorModal > div {
+  width: 100vw;
+  height: 100vh;
+}
+
+.editorModal h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.learnRule {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.learnRule a {
+  display: inline-block;
+  margin-left: 15px;
+  background: #eee;
+  color: #888;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.inputArea {
+  width: 90vw;
+  margin: 0 auto;
+  height: 40vh;
+}
+
+.inputArea .textAreaStyle {
+  height: 40vh;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px 0 rgba(59, 111, 245, 0.12);
+  overflow-y: scroll;
+}
+
+.inputArea .textAreaStyle::-webkit-scrollbar {
+  display: none;
+}
+
+.showArea {
+  width: 90vw;
+  margin: 0 auto;
+  height: 40vh;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px 0 rgba(59, 111, 245, 0.12);
+  overflow-y: scroll;
+}
+
+.showArea::-webkit-scrollbar {
+  display: none;
+}
+
+.showArea .tips {
+  font-size: 14px;
+  color: #333;
+}
+
+.operBtn {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.operBtn span {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.operBtn span.whiteBtn {
+  background: #fff;
+  color: #4d7fff;
+  border: 1px solid #4d7fff;
+  margin-right: 24px;
+}
+
+.operBtn span.blueBtn {
+  background: #4d7fff;
+  color: #fff;
+}

@@ -1,0 +1,167 @@
+/* stylelint-disable selector-class-pattern, keyframes-name-pattern, no-duplicate-selectors, selector-pseudo-class-no-unknown, no-descending-specificity */
+.page {
+  height: 100vh;
+  background: #f7f8f9;
+  overflow: hidden;
+}
+
+.page:fullscreen,
+.page:full-screen {
+  width: 100vw;
+  height: 100vh;
+  background: #f7f8f9;
+}
+
+.songti-scope {
+  --question-task-songti-font-family:
+    "Noto Serif SC Variable", "Noto Serif SC", serif;
+  --question-task-text-font-size: 14px;
+  --question-task-text-line-height: 24px;
+  --question-task-formula-scale: 0.8;
+  --question-task-formula-vertical-align: bottom;
+  --question-task-svg-inline-formula-height: 1em;
+  --question-task-svg-inline-formula-vertical-align: -0.06em;
+  --question-task-svg-block-formula-height: 1.12em;
+  --question-task-svg-block-formula-margin: 0.45em 0 0.55em;
+}
+
+.songti-scope .html-content,
+.songti-scope .option-content,
+.songti-scope .sub-question-meta-text,
+.songti-scope .answer-text-content {
+  font-family: var(--question-task-songti-font-family);
+}
+
+.songti-scope .html-content,
+.songti-scope .option-content,
+.songti-scope .sub-question-meta-text,
+.songti-scope .answer-text-content,
+.songti-scope [contenteditable="true"] {
+  font-size: var(--question-task-text-font-size);
+  line-height: var(--question-task-text-line-height);
+}
+
+.songti-scope .html-content :global(div),
+.songti-scope .html-content :global(p),
+.songti-scope .html-content :global(span),
+.songti-scope .html-content :global(ul),
+.songti-scope .html-content :global(ol),
+.songti-scope .html-content :global(li),
+.songti-scope .html-content :global(table),
+.songti-scope .html-content :global(thead),
+.songti-scope .html-content :global(tbody),
+.songti-scope .html-content :global(tr),
+.songti-scope .html-content :global(td),
+.songti-scope .html-content :global(th),
+.songti-scope .html-content :global(strong),
+.songti-scope .html-content :global(em),
+.songti-scope .html-content :global(u),
+.songti-scope .html-content :global(s),
+.songti-scope .html-content :global(blockquote),
+.songti-scope .option-content :global(div),
+.songti-scope .option-content :global(p),
+.songti-scope .option-content :global(span),
+.songti-scope .option-content :global(ul),
+.songti-scope .option-content :global(ol),
+.songti-scope .option-content :global(li),
+.songti-scope .option-content :global(table),
+.songti-scope .option-content :global(thead),
+.songti-scope .option-content :global(tbody),
+.songti-scope .option-content :global(tr),
+.songti-scope .option-content :global(td),
+.songti-scope .option-content :global(th),
+.songti-scope .option-content :global(strong),
+.songti-scope .option-content :global(em),
+.songti-scope .option-content :global(u),
+.songti-scope .option-content :global(s),
+.songti-scope .option-content :global(blockquote),
+.songti-scope .sub-question-meta-text :global(div),
+.songti-scope .sub-question-meta-text :global(p),
+.songti-scope .sub-question-meta-text :global(span),
+.songti-scope .sub-question-meta-text :global(ul),
+.songti-scope .sub-question-meta-text :global(ol),
+.songti-scope .sub-question-meta-text :global(li),
+.songti-scope .sub-question-meta-text :global(table),
+.songti-scope .sub-question-meta-text :global(thead),
+.songti-scope .sub-question-meta-text :global(tbody),
+.songti-scope .sub-question-meta-text :global(tr),
+.songti-scope .sub-question-meta-text :global(td),
+.songti-scope .sub-question-meta-text :global(th),
+.songti-scope .sub-question-meta-text :global(strong),
+.songti-scope .sub-question-meta-text :global(em),
+.songti-scope .sub-question-meta-text :global(u),
+.songti-scope .sub-question-meta-text :global(s),
+.songti-scope .sub-question-meta-text :global(blockquote),
+.songti-scope [contenteditable="true"],
+.songti-scope [contenteditable="true"] :global(div),
+.songti-scope [contenteditable="true"] :global(p),
+.songti-scope [contenteditable="true"] :global(span),
+.songti-scope [contenteditable="true"] :global(ul),
+.songti-scope [contenteditable="true"] :global(ol),
+.songti-scope [contenteditable="true"] :global(li),
+.songti-scope [contenteditable="true"] :global(table),
+.songti-scope [contenteditable="true"] :global(thead),
+.songti-scope [contenteditable="true"] :global(tbody),
+.songti-scope [contenteditable="true"] :global(tr),
+.songti-scope [contenteditable="true"] :global(td),
+.songti-scope [contenteditable="true"] :global(th),
+.songti-scope [contenteditable="true"] :global(strong),
+.songti-scope [contenteditable="true"] :global(em),
+.songti-scope [contenteditable="true"] :global(u),
+.songti-scope [contenteditable="true"] :global(s) {
+  font-family: var(--question-task-songti-font-family) !important;
+}
+
+.songti-scope
+  .question-card
+  :global(img[src*="mathUrl="]:not([src*="math-svg"])),
+.songti-scope
+  .answer-text-preview
+  :global(img[src*="mathUrl="]:not([src*="math-svg"])) {
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  height: calc(30px * var(--question-task-formula-scale)) !important;
+  object-fit: contain;
+  vertical-align: var(--question-task-formula-vertical-align);
+}
+
+.songti-scope
+  .question-card
+  :global(
+    img[src*="math-svg"][data-math="inline"],
+    img[src*="math-svg"][src*="display=inline"]
+  ),
+.songti-scope
+  .answer-text-preview
+  :global(
+    img[src*="math-svg"][data-math="inline"],
+    img[src*="math-svg"][src*="display=inline"]
+  ) {
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.songti-scope
+  .question-card
+  :global(
+    img[src*="math-svg"][data-math="block"],
+    img[src*="math-svg"][src*="display=block"]
+  ),
+.songti-scope
+  .answer-text-preview
+  :global(
+    img[src*="math-svg"][data-math="block"],
+    img[src*="math-svg"][src*="display=block"]
+  ) {
+  width: fit-content;
+  max-width: 100%;
+  display: block;
+  height: var(--question-task-svg-block-formula-height) !important;
+  object-fit: contain;
+  margin: var(--question-task-svg-block-formula-margin) !important;
+}

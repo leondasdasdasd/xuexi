@@ -1,0 +1,101 @@
+@import "../../utils/global.less";
+
+.questionTable {
+  padding: 10px 20px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .customAnalysis {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .importMessage {
+    font-family: AlibabaPuHuiTiR;
+    color: #01113d;
+    font-size: 14px;
+  }
+
+  .publicMessage {
+    font-family: AlibabaPuHuiTiL;
+    color: #01113d;
+    opacity: 0.45;
+    font-size: 12px;
+  }
+
+  .noPass {
+    color: #4818c9 !important;
+    opacity: 1;
+  }
+
+  .divider {
+    margin: 0 3px;
+  }
+
+  :global(.ant-table-tbody) > tr > td {
+    padding: 2px 16px !important;
+  }
+
+  :global(.ant-table-tbody) > tr > th {
+    padding: 2px 16px !important;
+  }
+}
+
+.tableBox {
+  flex: 1;
+  width: 100%;
+  border-radius: 0 0 15px 15px;
+
+  :global(.ant-pagination) {
+    float: right;
+  }
+
+  .tableBoxContent {
+    :global(.ant-table-scroll) {
+      ::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      // overflow: hidden !important;
+    }
+
+    :global(.ant-table-tbody) > tr > td {
+      padding: 0 0 0 16px !important;
+    }
+
+    :global(.ant-table-thead) > tr > th {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    background: #fff;
+    padding-bottom: 10px;
+
+    td {
+      height: 40px;
+    }
+  }
+}
+
+.suyang {
+  padding: 20px 0;
+  // font-size: 16px;
+  text-align: center;
+
+  p {
+    span {
+      display: inline-block;
+      padding-top: 20px;
+      color: #0445fc;
+      cursor: pointer;
+    }
+
+    .upload {
+      margin-right: 200px;
+    }
+  }
+}

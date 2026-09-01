@@ -1,0 +1,196 @@
+.studyActivityContent {
+  .header {
+    display: flex;
+    align-items: center;
+
+    .iconfont {
+      font-size: 24px;
+      cursor: pointer;
+      color: #bfbfbf;
+    }
+
+    .title {
+      flex: 1;
+      text-align: center;
+      color: #333;
+      font-family: PingFangSC-Medium;
+      font-size: 20px;
+    }
+  }
+
+  .content {
+    width: 280px;
+    margin: 0 auto;
+
+    .noSelect {
+      :global(.ant-select-selection-selected-value) {
+        color: #d9d9d9;
+      }
+    }
+
+    :global(.ant-select-selection) {
+      width: 280px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid rgba(221, 221, 221, 1);
+      border-radius: 20px;
+      margin-top: 40px;
+    }
+
+    :global(.ant-select-selection__placeholder) {
+      margin-top: -5px;
+    }
+
+    :global(.ant-select-selection-selected-value) {
+      line-height: 40px;
+    }
+
+    :global(.ant-input) {
+      border: none;
+      background: transparent;
+
+      .icon_down {
+        color: #bfbfbf;
+      }
+    }
+
+    :global(textarea.ant-input) {
+      width: 280px;
+      min-height: 200px;
+      max-height: 300px;
+      margin-top: 16px;
+      border: 1px solid #d9d9d9;
+    }
+
+    .iptActivity {
+      width: 280px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid rgba(221, 221, 221, 1);
+      border-radius: 20px;
+      margin-top: 16px;
+
+      :global(.ant-input) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+    }
+
+    .nextBtn {
+      width: 108px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 20px;
+      color: #fff;
+      background: #4d7fff;
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      margin: 52px auto 40px;
+      cursor: pointer;
+    }
+  }
+
+  .publishModal {
+    position: fixed;
+    inset: 0;
+    background: #fafbff;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    z-index: 999;
+
+    & > div {
+      box-shadow: 0 0 0 transparent !important;
+      background: #fafbff;
+    }
+
+    & > div > div {
+      padding: 0 !important;
+    }
+  }
+
+  .activityMenu {
+    width: 280px;
+    text-align: left;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+    z-index: 100;
+
+    & > li {
+      width: 100%;
+      list-style: none;
+      cursor: pointer;
+      margin-bottom: 5px;
+      position: relative;
+      padding: 10px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .activitySubMenu {
+        width: 200px;
+        position: absolute;
+        right: -220px;
+        top: 0;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        padding: 10px 0;
+        box-sizing: border-box;
+
+        & > li {
+          list-style: none;
+          padding: 10px;
+          margin-bottom: 5px;
+        }
+      }
+
+      &:first-child {
+        .activitySubMenu {
+          margin-top: -10px;
+        }
+      }
+    }
+
+    .activeLi {
+      .title {
+        color: #4d7fff;
+      }
+
+      .activitySubMenu {
+        & > li {
+          &:hover {
+            background: rgba(59, 111, 245, 0.1);
+          }
+        }
+
+        .subMenuLi {
+          background: #4d7fff;
+          color: #fff;
+
+          &:hover {
+            background: #4d7fff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

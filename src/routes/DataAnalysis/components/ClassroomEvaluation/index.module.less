@@ -1,0 +1,267 @@
+@import "../../../../utils/global.less";
+
+.rightContent {
+  min-width: 145px;
+  // padding: 10px;
+  margin: 0 10px;
+
+  .elevator {
+    background: #fbfbfc;
+    box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+    border-radius: 10px;
+    padding: 15px;
+
+    .elevatorTitle {
+      font-family: PingFangSC-Medium;
+      color: #01113d 100%;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .elevatorListItem {
+      font-family: PingFangSC-Regular;
+      color: #01113d;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .select {
+      font-family: PingFangSC-Medium;
+      color: #0445fc !important;
+    }
+  }
+}
+
+.containerFullScreen {
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  margin: 0;
+  background: #f5f5f9;
+  z-index: 99;
+}
+
+.draggableBox {
+  width: 179px;
+  margin-top: 33px;
+  margin-bottom: 33px;
+  border-radius: 5px;
+  border: 1px solid rgba(221, 221, 221, 0.7);
+  padding: 15px 10px;
+  height: calc(~"100% - 66px");
+  overflow: auto;
+
+  .title {
+    font-family: "PingFang SC";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #01113d;
+    margin-bottom: 22px;
+  }
+
+  .tag {
+    padding: 5px 0;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: rgba(1, 17, 61, 0.85);
+    background-color: #fff;
+  }
+
+  .tag:active {
+    // border: 1px solid orange;
+    background-color: rgb(234, 201, 141);
+    transform: scale(1.1);
+    padding: 2px 5px;
+  }
+}
+
+.commentContentBody {
+  :global {
+    .ant-modal-content {
+      .ant-modal-body {
+        padding: 0 35px 0 38px;
+      }
+    }
+  }
+}
+
+.tableBoxHeader {
+  height: 52px;
+  border-radius: 15px 15px 0 0;
+  background: #fff;
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .tableHeaderTitle {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #01113d;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}
+
+.line_spacing {
+  width: 100%;
+  height: 15px;
+}
+
+.changePageBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 13;
+  width: 70px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(52, 52, 52);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.changePageBtn:hover {
+  background: rgb(52, 52, 52);
+  border-color: #aaa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 1s;
+}
+
+.testIndex {
+  border-bottom: 1px #01113d solid;
+}
+
+.noPass {
+  color: #4818c9 !important;
+  opacity: 1;
+}
+
+.tableHeaderTitle {
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  color: #01113d;
+  letter-spacing: 0;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.toolbar {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 10px;
+  z-index: 20;
+  user-select: none;
+
+  span {
+    background: rgba(0, 0, 0, 0.65);
+    display: inline-block;
+    padding: 5px 14px;
+    border-right: 1px solid #fff;
+
+    &:last-child {
+      border-right: 0 none;
+      border-radius: 0 5px 5px 0;
+    }
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+  }
+
+  i {
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+  }
+}
+
+// 画笔颜色选择器
+.popContent {
+  :global {
+    .ant-popover-inner {
+      background: #1d1d1d !important;
+      border-radius: 50px !important;
+    }
+
+    .ant-popover-inner-content {
+      padding: 11px 18px !important;
+    }
+
+    .ant-popover-arrow-content {
+      --antd-arrow-background-color: #1d1d1d !important;
+    }
+  }
+}
+
+.closeBtn {
+  bottom: 30px;
+  right: 10px;
+  font-size: 16px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #343434;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 12;
+  position: "absolute";
+}
+
+.saveRemarkBtn {
+  bottom: 30px;
+  right: 60px;
+  font-size: 16px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #343434;
+  color: #fff;
+  border-radius: 5px;
+  z-index: 12;
+  position: "absolute";
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.presentationSlides {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 11;
+  padding: 0 60px 60px;
+}
+
+.questionTableCanvas {
+  border-radius: 0 0 15px 15px;
+  background: #fff;
+  padding-bottom: 10px;
+
+  tr > td {
+    padding: 2px 10px;
+    height: 40px;
+  }
+
+  :global(.ant-table-scroll) {
+    tr > th {
+      padding: 12px 10px 22px;
+    }
+  }
+}

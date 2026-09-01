@@ -1,0 +1,549 @@
+@import "antd/lib/style/themes/default.less";
+@import "../../utils/global.less";
+
+.overlayBox {
+  background-color: #fff;
+  width: 500px;
+  max-width: initial;
+
+  > div > div:first-child {
+    display: none;
+  }
+
+  > div > div:last-child {
+    max-width: none;
+    background-color: inherit;
+  }
+}
+
+.addQuestionNo {
+  cursor: pointer;
+  border: 1px solid rgba(4, 69, 252, 1);
+  padding: 0 11px;
+  font-family: PingFangSC-Regular;
+  color: #0445fc;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 7px;
+  margin-left: 19px;
+  margin-bottom: 17px;
+  height: 36px;
+  line-height: 34px;
+  margin-top: 15px;
+
+  & > i {
+    margin-right: 7px;
+    font-weight: 900;
+  }
+}
+
+.multiSelect {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+  position: relative;
+  z-index: 1060;
+
+  .mask {
+    position: fixed;
+    inset: 0;
+  }
+}
+
+.floatBox {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.listKey {
+  padding: 10px 15px;
+  font-size: 17px;
+}
+
+.levelBox {
+  padding: 0;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.levelBox li {
+  padding: 9.5px 15px;
+  list-style: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+// .levelBox li:link{
+//   background: red
+// }
+
+.levelBox li.select {
+  color: #fff;
+  background: #3b6ff5;
+  margin-bottom: 0 !important;
+
+  span {
+    color: #fff;
+  }
+}
+
+.levelBox li span {
+  float: right;
+  color: #2a2a2a;
+  font-size: 14px;
+  // border-radius: 50%;
+  // padding: 0.02rem 0.1rem;
+}
+
+.grayBg span {
+  border-radius: 0;
+}
+
+.grayBg label {
+  font-size: 14px !important;
+}
+
+.studentName {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 170px;
+}
+
+.gradeClass {
+  position: absolute;
+  right: 2%;
+  top: 17px;
+}
+
+.borderBox {
+  margin-right: 5px;
+}
+
+.actionBox {
+  display: inline-block;
+  padding: 10px 0;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
+
+.actionBox:hover {
+  color: #000;
+}
+
+.addBox {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+
+  .addBoxButton {
+    float: right;
+    border-radius: 20px;
+  }
+
+  .add {
+    background: #3b6ff5;
+    margin-left: 10px;
+    color: #fff;
+  }
+}
+
+.drawerBox {
+  // background-color: #fff;
+  // right: 0;
+  // left: 0;
+  // top: 0;
+  // bottom: 0;
+  // height: 100%;
+  // overflow: hidden;
+  // box-shadow: 0 6px 25px 0 rgba(59,111,245,0.12);
+  display: flex;
+  flex-direction: column;
+
+  /* position: relative; */
+  background-color: #fff;
+  inset: 0;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 6px 25px 0 rgba(59, 111, 245, 0.12);
+}
+
+.flexBox {
+  height: 100%;
+  display: flex;
+}
+
+.flexBox > div {
+  flex: 1;
+}
+
+.rightFlexItem {
+  border-left: 1px solid #efefef;
+  overflow: auto;
+  min-width: 260px;
+  -webkit-overflow-scrolling: touch;
+
+  :global {
+    .am-checkbox-agree {
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+    }
+  }
+}
+
+.mydrawer {
+  position: absolute;
+  inset: 0;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+
+  > div {
+    right: 0;
+  }
+}
+
+.cancel {
+  // margin-top: 20px;
+  // color: #3B6FF5;
+  // font-size: 14px;
+  // margin-left: 15px;
+  // margin: 0;
+  // padding-left: 20px;
+  // padding-bottom: 15px;
+  // border-bottom:1px solid #EFEFEF;
+  // display: flex;
+  // align-items: center;
+  // padding-bottom: 15px;
+  color: #3b6ff5;
+  font-size: 14px;
+  margin-left: 15px;
+  margin: 0;
+  padding-left: 20px;
+  border-bottom: 1px solid #efefef;
+  display: flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 15px;
+  flex: 10%;
+
+  span:nth-of-type(1) {
+    margin-right: 10px;
+  }
+}
+
+.row {
+  // top:70px;
+  // left: 0;
+  // right: 0;
+  overflow: scroll;
+}
+
+.bottom {
+  justify-content: space-between;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  height: 50px;
+  line-height: 50px;
+  background: white;
+  border-top: 1px solid #efefef;
+  color: #3b6ff5;
+  display: flex;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: @screen-xxl) {
+  .mydrawer {
+    width: 500px !important;
+
+    /* height: 400px; */
+  }
+
+  .search {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 445px;
+  }
+
+  .search > div > div {
+    text-align: left !important;
+  }
+
+  .search > div:nth-child(2) {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .selectStu {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: @screen-xl) {
+  .mydrawer {
+    width: 500px !important;
+
+    /* height: 400px; */
+  }
+
+  .search {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 445px;
+  }
+
+  .search > div > div {
+    text-align: left !important;
+  }
+
+  .search > div:nth-child(2) {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .selectStu {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: @screen-lg) {
+  .mydrawer {
+    width: 500px !important;
+
+    /* height: 400px; */
+  }
+
+  .search {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 445px;
+  }
+
+  .search > div > div {
+    text-align: left !important;
+  }
+
+  .search > div:nth-child(2) {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .selectStu {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: @screen-md) {
+  .mydrawer {
+    width: 100% !important;
+  }
+
+  .search {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .search > div > div {
+    text-align: left !important;
+  }
+
+  .search > div:nth-child(2) {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .row {
+    flex: 85%;
+  }
+
+  .bottom {
+    flex: 5%;
+  }
+
+  .selectStu {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .mydrawer {
+    width: 100% !important;
+  }
+
+  .search {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .search > div > div {
+    text-align: left !important;
+  }
+
+  .search > div:nth-child(2) {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .row {
+    flex: 83%;
+  }
+
+  .bottom {
+    flex: 7%;
+  }
+
+  .selectStu {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .mydrawer {
+    width: 100% !important;
+  }
+
+  .search {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .search > div > div {
+    text-align: left !important;
+  }
+
+  .search > div:nth-child(2) {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 20px;
+    width: 200px;
+  }
+
+  .row {
+    flex: 83%;
+  }
+
+  .bottom {
+    flex: 7%;
+  }
+
+  .selectStu {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .row {
+    flex: 82%;
+  }
+
+  .bottom {
+    flex: 8%;
+  }
+
+  .selectStu {
+    width: 240px;
+  }
+}
+
+.selectStu {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  //width: 160px;
+  // width: 400px;
+  min-height: 35px;
+  overflow: hidden scroll;
+  max-height: 80px;
+  line-height: 30px;
+  display: inline-block;
+  padding-left: 0;
+
+  i {
+    display: none !important;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+//添加学生姓名列表样式v1.1
+.placeholderContent {
+  color: #bfbfbf;
+  margin-top: 2px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.studentItem {
+  margin-left: 10px;
+  background: #eee;
+  border-radius: 10px;
+  padding: 0 10px;
+  display: inline-block;
+  margin-top: 2px;
+  margin-bottom: 5px;
+
+  em {
+    font-style: normal;
+    display: inline-block;
+    margin-left: 9px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+}

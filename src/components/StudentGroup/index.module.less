@@ -1,0 +1,353 @@
+@import "antd/lib/style/themes/default.less";
+@import "../../utils/global.less";
+
+.fullGroup {
+  height: 100% !important;
+  padding: 0 !important;
+
+  .stuDropBox {
+    margin-top: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .stuDropList {
+    min-height: 130px !important;
+  }
+
+  .imgDrop {
+    width: 100px !important;
+    font-family: PingFangSC-Medium !important;
+    color: #01113d;
+    font-size: 16px !important;
+    height: 70px !important;
+    line-height: 70px !important;
+
+    .imgBack {
+      background-size: cover;
+      border-radius: 25px !important;
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}
+
+.stuGroup {
+  padding: 20px;
+  height: calc(~"100vh - 120px");
+  overflow: scroll;
+
+  .bgColro0 {
+    background: rgba(254, 53, 5, 0.05) !important;
+  }
+
+  :global(.bgColor0) {
+    background: rgba(254, 53, 5, 0.05) !important;
+  }
+
+  :global(.bgColor1) {
+    background: rgba(252, 131, 18, 0.05) !important;
+  }
+
+  :global(.bgColor2) {
+    background: rgba(252, 233, 18, 0.05) !important;
+  }
+
+  :global(.bgColor3) {
+    background: rgba(5, 230, 87, 0.05) !important;
+  }
+
+  :global(.bgColor4) {
+    background: rgba(4, 69, 252, 0.05) !important;
+  }
+
+  :global(.bgColor5) {
+    background: rgba(18, 204, 252, 0.05) !important;
+  }
+
+  :global(.bgColor6) {
+    background: rgba(81, 18, 252, 0.05) !important;
+  }
+
+  :global(.bgColor7) {
+    background: rgba(254, 53, 5, 0.05) !important;
+  }
+
+  :global(.bgColor8) {
+    background: rgba(252, 131, 18, 0.05) !important;
+  }
+
+  :global(.bgColor9) {
+    background: rgba(252, 233, 18, 0.05) !important;
+  }
+
+  .displayNone {
+    display: none;
+  }
+
+  .groupTitle {
+    font-family: PingFangSC-Regular;
+    color: #01113d;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+
+    .inLineMessage {
+      font-size: 14px;
+      color: #999;
+      margin-left: 10px;
+    }
+
+    .inlineGroup {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .titleBox {
+      width: 6px;
+      height: 14px;
+      background: #11dc5d;
+      margin-right: 10px;
+      border-radius: 2px;
+    }
+  }
+
+  .chooseStuBox {
+    width: 100%;
+    height: 185px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(59, 111, 245, 0.18);
+    padding: 18px 32px;
+
+    .chooseStuContent {
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px;
+      justify-content: space-between;
+
+      .startContent {
+        width: 200px;
+        text-align: center;
+
+        .startBtn {
+          background: #0445fc;
+          font-family: PingFangSC-Regular;
+          color: #ffffff;
+          width: 120px;
+          height: 40px;
+          margin-top: 40px;
+          line-height: 40px;
+          border-radius: 10px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+
+      .stuContentTitle {
+        font-family: PingFangSC-Regular;
+        color: #5d6789;
+        margin-bottom: 10px;
+      }
+
+      :global(.ant-select-selection) {
+        min-height: 70px;
+      }
+
+      :global(.ant-select-selection__placeholder) {
+        overflow: inherit;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .stuAnswerBox {
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(59, 111, 245, 0.18);
+    padding: 18px 32px;
+    margin-top: 12px;
+
+    .stuAnswerContent {
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px;
+
+      .fakeTable {
+        width: 200px;
+        height: 300px;
+        margin-right: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(1, 17, 61, 0.1);
+        border-radius: 8px;
+
+        .wrongTitle {
+          background: rgb(246, 254, 247) !important;
+          color: #05e657 !important;
+        }
+
+        .rightTitle {
+          font-family: PingFangSC-Regular !important;
+          background: rgb(255, 244, 242) !important;
+          color: #fe3505 !important;
+        }
+
+        .fakeTableTitle {
+          background: #f2f2f2;
+          font-family: PingFangSC-Regular;
+          color: #5d6789;
+          border-radius: 8px;
+          text-align: center;
+          height: 30px;
+          line-height: 30px;
+        }
+
+        .fakeItemList {
+          height: 270px;
+          overflow: scroll;
+        }
+
+        .fakeTableItem {
+          height: 30px;
+          line-height: 30px;
+          font-family: PingFangSC-Regular;
+          color: #01113d;
+          padding-left: 20px;
+        }
+      }
+
+      .otherTable {
+        flex: 1;
+        border: 1px solid rgba(1, 17, 61, 0.1);
+
+        :global(.ant-table-thead) {
+          tr {
+            th {
+              padding: 4px 16px;
+            }
+          }
+        }
+
+        :global(.ant-table-tbody) {
+          tr {
+            td {
+              padding: 4px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .moHeight {
+    min-height: 100% !important;
+  }
+
+  .stuDropBox {
+    width: 100%;
+    min-height: 400px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(59, 111, 245, 0.18);
+    padding: 18px 32px;
+    margin-top: 12px;
+    position: relative;
+
+    :global(.ant-alert) {
+      display: inline-block;
+      margin-left: 20px;
+      width: 300px;
+    }
+
+    .fullBox {
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+      background: rgb(242, 244, 245);
+      color: rgb(118, 126, 147);
+      top: 20px;
+      padding: 5px 15px;
+      border-radius: 6px;
+    }
+
+    .chooseGroupBox {
+      position: absolute;
+      right: 100px;
+
+      .groupCount {
+        font-family: PingFangSC-Regular;
+        color: #5d6789;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+
+    .dropContent {
+      margin-top: 36px;
+    }
+
+    .stuDropList {
+      width: 100%;
+      min-height: 90px;
+      border-bottom: 1px solid #e6e6e6;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .dropListGroup {
+        width: 100px;
+        // writing-mode: sideways-rl;
+        font-family: PingFangSC-Semibold;
+        color: #01113d 100%;
+        font-size: 22px;
+        height: 100%;
+      }
+
+      .dropListItem {
+        width: 100%;
+        // height: 70px;
+      }
+
+      .imgDrop {
+        width: 100px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        // margin-left: 60px;
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        height: 70px;
+        line-height: 70px;
+
+        .stuNameBox {
+          text-align: center;
+          border-radius: 8px;
+          background: rgba(1, 17, 61, 0.03);
+          width: 90px;
+          height: 50px;
+          line-height: 50px;
+          margin-top: 10px;
+          font-family: PingFangSC-Medium;
+          color: #01113d;
+        }
+
+        cursor: pointer;
+
+        .imgBack {
+          background-size: cover;
+          border-radius: 24px;
+          width: 48px;
+          height: 48px;
+          margin-left: 25px;
+        }
+
+        img {
+          width: 48px;
+          height: 48px;
+          border-radius: 24px;
+        }
+      }
+    }
+  }
+}

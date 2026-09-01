@@ -1,0 +1,70 @@
+.filterBar {
+  // background: #fff;
+  // border: 1px solid #e8e8e8;
+  // border-radius: 4px;
+  // padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .tabs {
+    display: inline-flex;
+    margin-right: 12px;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #ffffff;
+    border: 1px solid #e6e7ec;
+    color: #27355a;
+
+    .tab {
+      padding: 5px 8px;
+      font-size: 14px;
+      line-height: 20px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      white-space: nowrap;
+      background: transparent;
+    }
+
+    .tabActive {
+      transition: all 0.3s;
+      color: #0445fc;
+      background: #f2f5ff;
+      font-weight: 500;
+    }
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+
+    .select {
+      min-width: 110px;
+      margin-right: 8px;
+    }
+  }
+
+  .search {
+    width: 220px;
+  }
+}
+
+.right {
+  flex: 0 0 auto;
+
+  :global {
+    .ant-btn-primary {
+      background: #0445fc;
+      color: #ffffff;
+      border: none;
+    }
+  }
+}

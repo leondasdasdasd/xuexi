@@ -1,0 +1,758 @@
+.singleContent {
+  word-wrap: break-word;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.singleContent :global(.ant-select-tree-dropdown) {
+  max-height: 300px !important;
+}
+
+.singleContent .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 60px;
+  width: 100%;
+  color: #333;
+  z-index: 99;
+  box-shadow: 0 4px 18px 0 rgba(59, 111, 245, 0.12);
+}
+
+.singleContent .header i {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+  float: left;
+}
+
+.singleContent .header .title {
+  font-family: PingFangSC-Medium;
+  color: #333333;
+  font-size: 26px;
+  flex: 1;
+  text-align: center;
+}
+
+.singleContent .header :global(.ant-btn-primary) {
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 0 20px;
+  background: #4d7fff;
+  color: #fff;
+  margin-top: 14px;
+  margin-right: 20px;
+}
+
+.questionType {
+  background-color: #f5f7ff;
+  padding: 0 20px;
+}
+
+.singleInputArea {
+  position: relative;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px 0 20px;
+}
+
+.singleInputArea .difficulty {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.singleInputArea .selected .unSelected {
+  padding: 5px 12px;
+  border-radius: 7px;
+  display: inline-block;
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+.singleInputArea .selected .unSelected i {
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.singleInputArea .selected .unSelected span {
+  font-size: 13px;
+  font-style: normal;
+}
+
+.singleInputArea .selected1 {
+  padding: 5px 12px;
+  border-radius: 7px;
+  display: inline-block;
+  background: rgba(4, 53, 189, 0.1);
+  color: #0435bd;
+}
+
+.singleInputArea .selected1 span {
+  font-size: 13px;
+  font-style: normal;
+}
+
+.singleInputArea .selected2 {
+  padding: 5px 12px;
+  border-radius: 7px;
+  display: inline-block;
+  background: rgba(5, 125, 230, 0.1);
+  color: #057de6;
+}
+
+.singleInputArea .selected2 span {
+  font-size: 13px;
+  font-style: normal;
+}
+
+.singleInputArea .selected3 {
+  padding: 5px 12px;
+  border-radius: 7px;
+  display: inline-block;
+  background: rgba(103, 48, 251, 0.1);
+  color: #6730fb;
+}
+
+.singleInputArea .selected3 span {
+  font-size: 13px;
+  font-style: normal;
+}
+
+.singleInputArea .selected4 {
+  padding: 5px 12px;
+  border-radius: 7px;
+  display: inline-block;
+  background: rgba(252, 130, 18, 0.1);
+  color: #fc8212;
+}
+
+.singleInputArea .selected4 span {
+  font-size: 13px;
+  font-style: normal;
+}
+
+.singleInputArea .selected5 {
+  padding: 5px 12px;
+  border-radius: 7px;
+  display: inline-block;
+  background: rgba(214, 238, 214, 0.904);
+  color: #fc1231;
+}
+
+.singleInputArea .selected5 span {
+  font-size: 13px;
+  font-style: normal;
+}
+
+.singleInputArea .unSelected {
+  padding: 5px 12px;
+  border-radius: 7px;
+  margin-right: 11px;
+  display: inline-block;
+  color: #666;
+}
+
+.singleInputArea .unSelected i {
+  font-size: 14px;
+}
+
+.singleInputArea .unSelected span {
+  font-size: 13px;
+}
+
+.singleInputArea .questionArea {
+  margin: 25px auto;
+  padding: 0 20px 25px;
+  border-radius: 10px;
+}
+
+.singleInputArea .questionArea .questionTips {
+  margin-bottom: 20px !important;
+}
+
+.singleInputArea .questionArea .questionTips span {
+  margin-right: 12px;
+  font-family: PingFangSC-Medium;
+  color: #666;
+  font-size: 16px;
+}
+
+.singleInputArea .questionArea .questionTips em {
+  font-family: PingFangSC-Regular;
+  color: #999;
+  font-size: 14px;
+  font-style: normal;
+  margin-left: 12px;
+}
+
+.singleInputArea .questionArea .fillContent {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  min-height: 150px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.singleInputArea .questionArea .fillContent em {
+  color: #999;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.singleInputArea .questionArea .fillContent p {
+  display: inline-block;
+}
+
+.singleInputArea .questionArea .fillContent div {
+  display: inline-block;
+}
+
+.singleInputArea .questionOption {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.singleInputArea .questionOption .questionTips {
+  margin-bottom: 20px !important;
+}
+
+.singleInputArea .questionOption .questionTips span {
+  margin-right: 12px;
+  font-family: PingFangSC-Medium;
+  color: #666;
+  font-size: 16px;
+}
+
+.singleInputArea .questionOption .questionTips em {
+  font-family: PingFangSC-Regular;
+  color: #999;
+  font-size: 14px;
+  font-style: normal;
+  margin-left: 12px;
+}
+
+.singleInputArea .questionOption .questionTips .completionSwitch {
+  font-size: 14px;
+  float: right;
+}
+
+.singleInputArea .questionOption .questionTips .completionSwitch button {
+  margin-left: 20px;
+}
+
+.singleInputArea .questionOption .questionTips i {
+  color: #4d7fff !important;
+  margin-left: 3px !important;
+}
+
+.conditionArea {
+  padding: 15px o;
+  z-index: 99;
+}
+
+.conditionArea .conditionTop {
+  display: flex;
+}
+
+.conditionArea .treeBox :global(.ant-select-selection) {
+  display: block;
+  border-radius: 20px;
+}
+
+.conditionArea .globalWidth {
+  display: inline-block;
+  font-family: PingFangSC-Medium;
+  color: #666;
+  font-size: 16px;
+}
+
+.conditionArea .globalWidth span {
+  display: inline-block;
+}
+
+.conditionArea .globalWidth span em {
+  font-style: normal;
+}
+
+.conditionArea .globalWidth .title {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.conditionArea .globalWidth .selectStyle {
+  margin-right: 12px;
+}
+
+.conditionArea .globalWidth .selectStyle > div {
+  border-radius: 10px;
+}
+
+.conditionArea .globalWidth .checkedHard {
+  border: 1px solid #4d7fff;
+  border-radius: 20px;
+  color: #4d7fff;
+  font-size: 14px;
+  padding: 5px 18px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.conditionArea .globalWidth .isHard {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  color: #999;
+  font-size: 14px;
+  padding: 5px 18px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.conditionArea .knowledgePoints {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.conditionArea .knowledgePoints :global(.ant-select) {
+  z-index: 99;
+}
+
+.conditionArea .accomplishment {
+  display: inline-block;
+}
+
+.conditionArea .condition {
+  display: inline-block;
+  font-family: PingFangSC-Medium;
+  color: #666;
+  font-size: 16px;
+}
+
+.conditionArea .condition span {
+  display: inline-block;
+}
+
+.conditionArea .condition span em {
+  font-style: normal;
+}
+
+.conditionArea .condition .title {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.conditionArea .condition .selectStyle {
+  margin-right: 12px;
+}
+
+.conditionArea .condition .selectStyle > div {
+  border-radius: 10px;
+  height: 36px;
+}
+
+.conditionArea
+  .condition
+  .selectStyle
+  :global(.ant-select-selection__rendered) {
+  height: 36px;
+  line-height: 36px;
+}
+
+.conditionArea .condition .checkedHard {
+  border: 1px solid #4d7fff;
+  border-radius: 20px;
+  color: #4d7fff;
+  font-size: 14px;
+  padding: 5px 18px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.conditionArea .condition .isHard {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  color: #999;
+  font-size: 14px;
+  padding: 5px 18px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.conditionArea .choice {
+  position: absolute;
+  top: 13px;
+  left: 150px;
+  z-index: 99;
+}
+
+.conditionArea .bjChoice {
+  left: 50px;
+}
+
+.operBtn {
+  position: absolute;
+  right: 100px;
+  top: 14px;
+  z-index: 99;
+}
+
+.operBtn span {
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 5.5px 10px;
+  cursor: pointer;
+}
+
+.operBtn span.whiteBtn {
+  background: rgba(1, 17, 61, 0.05);
+  color: #333;
+  margin-right: 10px;
+}
+
+.operBtn span.blueBtn {
+  background: #0445fc;
+  color: #fff;
+  margin-right: 60px;
+}
+
+.operBtn span.blueBtn1 {
+  background: #0445fc;
+  color: #fff;
+  margin-right: 40px;
+}
+
+.level {
+  font-size: 18px;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.subjectName {
+  color: rgba(0, 0, 0, 0.65);
+  display: block;
+}
+
+.subjectName:hover {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.optionList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.optionList :global(.ant-select) {
+  border-radius: 10px;
+}
+
+.optionList :global(.ant-select) :global(.ant-select-selection__rendered) {
+  padding-bottom: 6px !important;
+}
+
+.optionList
+  :global(.ant-select)
+  :global(.ant-select-selection__rendered)
+  ul
+  li {
+  height: 30px;
+  line-height: 30px;
+}
+
+.optionList :global(.ant-select-selection) {
+  border-radius: 10px;
+}
+
+.optionList .removeIcon {
+  color: #666;
+  font-size: 16px;
+  margin: 0 10px;
+  cursor: move;
+}
+
+.optionList .completionSerial {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  line-height: 17px;
+  margin-right: 7px;
+}
+
+.optionList .optionContent {
+  flex: 1;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  min-height: 40px;
+  border-radius: 10px;
+  line-height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.optionList .optionContent .tagBox {
+  margin-left: 10px;
+}
+
+.optionList .optionContent .tagBox :global(.ant-tag) {
+  height: 30px;
+  line-height: 30px;
+  background: rgba(1, 17, 61, 0.05);
+  color: #333;
+}
+
+.optionList .optionContent .optionA {
+  min-width: 40px;
+  text-align: center;
+  display: block;
+  background: #fff;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+.optionList .optionContent .optionA i {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.optionList .optionContent .optionASelected {
+  min-width: 40px;
+  text-align: center;
+  display: block;
+  background: #4d7fff;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.optionList .optionContent .optionASelected i {
+  color: #fff;
+  font-size: 12px;
+}
+
+.optionList .optionContent .divider {
+  position: absolute;
+  left: 40px;
+  height: 100%;
+  width: 1px;
+  background: #e6e6e6;
+}
+
+.optionList .optionContent .braftEditorStyle {
+  margin-left: 2px;
+}
+
+.optionList .optionContent .selectArea {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.optionList .optionContent .selectArea .placeholderTxt {
+  color: #999;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.optionList .optionContent .selectArea div {
+  display: inline-block;
+}
+
+.optionList .optionContent .selectArea p {
+  display: inline-block;
+}
+
+.optionList .deleteIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.addOptionBtn {
+  background: rgba(1, 17, 61, 0.05);
+  width: 120px;
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
+  font-size: 11px;
+  border-radius: 7px;
+  margin-left: 38px;
+  cursor: pointer;
+}
+
+.addOptionBtn i {
+  font-size: 15px;
+  margin-right: 2px;
+}
+
+.answerAnalysis {
+  background: #fff;
+  min-height: 120px;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 20px 20px 35px;
+}
+
+.answerAnalysis .analysisTitle {
+  font-family: PingFangSC-Medium;
+  color: #666;
+  font-size: 16px;
+}
+
+.answerAnalysis .analysisTitle em {
+  font-family: PingFangSC-Regular;
+  color: #999;
+  font-size: 14px;
+  font-style: normal;
+  margin-left: 12px;
+}
+
+.answerAnalysis .analysisArea {
+  margin-top: 20px;
+}
+
+.answerAnalysis .analysisArea .fillAnalysis {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  min-height: 150px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.answerAnalysis .analysisArea .fillAnalysis p {
+  display: inline-block;
+}
+
+.answerAnalysis .analysisArea .fillAnalysis div {
+  display: inline-block;
+}
+
+.judgeBox .judeg {
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  height: 36px;
+  width: 80px;
+  line-height: 34px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.judgeBox .judeg i {
+  margin-right: 10px;
+}
+
+.judgeBox .blue {
+  border: 1px solid #0445fc;
+  color: blue;
+}
+
+.importResult {
+  text-align: center;
+}
+
+.importResult h4 {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.importResult .resultTips {
+  color: #666;
+  font-size: 16px;
+}
+
+.importResult .resultTips i {
+  color: #51b520;
+  font-size: 23px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.importResult .resultTips .tips {
+  font-size: 18px;
+  color: #51b520;
+  vertical-align: middle;
+}
+
+.importResult .resultTips em {
+  margin: 0 5px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.importResult .resultTips em.success {
+  color: #4d7fff;
+}
+
+.importResult .resultTips em.error {
+  color: #f76377;
+}
+
+.literacyChoice {
+  margin-top: 17px;
+  padding-top: 17px;
+  padding-left: 20px;
+}
+
+.literacyChoice .knowledgePoints {
+  margin-bottom: 18px;
+}
+
+.literacyChoice .title {
+  display: inline-block;
+  min-width: 50px;
+  text-align: center;
+}
+
+.answerArea {
+  margin-top: 20px;
+}
+
+.answerArea .fillAnswer {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  min-height: 150px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.accomplishment :global .selectStyles {
+  height: 120px !important;
+  border-radius: 5px;
+}
+
+.accomplishment :global .selectStyles .ant-select-dropdown-menu {
+  padding: 0;
+}
+
+.accomplishment :global .selectStyles .ant-select-dropdown-menu-item {
+  font-size: 14px;
+  height: 40px !important;
+  line-height: 33px;
+  text-align: center;
+}
+
+.accomplishment :global .selectStyles .ant-select-dropdown-menu-item-active {
+  background: rgba(4, 69, 252, 0.1) !important;
+}

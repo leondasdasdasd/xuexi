@@ -1,0 +1,216 @@
+//批量导入右侧预览区样式start
+:global {
+  a[href="https://froala.com/wysiwyg-editor"],
+  a[href="https://www.froala.com/wysiwyg-editor?k=u"] {
+    display: none !important;
+  }
+
+  .fr-wrapper > div[style*="z-index: 9999"] {
+    position: absolute;
+    top: -10000px;
+    opacity: 0;
+  }
+
+  #preview {
+    // max-height: 500px;
+    overflow-y: scroll;
+    padding: 0 24px 24px;
+
+    img {
+      max-width: 100% !important;
+      max-height: 300px !important;
+      object-fit: contain;
+    }
+  }
+
+  #preview .question {
+    padding-top: 20px !important;
+  }
+  //富文本编辑器样式
+  .fr-toolbar {
+    display: none !important;
+  }
+
+  .fr-buttons,
+  .fr-arrow {
+    display: none !important;
+  }
+
+  .fr-popup {
+    border: 0 !important;
+    box-shadow: none;
+  }
+
+  .fr-wrapper {
+    border: 0 none !important;
+  }
+
+  .fr-element.fr-view {
+    min-height: 100% !important;
+  }
+
+  .fr-box.fr-basic .fr-wrapper {
+    background: none !important;
+  }
+
+  .fr-box.fr-basic.fr-top .fr-wrapper {
+    box-shadow: none !important;
+    line-height: 31px;
+  }
+
+  .second-toolbar {
+    display: none !important;
+  }
+
+  /* end */
+  .type-box {
+    display: block;
+    margin-bottom: 13px !important;
+  }
+
+  .type-name {
+    border: 1px solid #ccc;
+    margin: 0;
+    border-radius: 2px;
+    width: 54px;
+    height: 22px;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .type-name-1 {
+    // background: rgba(4,53,189,0.10);
+    border-color: #1a8cfe;
+    // color: #0435BD  !important;
+    color: #1a8cfe !important;
+  }
+
+  .type-name-2 {
+    border-color: #1dc88c;
+    color: #1dc88c !important;
+  }
+
+  .type-name-3 {
+    border-color: #f76377;
+    color: #f76377 !important;
+  }
+
+  .type-name-4 {
+    border-color: #a06ad2;
+    color: #a06ad2 !important;
+  }
+
+  .type-name-5 {
+    border-color: #c9a310;
+    color: #c9a310 !important;
+  }
+
+  .change-type {
+    float: right;
+  }
+
+  .change-type input {
+    margin-right: 12px;
+    cursor: pointer;
+  }
+
+  //批量录入检查区样式
+  .question {
+    padding: 12.8px 47.7px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #494949;
+    letter-spacing: -0.44px;
+    line-height: 22px;
+    border: 1px solid #dedede;
+    margin-top: 20px;
+    position: relative;
+
+    p {
+      word-break: break-all;
+      word-wrap: break-word;
+      line-height: inherit;
+
+      .checkOrRadio {
+        margin: 0 10px;
+      }
+    }
+
+    .qt_title {
+      margin: 0 0 6px;
+
+      .title {
+        font-family: MicrosoftYaHei;
+        font-size: 24px;
+        color: #5d9cec;
+        letter-spacing: -0.88px;
+        line-height: 22px;
+        position: absolute;
+        left: 9px;
+      }
+    }
+
+    .key_A,
+    .key_B,
+    .key_C,
+    .key_D,
+    .key_E,
+    .key_F,
+    .key_G,
+    .key_H {
+      // border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      margin-top: 3px !important;
+      margin-bottom: 3px !important;
+      min-height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      color: #000;
+      display: inline-block;
+      margin-right: 5px !important;
+      padding-right: 5px !important;
+
+      .title {
+        margin-right: 3px;
+        color: #333;
+      }
+      // .checkOrRadio {
+      //     display: contents;
+      // }
+    }
+
+    .qt_answer,
+    .qt_analysis {
+      margin: 0 0 5px;
+      line-height: 24px !important;
+    }
+
+    .qt_error {
+      padding-left: 35px;
+    }
+
+    .qt_error,
+    .error {
+      color: #fff;
+      font-weight: bold;
+      background-color: #ff4848;
+      border-radius: 2px;
+      word-wrap: break-word;
+      word-break: break-all;
+      margin-bottom: 5px;
+    }
+
+    &.check_error {
+      border: 1px solid #ff4848 !important;
+    }
+
+    .title {
+      color: #4d7fff;
+    }
+  }
+
+  .fr-wrapper.show-placeholder .fr-placeholder {
+    white-space: normal !important;
+  }
+}

@@ -1,0 +1,586 @@
+@import "../../utils/global.less";
+
+.pupllAnalyse {
+  width: 100%;
+  padding: 12px;
+  height: calc(~"100vh - 120px");
+  background-color: #f5f6f7;
+  overflow-x: auto;
+  // display: flex;
+  // justify-content: center;
+  // flex-wrap: nowrap;
+  // flex-direction: row;
+}
+
+.leftContent {
+  flex-shrink: 0;
+  width: 191px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 11px;
+  flex-grow: 0;
+}
+
+.centerWarp {
+  flex-shrink: 0;
+  width: 957px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 21px 9px 21px 28px;
+  background-color: #fff;
+  border-radius: 11px;
+  margin: 0 12px;
+  flex-grow: 0;
+
+  .titltName {
+    font-family: PingFangSC-Semibold;
+    color: #01113d;
+    font-size: 20px;
+  }
+}
+
+.rightContent {
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  border-radius: 11px;
+  flex-grow: 0;
+  overflow-y: auto;
+}
+
+.pupllAnalyseBoxRight {
+  background: #fff;
+  width: 145px;
+  padding: 8px;
+  border-radius: 10px;
+  // display: inline-block;
+  // min-width: 145px;
+
+  .mentBtn {
+    display: block;
+    min-height: 36px;
+    padding: 8px 0;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    text-align: center;
+    line-height: 19px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: rgba(4, 69, 252, 0.1);
+    box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+    color: #0445fc;
+    width: 100%;
+  }
+}
+
+.previewStudentReportModal {
+  :global(.ant-modal-content .ant-modal-body) {
+    overflow-y: auto;
+    max-height: 600px;
+    padding: 0 !important;
+    background-color: #fff;
+  }
+}
+
+.stepWarp {
+  padding-bottom: 9px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-bottom: 1px solid rgba(1, 17, 61, 0.05);
+}
+
+.formWarp {
+  width: 100%;
+  background-color: #fff;
+}
+
+.previewLeft {
+  width: 201px;
+  height: 100%;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.previewRight {
+  width: 957px;
+  height: 161%;
+  padding: 12px 14px 0;
+  flex-shrink: 0;
+  background-color: #fafafb;
+  overflow-y: auto;
+}
+
+.selectContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .searchBox {
+    height: 36px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 60px;
+    flex-shrink: 0;
+
+    :global {
+      .ant-input-affix-wrapper .ant-input {
+        background: rgba(1, 17, 61, 0.04);
+        height: 36px;
+      }
+    }
+  }
+
+  .selectorContent {
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 16px;
+    overflow-y: auto;
+    // height: calc(~"100% - 108px");
+    padding: 0 60px 18px;
+  }
+}
+
+.tabsBox {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom: 1px solid rgba(1, 17, 61, 0.05);
+  padding: 0 60px;
+  flex-shrink: 0;
+
+  .tab {
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(1, 17, 61, 0.654);
+    margin-right: 40px;
+    cursor: pointer;
+    height: 100%;
+    line-height: 36px;
+  }
+
+  .tab.active {
+    color: #0445fc;
+    border-bottom: 3px solid #0445fc;
+  }
+
+  .error {
+    color: #fc491e;
+  }
+
+  .error.active {
+    color: #fc491e;
+    border-bottom: 3px solid #fc491e;
+  }
+}
+
+.modalTabsBox {
+  width: 100%;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 30px;
+  flex-shrink: 0;
+  font-family: "PingFang SC";
+
+  .tab {
+    color: rgba(1, 17, 61, 0.654);
+    margin-right: 40px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+  }
+
+  .tab.active {
+    border-bottom: 3px solid #0445fc;
+  }
+}
+
+.centerContent {
+  // padding: 21px 28px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.titltName {
+  font-family: "PingFang SC";
+  font-size: 24px;
+  line-height: 54px;
+  font-weight: 600;
+  color: #01113d;
+  text-align: center;
+}
+
+.name_group {
+  font-family: "PingFang SC";
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #01113d;
+}
+
+.summarize {
+  width: 100%;
+  // height: 82px;
+  padding: 8px 12px;
+  background: rgba(1, 17, 61, 0.04);
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #01113d;
+}
+
+.logModal {
+  :global(.ant-modal-content .ant-modal-body) {
+    overflow-y: auto;
+    max-height: 500px;
+    padding: 9px 24px;
+    background-color: #fff;
+    min-height: 520px;
+  }
+
+  :global {
+    // .ant-table {
+
+    //   .ant-table-thead>tr>th,
+    //   .ant-table-tbody>tr>td {
+    //     // padding: 5px 34px;
+    //     padding: 5px 12px !important;
+    //   }
+    // }
+  }
+}
+
+.footerBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  height: 32px;
+  border-radius: 7px;
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.btn.cancel {
+  color: rgba(1, 17, 61, 0.65);
+  background: rgba(1, 17, 61, 0.07);
+  margin-right: 12px;
+}
+
+.btn.warning {
+  color: #fc491e;
+  background: rgba(1, 17, 61, 0.07);
+  margin-right: 12px;
+}
+
+.btn.confirm {
+  color: #fff;
+  background: #0445fc;
+}
+
+.subjectRanRemark {
+  width: 90%;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 8px;
+  background: rgba(78, 206, 249, 0.1);
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-weight: normal;
+  color: #01113d;
+  margin-bottom: 19px;
+}
+
+.spinContent {
+  width: 100%;
+  height: 100%;
+  // overflow-y: auto;
+
+  :global {
+    .ant-spin-container {
+      width: 100%;
+      height: 100%;
+      // overflow-y: auto;
+    }
+  }
+}
+
+.selteReport {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #01113d;
+  text-align: center;
+  height: 52px;
+  line-height: 52px;
+  border-radius: 11px 11px 0 0;
+  border-bottom: 1px solid rgba(1, 17, 61, 0.07);
+}
+
+.remark {
+  font-family: "PingFang SC";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  color: rgba(1, 17, 61, 0.85);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.stateText {
+  font-family: "PingFang SC";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+  color: #01113d;
+}
+
+.emptyContent {
+  .text {
+    font-family: "PingFang SC";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    color: #01113d;
+  }
+}
+
+.point {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.08);
+  border-radius: 50%;
+  text-align: center;
+  color: rgba(1, 17, 61, 0.7);
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.elevator {
+  background: #fff;
+  box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 16px;
+
+  .elevatorTitle {
+    font-family: PingFangSC-Medium;
+    color: #01113d 100%;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .elevatorListItem {
+    font-family: PingFangSC-Regular;
+    color: #01113d;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .elevatorListItem.active {
+    font-family: PingFangSC-Medium;
+    color: #0445fc !important;
+  }
+}
+
+.my_popconfirm {
+  :global {
+    .ant-btn {
+      border: none;
+      background-color: rgba(1, 17, 61, 0.05);
+      color: rgba(1, 17, 61, 0.45);
+      font-family: "PingFang SC";
+      font-size: 11px;
+      font-weight: 500;
+      padding: 0 15px;
+    }
+
+    .ant-btn-primary {
+      background: #0445fc;
+      color: #ffffff;
+    }
+  }
+}
+
+.modalBodyContent {
+  height: 461px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.scrollbar {
+  /* 滚动条样式 */
+  &::-webkit-scrollbar {
+    width: 8px;
+
+    /*  设置纵轴（y轴）轴滚动条 */
+    height: 4px;
+
+    /*  设置横轴（x轴）轴滚动条 */
+  }
+
+  /* 滚动条滑块（里面小方块） */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #c1c1c1;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #7d7d7d;
+  }
+
+  /* 滚动条轨道 */
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background: #fafafa;
+    box-shadow: inset 0 0 5px rgba(104, 100, 100, 0.2);
+  }
+}
+
+.readMsgModal {
+  :global {
+    .ant-modal-content .ant-modal-body {
+      padding: 9px 24px;
+      min-height: 520px;
+    }
+
+    .ant-modal-content .ant-modal-header {
+      padding: 15px 22px 9px;
+    }
+  }
+}
+
+.readMsgDetailModal {
+  :global {
+    .ant-modal-content .ant-modal-body {
+      padding: 9px 24px;
+      min-height: 520px;
+    }
+  }
+}
+
+.heightClass {
+  :global {
+    .ant-table-body {
+      overflow: auto !important;
+      // height: 520px;
+
+      /* 滚动条样式 */
+      &::-webkit-scrollbar {
+        width: 8px;
+
+        /*  设置纵轴（y轴）轴滚动条 */
+        height: 4px;
+
+        /*  设置横轴（x轴）轴滚动条 */
+      }
+
+      /* 滚动条滑块（里面小方块） */
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background: #c1c1c1;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #7d7d7d;
+      }
+
+      /* 滚动条轨道 */
+      &::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background: #fafafa;
+        box-shadow: inset 0 0 5px rgba(104, 100, 100, 0.2);
+      }
+    }
+  }
+}
+
+.progress_bar {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress_bar_filler {
+  width: 30%;
+
+  /* 假设进度为70% */
+  height: 100%;
+  background-color: #2ecc71;
+  animation: fill-progress 5s linear forwards;
+
+  /* 动画效果 */
+}
+
+@keyframes fill-progress {
+  to {
+    width: 90%;
+
+    /* 实际进度条宽度 */
+  }
+}
+
+.reportNameBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .editIcon {
+    opacity: 0;
+    font-size: 16px;
+  }
+}
+
+.reportNameBox:hover {
+  .editIcon {
+    opacity: 1;
+    color: #01113d;
+  }
+}
+
+.reportNameBoxInput {
+  border: none;
+  font-family: PingFangSC-Semibold;
+  color: #01113d;
+  font-size: 20px;
+  text-align: center;
+  line-height: 54px;
+  height: 54px;
+  text-decoration: underline;
+}
+
+.reportNameBoxInput:focus {
+  box-shadow: none;
+}
+
+.readFamilyBtn {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgba(1, 17, 61, 0.85);
+}
+
+.readFamilyBtn.active {
+  color: #0445fc;
+}

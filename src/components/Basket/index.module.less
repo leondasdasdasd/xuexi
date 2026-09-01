@@ -1,0 +1,143 @@
+@import "antd/lib/style/themes/default.less";
+
+.basket {
+  width: 240px;
+  padding: 12px;
+
+  .header {
+    width: 100%;
+    overflow: scroll;
+    height: 30px;
+
+    .tabList {
+      display: inline-block;
+      white-space: nowrap;
+      color: #999;
+      height: 100%;
+    }
+
+    -webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    .headerTab {
+      display: inline-block;
+      min-width: 40px;
+      margin-right: 10px;
+      cursor: pointer;
+      height: 100%;
+    }
+
+    .checked {
+      color: #4d7fff;
+    }
+  }
+
+  .header::-webkit-scrollbar {
+    display: none;
+  }
+
+  .content {
+    height: auto;
+
+    .questionContent {
+      margin-top: 10px;
+
+      .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: PingFangSC-Medium;
+        color: #000000;
+        font-size: 14px;
+      }
+
+      .chart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: PingFangSC-Light;
+        color: #999999;
+        margin-top: 10px;
+
+        .viewChart {
+          width: 120px;
+          height: 5px;
+          border-radius: 2px;
+          margin-top: 16px;
+
+          .global {
+            position: relative;
+            height: 5px;
+            display: inline-block;
+            top: -2px;
+            vertical-align: top;
+
+            .message {
+              position: absolute;
+              top: -15px;
+              font-size: 12px;
+              min-width: 30px;
+            }
+          }
+
+          .global:first-child {
+            border-radius: 2px 0 0 2px;
+          }
+
+          .global:last-child {
+            border-radius: 0 2px 2px 0;
+          }
+
+          .difficult {
+            background: #dd6b47;
+            color: #dd6b47;
+            border-radius: 0 2px 2px 0;
+
+            .message {
+              text-align: right;
+              right: 0;
+            }
+          }
+
+          .easy {
+            background: #67b251;
+            color: #67b251;
+          }
+
+          .common {
+            background: #e9b635;
+            color: #e9b635;
+          }
+        }
+      }
+    }
+  }
+
+  .viewLink {
+    background: #4d7fff;
+    color: #fff;
+    display: block;
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  .notLink {
+    background: #ccc;
+    color: #fff;
+    display: block;
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+}

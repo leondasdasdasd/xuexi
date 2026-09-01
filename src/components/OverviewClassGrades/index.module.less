@@ -1,0 +1,123 @@
+@import "../../utils/global.less";
+
+.fullScreen {
+  overflow: scroll;
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  background: #fff;
+  z-index: 99;
+}
+
+.textWarp {
+  font-family: PingFangSC-Regular;
+  font-size: 13px;
+  color: #0445fc;
+  font-weight: 400;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mr14 {
+  margin-right: 14px;
+}
+
+.tableCourseDetail {
+  :global(.ant-table-scroll) {
+    tr > th {
+      padding: 12px 10px 22px;
+    }
+  }
+}
+
+.tableBoxContent {
+  border-radius: 0 0 15px 15px;
+  background: #fff;
+  padding-bottom: 10px;
+
+  tr > td {
+    padding: 2px 10px;
+    height: 40px;
+  }
+}
+
+.paragraph {
+  display: inline-block;
+  width: 50px;
+  text-align: left;
+  margin-left: 114px;
+}
+
+.stuPopover {
+  :global(.ant-popover-inner-content) {
+    width: auto;
+  }
+}
+
+.stuInfoBox {
+  width: 450px;
+  height: 220px;
+  overflow: scroll hidden;
+  display: flex;
+  flex-flow: column wrap;
+
+  .stuInfoMessage {
+    position: relative;
+    width: 180px;
+  }
+
+  .sort {
+    // margin-right: 15px;
+    position: absolute;
+    left: 0;
+  }
+
+  .infoName {
+    margin-right: 5px;
+    margin-left: 40px;
+  }
+}
+
+.dropdownWarp {
+  background: #ffffff;
+  box-shadow: 0 4px 16px 0 rgba(1, 17, 61, 0.08);
+  border-radius: 7px;
+  padding: 7px 0;
+  width: 163px;
+
+  :global {
+    .ant-dropdown-menu-item-selected {
+      background: rgba(4, 69, 252, 0.05);
+    }
+
+    .ant-dropdown-menu-item-selected::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      width: 10px;
+      height: 7px;
+      border: 2px solid rgba(4, 69, 252, 1);
+      border-top: none;
+      border-right: none;
+      transform: rotate(314deg);
+    }
+  }
+}
+
+.dropdownItem {
+  position: relative;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(1, 17, 61, 1);
+  font-weight: 400;
+}
+
+.dropdownItem:hover {
+  background: rgba(4, 69, 252, 0.05);
+}
+
+.sortBtn {
+  white-space: nowrap;
+}

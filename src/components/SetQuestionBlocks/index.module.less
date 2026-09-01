@@ -1,0 +1,295 @@
+@import "antd/lib/style/themes/default.less";
+
+.allocationProcessBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .header {
+    z-index: 999;
+    height: 60px;
+    width: 100%;
+    background: #fff;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    line-height: 60px;
+
+    .closeIcon {
+      cursor: pointer;
+      font-size: 24px;
+      margin-left: 24px;
+      display: inline-block;
+      font-family: PingFangSC-Medium;
+      color: rgba(1, 17, 61, 0.65);
+    }
+
+    .viewTitle {
+      font-family: PingFangSC-Medium;
+      color: rgba(1, 17, 61, 0.85);
+      font-size: 18px;
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .headeRight {
+      margin-right: 12px;
+      float: right;
+      font-size: 16px;
+
+      span {
+        display: inline-block;
+        height: 36px;
+        padding: 0 14px;
+        line-height: 36px;
+        border: 6px;
+        border-radius: 8px;
+        font-family: PingFangSC-Medium;
+        color: rgba(1, 17, 61, 0.65);
+        cursor: pointer;
+        background: rgba(1, 17, 61, 0.07);
+      }
+
+      .assignComplete {
+        // padding: 5px 12px;
+        font-family: PingFangSC-Medium;
+        color: #fff;
+        background: #0445fc;
+        cursor: pointer;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .flowPathBox {
+    margin: 23px 16px 60px;
+    height: calc(~"100% - 143px");
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 50px;
+  }
+
+  .allocationBottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    background: #fff;
+    line-height: 60px;
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.04);
+    padding: 0 20px 0 52px;
+
+    .bulkOperationCheckbox {
+      .bulkOperation {
+        margin-left: 12px;
+        font-family: PingFangSC-Medium;
+        color: #01113d;
+      }
+    }
+
+    .bomInline {
+      display: inline-block;
+      padding: 0 13px;
+      font-family: PingFangSC-Medium;
+      color: rgba(1, 17, 61, 0.85);
+      background: rgba(1, 17, 61, 0.05);
+      height: 32px;
+      line-height: 32px;
+      border-radius: 7px;
+      margin-left: 12px;
+      cursor: pointer;
+
+      :global(.ant-popover-inner-content) {
+        padding: 0;
+      }
+
+      .scoringMethodBox {
+        height: 140px;
+        width: 280px;
+        padding: 20px;
+
+        .row {
+          margin-bottom: 15px;
+
+          .testLeft1 {
+            font-family: PingFangSC-Regular;
+            color: #01113d;
+            margin-right: 5px;
+          }
+
+          .testLeft2 {
+            font-family: PingFangSC-Regular;
+            color: #01113d;
+            margin-right: 15px;
+          }
+
+          .sureBtn {
+            float: right;
+            height: 28px;
+            line-height: 28px;
+            width: 68px;
+            text-align: center;
+            background: #0445fc;
+            color: #fff;
+            font-family: PingFangSC-Medium;
+            font-size: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .isStuName {
+      font-family: PingFangSC-Regular;
+      color: rgba(1, 17, 61, 0.65);
+      float: right;
+
+      .radioTitle {
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .setQuestionBlocksBox {
+    padding: 65px 10px 10px 62px;
+
+    .title {
+      font-family: PingFangSC-Semibold;
+      color: rgba(1, 17, 61, 0.85);
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .blocksTip {
+      font-family: PingFangSC-Regular;
+      color: rgba(1, 17, 61, 0.65);
+    }
+
+    .questionBlocksList {
+      display: flex;
+      flex-wrap: wrap;
+      height: calc(~"100vh - 210px");
+      overflow-y: scroll;
+
+      .questionBlocks {
+        background: #ffffff;
+        border: 1px solid rgba(224, 223, 223, 1);
+        padding: 15px;
+        width: 280px;
+        height: 180px;
+        margin-right: 30px;
+        margin-top: 30px;
+        position: relative;
+        border-radius: 7px;
+
+        .blocksTitle {
+          font-family: PingFangSC-Semibold;
+          color: rgba(1, 17, 61, 0.65);
+          border-bottom: 1px solid rgba(1, 17, 61, 0.05);
+          padding-bottom: 5px;
+
+          :global(.ant-input) {
+            border: 0;
+          }
+        }
+
+        .questionList {
+          // display: flex;
+          // justify-content: space-between;
+          // flex-direction: row;
+          // flex-wrap: wrap;
+          height: 122px;
+          overflow-y: scroll;
+
+          .questionNum {
+            display: inline-block;
+            width: 64px;
+            height: 30px;
+            margin-right: 10px;
+            line-height: 30px;
+            text-align: center;
+            background: rgba(1, 17, 61, 0.05);
+            border: 1px solid rgba(1, 17, 61, 0.15);
+            font-family: PingFangSC-Regular;
+            color: #01113d;
+            margin-top: 10px;
+            position: relative;
+
+            i {
+              position: absolute;
+              top: -13px;
+              right: -5px;
+              color: #8b93a7;
+              font-size: 12px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .addQuestionTest {
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.45);
+          text-align: center;
+          line-height: 120px;
+          cursor: pointer;
+        }
+
+        .iconDelete {
+          color: #8b93a7;
+          font-size: 20px;
+          position: absolute;
+          bottom: 8px;
+          right: 15px;
+          cursor: pointer;
+        }
+
+        .selectQuestion {
+          position: absolute;
+          top: 180px;
+          left: 0;
+          width: 280px;
+          height: 240px;
+          overflow-y: scroll;
+          background: #fff;
+          box-shadow: 0 4px 16px 0 rgba(1, 17, 61, 0.08);
+          z-index: 99;
+
+          .questionBox {
+            width: 100%;
+            height: 36px;
+            line-height: 36px;
+            font-family: PingFangSC-Regular;
+            color: #01113d;
+            padding: 0 22px;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+              color: #0445fc;
+              font-size: 16px;
+            }
+          }
+
+          .questionBox:hover {
+            background: rgba(4, 69, 252, 0.05);
+          }
+        }
+      }
+
+      .addBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .addQuestionBlock {
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.45);
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

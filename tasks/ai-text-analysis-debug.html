@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 文本解析调试页</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #20242a;
+      background: #f5f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 12px;
+      line-height: 1.6;
+      color: #5d6673;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
+      gap: 16px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .panel {
+      min-width: 0;
+      padding: 16px;
+      border: 1px solid #d9e0ea;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .field {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #303846;
+    }
+
+    textarea,
+    input,
+    select {
+      width: 100%;
+      border: 1px solid #c8d1df;
+      border-radius: 6px;
+      color: #20242a;
+      background: #fff;
+      font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    textarea {
+      min-height: 168px;
+      padding: 10px;
+      resize: vertical;
+      tab-size: 2;
+    }
+
+    input,
+    select {
+      height: 36px;
+      padding: 0 10px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    button {
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid #aeb9c8;
+      border-radius: 6px;
+      color: #1f2937;
+      background: #f8fafc;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    button.primary {
+      border-color: #2463eb;
+      color: #fff;
+      background: #2463eb;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    pre {
+      min-height: 120px;
+      max-height: 420px;
+      margin: 0;
+      padding: 12px;
+      overflow: auto;
+      border: 1px solid #d9e0ea;
+      border-radius: 6px;
+      color: #172033;
+      background: #f8fafc;
+      font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .status {
+      min-height: 24px;
+      margin: 8px 0 0;
+      color: #2463eb;
+      font-size: 13px;
+    }
+
+    .hint {
+      padding: 10px 12px;
+      border: 1px solid #f1d18a;
+      border-radius: 6px;
+      color: #735100;
+      background: #fff8e6;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      body {
+        padding: 14px;
+      }
+
+      .layout,
+      .row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="layout">
+    <section class="panel">
+      <h1>AI 文本解析调试页</h1>
+      <p>建议先打开 https://ai.yungu.org/exam，再把右侧生成的注入脚本复制到控制台执行，这样请求会在 ai.yungu.org 同源下携带登录态。</p>
+
+      <div class="actions">
+        <button type="button" data-action="load-score">载入平均成绩样例</button>
+        <button type="button" data-action="load-target">载入分数线样例</button>
+        <button type="button" data-action="normalize">空格表格转 Tab</button>
+        <button type="button" data-action="reset-schema">重置 Schema</button>
+      </div>
+
+      <div class="field">
+        <label for="inputText">inputText</label>
+        <textarea id="inputText" spellcheck="false"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="analysisInstruction">analysisInstruction</label>
+        <textarea id="analysisInstruction" spellcheck="false"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="analysisType">analysisType</label>
+          <input id="analysisType" value="qualityBenchmarkTextImport">
+        </div>
+        <div class="field">
+          <label for="model">model</label>
+          <input id="model" value="qwen3-max">
+        </div>
+        <div class="field">
+          <label for="forceAnalysis">forceAnalysis</label>
+          <select id="forceAnalysis">
+            <option value="false" selected>false</option>
+            <option value="true">true</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="authorization">Authorization（可选，示例：Bearer xxx）</label>
+        <input id="authorization" placeholder="从 ai.yungu.org 的 Network 请求头复制 Authorization；为空则不传">
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="requestMode">请求模式</label>
+          <select id="requestMode">
+            <option value="proxy" selected>本地 Cookie 代理</option>
+            <option value="direct">浏览器直连 ai.yungu.org</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cookie">Cookie（代理模式可选）</label>
+          <input id="cookie" placeholder="从 ai.yungu.org 的 Network 请求头复制 Cookie；为空则不传">
+        </div>
+        <div class="field">
+          <label for="proxyUrl">本地代理地址</label>
+          <input id="proxyUrl">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="jsonSchema">jsonSchema</label>
+        <textarea id="jsonSchema" spellcheck="false"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="primary" data-action="send">调用 AI 网关</button>
+        <button type="button" data-action="copy-request">复制请求体</button>
+        <button type="button" data-action="copy-curl">复制 curl</button>
+        <button type="button" data-action="clear-output">清空输出</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <aside class="panel">
+      <h2>同源注入脚本</h2>
+      <p class="hint">打开 https://ai.yungu.org/exam，登录后在 DevTools Console 粘贴下面脚本。直接本地打开本页调用可能受 CORS 或 Cookie 限制。</p>
+      <div class="actions">
+        <button type="button" data-action="build-inject">生成注入脚本</button>
+        <button type="button" data-action="copy-inject">复制注入脚本</button>
+      </div>
+      <textarea id="injectScript" spellcheck="false" readonly></textarea>
+
+      <h2>请求体</h2>
+      <pre id="requestPreview"></pre>
+
+      <h2>原始响应</h2>
+      <pre id="rawResponse"></pre>
+
+      <h2>analysisJson</h2>
+      <pre id="analysisJson"></pre>
+
+      <h2>analysisText</h2>
+      <pre id="analysisText"></pre>
+    </aside>
+  </main>
+
+  <script>
+    const apiUrl = "https://ai.yungu.org/center/api/file-services/textAnalysis";
+
+    const scoreSample = [
+      "学校  考试人数        总分平均分      总分及格率      总分良好率      总分优秀率      语文平均分      语文及格率      语文良好率      语文优秀率      数学平均分      数学及格率      数学良好率      数学优秀率      英语平均分      英语及格率      英语良好率      英语优秀率",
+      "实验中学      423     610.5   80.74   65.2    24.23   93.12   96.21   78.3    21.8    82.85   74.17   60.4    20.38   94.6    86.2    70.5    32.4",
+      "华辰学校      456     625.3   83.84   68.1    29.49   93.98   96.26   80.1    22.2    88.65   81.98   66.5    33.85   98.2    89.4    73.1    38.6"
+    ].join("\n");
+
+    const targetSample = [
+      "学校\t考试人数\t650\t600\t550",
+      "实验中学\t423\t88\t156\t238",
+      "华辰学校\t456\t102\t178\t266",
+      "启明中学\t398\t73\t141\t219"
+    ].join("\n");
+
+    const defaultSchema = {
+      type: "object",
+      properties: {
+        scoreRows: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              schoolName: { type: "string" },
+              subjectName: { type: "string" },
+              studentCount: { type: "number" },
+              avgScore: { type: "number" },
+              passRate: { type: "number" },
+              goodRate: { type: "number" },
+              excellentRate: { type: "number" }
+            }
+          }
+        },
+        targetLineRows: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              schoolName: { type: "string" },
+              studentCount: { type: "number" },
+              targetScore: { type: "number" },
+              onlineCount: { type: "number" },
+              onlineRate: { type: "number" }
+            }
+          }
+        },
+        warnings: {
+          type: "array",
+          items: { type: "string" }
+        }
+      }
+    };
+
+    const scoreSchema = {
+      type: "object",
+      properties: {
+        scoreRows: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              schoolName: { type: "string" },
+              subjectName: { type: "string" },
+              studentCount: { type: "number" },
+              avgScore: { type: "number" },
+              passRate: { type: "number" },
+              goodRate: { type: "number" },
+              excellentRate: { type: "number" }
+            },
+            required: [
+              "schoolName",
+              "subjectName",
+              "studentCount",
+              "avgScore",
+              "passRate",
+              "goodRate",
+              "excellentRate"
+            ]
+          }
+        },
+        targetLineRows: {
+          type: "array",
+          maxItems: 0,
+          items: {
+            type: "object",
+            properties: {
+              schoolName: { type: "string" },
+              studentCount: { type: "number" },
+              targetScore: { type: "number" },
+              onlineCount: { type: "number" },
+              onlineRate: { type: "number" }
+            }
+          }
+        },
+        warnings: {
+          type: "array",
+          items: { type: "string" }
+        }
+      },
+      required: ["scoreRows", "targetLineRows", "warnings"]
+    };
+
+    const targetSchema = {
+      type: "object",
+      properties: {
+        scoreRows: {
+          type: "array",
+          maxItems: 0,
+          items: {
+            type: "object",
+            properties: {
+              schoolName: { type: "string" },
+              subjectName: { type: "string" },
+              studentCount: { type: "number" },
+              avgScore: { type: "number" },
+              passRate: { type: "number" },
+              goodRate: { type: "number" },
+              excellentRate: { type: "number" }
+            }
+          }
+        },
+        targetLineRows: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              schoolName: { type: "string" },
+              studentCount: { type: "number" },
+              targetScore: { type: "number" },
+              onlineCount: { type: "number" },
+              onlineRate: { type: "number" }
+            },
+            required: [
+              "schoolName",
+              "studentCount",
+              "targetScore",
+              "onlineCount",
+              "onlineRate"
+            ]
+          }
+        },
+        warnings: {
+          type: "array",
+          items: { type: "string" }
+        }
+      },
+      required: ["scoreRows", "targetLineRows", "warnings"]
+    };
+
+    function scoreInstruction() {
+      return [
+        "# Role",
+        "你是一个高性能的成绩汇总校内外对比导入助手，专精于将 CSV/TSV 等纯文本表格精准解析为结构化的 JSON。",
+        "",
+        "# Task",
+        "请将用户粘贴的 CSV/TSV 文本表格数据提取并转换为符合指定 JSON Schema 的结构化数据。",
+        "当前考试：本次考试。当前年级：未提供。",
+        "inputText 已尽量规范为 Tab 分隔表格，请严格按列解析，不要把相邻列合并到同一个字段。",
+        "",
+        "# Core Rules（严禁遗漏数据）",
+        "1. 【完整性原则】：必须提取出表格中对应科目的所有数值（平均分、及格率、良好率、优秀率）。严禁只输出名称而丢弃具体的数值字段！",
+        "2. 【记录拆分】：每一行学校数据必须按科目拆分成多条记录。",
+        "   - “总分平均分、总分及格率、总分良好率、总分优秀率”对应一条记录，subjectName 填 “总分”。",
+        "   - “语文平均分、语文及格率、语文良好率、语文优秀率”对应一条记录，subjectName 填 “语文”。",
+        "   - 数学、英语等科目同理分别输出一条记录。",
+        "3. 【数据过滤】：本次只解析平均成绩相关数据，写入 `scoreRows` 数组。`targetLineRows` 固定返回空数组 `[]`。",
+        "",
+        "# Field Mapping",
+        "- schoolName: 学校名称 (string)",
+        "- subjectName: 科目名称，如 \"总分\"、\"语文\"、\"数学\"、\"英语\" (string)",
+        "- studentCount: 考试人数 (number)",
+        "- avgScore: 对应科目的平均分 (number)",
+        "- passRate: 对应科目的及格率，统一输出纯数字的百分数数值（如 80.74）",
+        "- goodRate: 对应科目的良好率，统一输出纯数字的百分数数值（如 65.2）",
+        "- excellentRate: 对应科目的优秀率，统一输出纯数字的百分数数值（如 24.23）",
+        "",
+        "# Output Format",
+        "- 请【绝对只返回标准的 JSON 数据】，不要包含任何前言、解释、markdown 块外的文本。"
+      ].join("\n");
+    }
+
+    function targetInstruction() {
+      return [
+        "# Role",
+        "你是一个高性能的成绩汇总校内外对比分数线导入助手，专精于将 CSV/TSV 等纯文本宽表精准解析为结构化 JSON。",
+        "",
+        "# Task",
+        "请将用户粘贴的分数线宽表数据提取并转换为符合指定 JSON Schema 的结构化数据。",
+        "当前考试：本次考试。当前年级：未提供。",
+        "inputText 已尽量规范为 Tab 分隔表格，请严格按列解析，不要把相邻列合并到同一个字段。",
+        "",
+        "# Core Rules（严禁拆散行）",
+        "1. 【只解析分数线】：本次只解析分数线/总分上线数据，写入 `targetLineRows` 数组。`scoreRows` 固定返回空数组 `[]`。",
+        "2. 【数字表头含义】：宽表第一行中，“学校”“考试人数”之后的数字表头就是分数线 `targetScore`（例如 650、600、550），请剔除可能存在的“分”等单位，仅提取纯数字。严禁把这些数字解析为科学计数法或上线人数。",
+        "3. 【记录展开】：每一行学校数据必须按每个分数线展开成多条完整记录。",
+        "   - 例如表头为“学校、考试人数、650、600、550”，数据行为“实验中学、423、88、156、238”。",
+        "   - 必须输出 3 条记录：targetScore=650 onlineCount=88；targetScore=600 onlineCount=156；targetScore=550 onlineCount=238。",
+        "4. 【完整对象】：每条 targetLineRows 记录必须同时包含 schoolName、studentCount、targetScore、onlineCount、onlineRate。严禁把 schoolName/studentCount/targetScore 和 onlineCount 拆成不同对象。",
+        "5. 【异常兜底】：若解析过程中无业务或格式异常，`warnings` 字段固定返回空数组 `[]`。",
+        "",
+        "# Field Mapping",
+        "- schoolName: 学校名称 (string)",
+        "- studentCount: 考试人数 (number)",
+        "- targetScore: 分数线，来自表头中的数字列，转换为纯数字 (number)",
+        "- onlineCount: 当前学校在该分数线下的上线人数，来自数据行对应数字列 (number)",
+        "- onlineRate: 上线率。计算公式：(onlineCount / studentCount) * 100。输出纯数字，保留4位小数，进行四舍五入。例如：20.8038 (number)",
+        "",
+        "# Output Format",
+        "- 请【绝对只返回标准的 JSON 数据】，不要包含任何前言、解释、markdown 块外的文本。"
+      ].join("\n");
+    }
+
+    function getElement(id) {
+      return document.getElementById(id);
+    }
+
+    function getDefaultProxyUrl() {
+      if (window.location.protocol === "file:") {
+        return "http://127.0.0.1:8766/proxy/textAnalysis";
+      }
+      if (window.location.port === "8766") {
+        return "/proxy/textAnalysis";
+      }
+      return `${window.location.protocol}//${window.location.hostname}:8766/proxy/textAnalysis`;
+    }
+
+    function setStatus(text) {
+      getElement("status").textContent = text || "";
+    }
+
+    function formatJson(value) {
+      return JSON.stringify(value, null, 2);
+    }
+
+    function normalizeText(text) {
+      return String(text || "")
+        .split(/\r?\n/)
+        .map((line) => line.trim().split(/\s+/).filter(Boolean).join("\t"))
+        .filter(Boolean)
+        .join("\n");
+    }
+
+    function parseSchema() {
+      try {
+        return JSON.parse(getElement("jsonSchema").value);
+      } catch (error) {
+        throw new Error("jsonSchema 不是合法 JSON：" + error.message);
+      }
+    }
+
+    function buildRequestBody() {
+      return {
+        inputText: getElement("inputText").value,
+        analysisInstruction: getElement("analysisInstruction").value,
+        analysisType: getElement("analysisType").value,
+        jsonSchema: parseSchema(),
+        model: getElement("model").value,
+        forceAnalysis: getElement("forceAnalysis").value === "true"
+      };
+    }
+
+    function buildRequestHeaders() {
+      const headers = {
+        accept: "application/json",
+        "content-type": "application/json; charset=utf-8"
+      };
+      const authorization = getElement("authorization").value.trim();
+      if (authorization) {
+        headers.Authorization = authorization;
+      }
+      return headers;
+    }
+
+    function buildProxyPayload() {
+      return {
+        cookie: getElement("cookie").value.trim(),
+        authorization: getElement("authorization").value.trim(),
+        body: buildRequestBody()
+      };
+    }
+
+    function getEffectiveRequestUrl() {
+      return getElement("requestMode").value === "proxy"
+        ? getElement("proxyUrl").value.trim() || "/proxy/textAnalysis"
+        : apiUrl;
+    }
+
+    function buildCurlCommand() {
+      const isProxyMode = getElement("requestMode").value === "proxy";
+      const headers = isProxyMode
+        ? { "content-type": "application/json; charset=utf-8" }
+        : buildRequestHeaders();
+      const body = isProxyMode ? buildProxyPayload() : buildRequestBody();
+      const headerText = Object.keys(headers)
+        .map((key) => `  -H ${JSON.stringify(`${key}: ${headers[key]}`)} \\`)
+        .join("\n");
+      return [
+        `curl ${JSON.stringify(getEffectiveRequestUrl())} \\`,
+        headerText,
+        `  --data-raw ${JSON.stringify(JSON.stringify(body))}`
+      ].join("\n");
+    }
+
+    function refreshRequestPreview() {
+      try {
+        const isProxyMode = getElement("requestMode").value === "proxy";
+        getElement("requestPreview").textContent = formatJson({
+          mode: isProxyMode ? "proxy" : "direct",
+          url: getEffectiveRequestUrl(),
+          headers: isProxyMode
+            ? {
+                "content-type": "application/json; charset=utf-8",
+                Cookie: getElement("cookie").value.trim() ? "已填写，不在预览中展开" : "",
+                Authorization: getElement("authorization").value.trim() ? "已填写，不在预览中展开" : ""
+              }
+            : buildRequestHeaders(),
+          body: isProxyMode ? buildProxyPayload() : buildRequestBody()
+        });
+      } catch (error) {
+        getElement("requestPreview").textContent = error.message;
+      }
+    }
+
+    function loadScoreSample() {
+      getElement("inputText").value = normalizeText(scoreSample);
+      getElement("analysisInstruction").value = scoreInstruction();
+      getElement("jsonSchema").value = formatJson(scoreSchema);
+      refreshRequestPreview();
+    }
+
+    function loadTargetSample() {
+      getElement("inputText").value = normalizeText(targetSample);
+      getElement("analysisInstruction").value = targetInstruction();
+      getElement("jsonSchema").value = formatJson(targetSchema);
+      refreshRequestPreview();
+    }
+
+    function resetSchema() {
+      getElement("jsonSchema").value = formatJson(defaultSchema);
+      refreshRequestPreview();
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+    }
+
+    function buildInjectScript() {
+      const html = document.documentElement.outerHTML;
+      const code = [
+        "(() => {",
+        "  const html = " + JSON.stringify(html) + ";",
+        "  document.open();",
+        "  document.write(html);",
+        "  document.close();",
+        "})();"
+      ].join("\n");
+      getElement("injectScript").value = code;
+      setStatus("已生成注入脚本");
+    }
+
+    async function sendRequest() {
+      const button = document.querySelector('[data-action="send"]');
+      button.disabled = true;
+      setStatus("请求中...");
+      refreshRequestPreview();
+      getElement("rawResponse").textContent = "";
+      getElement("analysisJson").textContent = "";
+      getElement("analysisText").textContent = "";
+      try {
+        const isProxyMode = getElement("requestMode").value === "proxy";
+        const response = await fetch(getEffectiveRequestUrl(), {
+          method: "POST",
+          mode: "cors",
+          credentials: "include",
+          headers: isProxyMode
+            ? { "content-type": "application/json; charset=utf-8" }
+            : buildRequestHeaders(),
+          body: JSON.stringify(isProxyMode ? buildProxyPayload() : buildRequestBody())
+        });
+        const text = await response.text();
+        let data;
+        try {
+          data = JSON.parse(text);
+        } catch {
+          data = text;
+        }
+        getElement("rawResponse").textContent =
+          typeof data === "string" ? data : formatJson(data);
+        const content = data && data.content ? data.content : {};
+        getElement("analysisJson").textContent = content.analysisJson
+          ? formatJson(content.analysisJson)
+          : "";
+        getElement("analysisText").textContent = content.analysisText || "";
+        setStatus("请求完成：" + response.status);
+      } catch (error) {
+        getElement("rawResponse").textContent = error.stack || error.message;
+        setStatus("请求失败");
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    document.addEventListener("click", async (event) => {
+      const action = event.target && event.target.dataset.action;
+      if (!action) {
+        return;
+      }
+      if (action === "load-score") {
+        loadScoreSample();
+      }
+      if (action === "load-target") {
+        loadTargetSample();
+      }
+      if (action === "normalize") {
+        getElement("inputText").value = normalizeText(getElement("inputText").value);
+        refreshRequestPreview();
+      }
+      if (action === "reset-schema") {
+        resetSchema();
+      }
+      if (action === "send") {
+        sendRequest();
+      }
+      if (action === "copy-request") {
+        await copyText(formatJson(buildRequestBody()));
+        setStatus("已复制请求体");
+      }
+      if (action === "copy-curl") {
+        await copyText(buildCurlCommand());
+        setStatus("已复制 curl");
+      }
+      if (action === "clear-output") {
+        getElement("rawResponse").textContent = "";
+        getElement("analysisJson").textContent = "";
+        getElement("analysisText").textContent = "";
+        setStatus("");
+      }
+      if (action === "build-inject") {
+        buildInjectScript();
+      }
+      if (action === "copy-inject") {
+        if (!getElement("injectScript").value) {
+          buildInjectScript();
+        }
+        await copyText(getElement("injectScript").value);
+        setStatus("已复制注入脚本");
+      }
+    });
+
+    ["inputText", "analysisInstruction", "analysisType", "model", "forceAnalysis", "authorization", "requestMode", "cookie", "proxyUrl", "jsonSchema"].forEach((id) => {
+      getElement(id).addEventListener("input", refreshRequestPreview);
+      getElement(id).addEventListener("change", refreshRequestPreview);
+    });
+
+    resetSchema();
+    getElement("proxyUrl").value = getDefaultProxyUrl();
+    loadTargetSample();
+    buildInjectScript();
+  </script>
+</body>
+</html>

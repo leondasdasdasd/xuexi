@@ -1,0 +1,290 @@
+@import "antd/lib/style/themes/default.less";
+
+.globalUtil {
+  position: relative;
+  z-index: 999;
+
+  .user {
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+
+    .action {
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.3s;
+      height: 100%;
+
+      .name {
+        display: inline-block;
+        width: 72px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+      }
+
+      > i {
+        font-size: 12px;
+        vertical-align: middle;
+        // color: @text-color;
+        color: #fff;
+      }
+      // &:hover,
+      // &:global(.ant-popover-open) {
+      //   background: @primary-1;
+      // }
+    }
+
+    .search {
+      padding: 0;
+      margin: 0 12px;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    .account {
+      .avatar {
+        margin: 20px 8px 20px 0;
+        color: @primary-color;
+        background: rgba(255, 255, 255, 0.85);
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.menu {
+  width: 250px;
+
+  .personal {
+    display: flex;
+
+    .avatar {
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 20px;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .changeImg {
+        position: absolute;
+        bottom: 0;
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .information {
+      padding: 10px 0;
+      line-height: 20px;
+
+      .name {
+        max-width: 120px;
+        overflow: hidden;
+        word-break: break-all;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .identify {
+        cursor: pointer;
+        color: #3c76f7;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.menu > li {
+  line-height: 50px;
+  display: flex;
+
+  span {
+    margin-left: 20px;
+  }
+}
+
+.menu > li:first-child {
+  cursor: default;
+  height: 90px;
+}
+
+.menu > li:first-child:hover {
+  background: #fff;
+}
+
+.languagebox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    i {
+      font-size: 40px;
+    }
+  }
+}
+
+.modal {
+  height: 250px;
+}
+
+.searchHomePage {
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 40px;
+  color: #666 !important;
+  vertical-align: middle;
+}
+
+:global {
+  .ant-modal-body {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
+.homePageBtn > span > input {
+  border-radius: 20px !important;
+}
+
+.homePageBtn > span > span > i {
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+@media screen and (max-width: 3000px) {
+  .user {
+    .action {
+      padding: 0 12px;
+
+      > i {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .iframeStyle {
+    width: 400px;
+    //height: 250px;
+    border: 0 !important;
+  }
+
+  .changePassword {
+    width: 400px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: @screen-xxl) {
+  .user {
+    .action {
+      padding: 0 12px;
+
+      > i {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .iframeStyle {
+    width: 400px;
+    //height: 250px;
+  }
+
+  .changePassword {
+    width: 400px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: @screen-lg) {
+  .user {
+    .action {
+      padding: 0 12px;
+
+      > i {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .iframeStyle {
+    width: 400px;
+    //height: 250px;
+  }
+
+  .changePassword {
+    width: 400px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .user {
+    .action {
+      padding: 0 12px;
+
+      > i {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .iframeStyle {
+    width: 400px;
+    //height: 250px;
+  }
+
+  .changePassword {
+    width: 400px;
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .user {
+    .action {
+      padding: 0;
+
+      > i {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .iframeStyle {
+    width: 300px;
+    //height: 220px;
+  }
+
+  .changePassword {
+    width: 400px;
+    height: 260px;
+  }
+}

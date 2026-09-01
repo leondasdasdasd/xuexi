@@ -1,0 +1,35 @@
+@import "antd/lib/style/themes/default.less";
+
+.queryCriteriaTable {
+  padding: 10px;
+  height: 500px;
+
+  :global(.ant-table-thead) > tr > th {
+    padding: 9px 0 9px 10px !important;
+  }
+
+  :global(.ant-table-tbody) > tr > td {
+    padding: 9px 0 9px 10px !important;
+  }
+
+  .operate {
+    color: #0445fc;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  .tableBody {
+    height: 450px;
+    overflow-y: scroll;
+  }
+
+  .paginations {
+    background: #fff;
+    height: 32px;
+    // border-radius: 0 0 15px 15px ;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 99;
+  }
+}

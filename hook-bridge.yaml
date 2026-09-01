@@ -1,0 +1,13 @@
+version: 1
+
+defaults:
+  shell: sh
+  timeout_sec: 1800
+
+hooks:
+  - id: stop.static-checks
+    description: Run the workspace verification gate before allowing a stop event to finish.
+    event: Stop
+    status_message: Verifying...
+    command: |
+      npm run lint:changed

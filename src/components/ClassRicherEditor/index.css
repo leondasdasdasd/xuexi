@@ -1,0 +1,68 @@
+.operButton {
+  display: block;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #dddddd;
+  border-top: 0;
+  background: #f4f5f7;
+  padding: 8px 16px;
+}
+
+.operButton span {
+  display: inline-block;
+  cursor: pointer;
+  color: #0445fc;
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+}
+
+.operButton .lockTime {
+  color: rgba(1, 17, 61, 0.65);
+}
+
+.operButton .cancelBtn {
+  background: rgba(1, 17, 61, 0.1);
+  color: rgba(1, 17, 61, 0.65);
+  border-radius: 5px;
+  padding: 2px 20px;
+}
+
+.operButton .saveBtn {
+  background: #003ef6;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin-left: 12px;
+  margin: 10px 12px;
+  font-size: 14px;
+}
+
+:global .bf-controlbar {
+  background: #f4f5f7;
+  border-radius: 10px 10px 0 0;
+}
+
+:global .bf-container .bf-content {
+  height: auto !important;
+  min-height: 300px !important;
+  max-height: 413px !important;
+  overflow-y: scroll;
+}
+
+:global .bf-container .public-DraftEditor-content {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+:global .bf-table-container .bf-col-tool-handler {
+  height: 15px !important;
+}
+
+:global .fullscreen .bf-content {
+  max-height: 80vh !important;
+}
+
+.editorWrapper {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

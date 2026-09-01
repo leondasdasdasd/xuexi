@@ -1,0 +1,139 @@
+@import "../../utils/global.less";
+
+.header {
+  z-index: 999;
+  height: 64px;
+  width: 100%;
+  background: #fff;
+  line-height: 64px;
+  position: relative;
+
+  .closeIcon {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 20px;
+    display: inline-block;
+    font-family: PingFangSC-Medium;
+    color: #01113d;
+    margin-right: 10px;
+  }
+
+  .viewTitle {
+    font-family: PingFangSC-Medium;
+    color: #01113d;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  .headeRight {
+    margin-right: 12px;
+    float: right;
+    border-radius: 7px;
+    cursor: pointer;
+
+    :global(.ant-btn) {
+      margin: 16px 20px 0 0;
+      background: #4d7fff;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+
+    button {
+      height: 32px;
+      width: 80px;
+      background: #0445fc;
+      text-align: center;
+      line-height: 32px;
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+    }
+  }
+}
+
+.formContent {
+  background-color: #fff;
+  padding: 25px 25px 10px;
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 14px;
+    }
+
+    .ant-form-item-control {
+      line-height: 32px;
+    }
+
+    .ant-form-item-label {
+      line-height: 32px;
+    }
+  }
+}
+
+.contentBox {
+  padding: 12px 24px 12px 64px;
+  box-shadow: 0 1px 4px 0 rgba(1, 17, 61, 0.04);
+
+  .tableWarp {
+    .tabletHead {
+      height: 36px;
+      background: rgba(1, 17, 61, 0.05);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    .tabletBody {
+      background-color: #fff;
+    }
+
+    tr td {
+      font-family: "PingFang SC";
+    }
+
+    thead tr th {
+      padding: 0 16px;
+    }
+
+    tbody tr td {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: normal;
+      color: #01113d;
+      padding: 0 16px;
+    }
+  }
+
+  .title {
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: rgba(1, 17, 61, 0.85);
+    margin: 8px 0;
+  }
+}
+
+.gradeCheckedContent {
+  position: relative;
+
+  .checkAllBox {
+    position: absolute;
+    line-height: 32px;
+    height: 32px;
+    top: 0;
+    left: 0;
+  }
+
+  .checkboxGroupBox {
+    line-height: 32px;
+
+    :global {
+      .ant-checkbox-group-item:first-child {
+        margin-left: 66px;
+      }
+    }
+  }
+}

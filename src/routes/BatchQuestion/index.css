@@ -1,0 +1,227 @@
+body {
+  word-wrap: break-word;
+}
+
+.mainContent {
+  font-family: PingFangSC-Regular;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100% - 136px);
+  word-break: break-all;
+  background-color: #fff;
+  word-wrap: break-word;
+}
+
+.mainContent .tabList {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  line-height: 60px;
+  padding-left: 15px;
+}
+
+.mainContent .tabList .questionBank {
+  position: absolute;
+  right: 307px;
+  top: 7px;
+  font-size: 14px;
+  width: 90px;
+  height: 32px;
+  background: rgba(1, 17, 61, 0.05);
+  text-align: center;
+  line-height: 32px;
+  border-radius: 10px;
+}
+
+.mainContent .tabList .testBasket {
+  position: absolute;
+  right: 160px;
+  top: 7px;
+  font-size: 14px;
+  height: 32px;
+  width: 137px;
+  text-align: center;
+  line-height: 32px;
+  background: #0445fc;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.mainContent .tabList .returnMy {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mainContent .tabList .cur {
+  margin-right: 10px;
+}
+
+.mainContent .tabList .cur a {
+  color: #3b6ff5 !important;
+}
+
+.mainContent .tabList .normal {
+  margin-right: 10px;
+}
+
+.mainContent .tabList .normal a {
+  color: #ccc !important;
+}
+
+.mainContent .tabList .entryTitle {
+  position: absolute;
+  right: 50px;
+  top: 7px;
+  height: 36px;
+  line-height: 36px;
+  cursor: pointer;
+  font-family: PingFangSC-Medium;
+  color: #0445fc !important;
+  background: rgba(4, 69, 252, 0.1);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.mainContent .tabList .buyCar {
+  position: absolute;
+  right: 45px;
+  top: 14px;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+  font-family: PingFangSC-Medium;
+  color: #0445fc !important;
+  background: rgba(4, 69, 252, 0.1);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.mainContent .tabList .buyCar .count {
+  margin-left: 5px;
+}
+
+.mainContent .tabList .buyCar .split {
+  color: #94aaf4 !important;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.mainContent .menu a {
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.mainContent .menu a:first-child {
+  margin-left: 0;
+}
+
+.mainContent .menu span.menuTitle {
+  color: #999;
+  font-size: 14px;
+}
+
+.mainContent .menu span.selectedMenu {
+  color: #4d7fff;
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+}
+
+.mainContent .inputType {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.mainContent .inputType .inputArea {
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  justify-content: space-between;
+}
+
+.mainContent .inputType .inputArea .inputTitle {
+  font-size: 18px;
+  display: block;
+}
+
+.mainContent .inputType .inputArea .inputTitle em {
+  display: inline-block;
+  font-style: normal;
+}
+
+.mainContent .inputType .inputArea .inputTitle .newIcon {
+  width: 33px;
+  vertical-align: bottom;
+}
+
+.mainContent .inputType .inputArea .inputTips {
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.mainContent .inputType .inputArea .inputButton {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 20px;
+  min-width: 400px;
+  flex: 1;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.mainContent .inputType .inputArea .inputButton .inputTitle {
+  color: #666;
+  font-size: 18px;
+  display: block;
+}
+
+.mainContent .inputType .inputArea .inputButton .inputTips {
+  color: #999;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+
+.mainContent .inputType .inputArea .selectInputButton {
+  border: 1px solid #4d7fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px 20px;
+  min-width: 400px;
+  flex: 1;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.mainContent .inputType .inputArea .selectInputButton .inputTitle {
+  color: #4d7fff;
+}
+
+.mainContent .inputType .inputArea .selectInputButton .inputTips {
+  color: #4d7fff;
+}
+
+:global .inputStem {
+  width: 152px;
+  height: 88px !important;
+  border-radius: 10px;
+}
+
+:global .inputStem .ant-dropdown-menu {
+  padding: 0;
+}
+
+:global .inputStem .ant-dropdown-menu-item {
+  padding: 0 24px;
+  font-size: 16px;
+  height: 42px;
+  line-height: 42px;
+}
+
+:global .inputStem .ant-dropdown-menu-item-active {
+  background: rgba(4, 69, 252, 0.1);
+}

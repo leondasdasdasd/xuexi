@@ -1,0 +1,1625 @@
+.missScoreBox {
+  width: 400px;
+  height: 300px;
+  overflow: scroll;
+
+  .stuMessageTitle {
+    font-family: PingFangSC-Medium;
+    color: #4a5270;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .missScoreQuestion {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebecf0;
+  }
+}
+
+#table1 {
+  td {
+    height: 30px !important;
+  }
+}
+
+.noScorll::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}
+
+.stuMessageBox {
+  // display: flex;
+  // flex-direction: row;
+  max-width: 410px;
+  max-height: 200px;
+  overflow-y: scroll;
+
+  .stuMessage {
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+
+    .imgBox {
+      width: 48px;
+      height: 48px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      display: block;
+      margin-bottom: 5px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .stuName {
+      color: #000;
+      font-size: 12px;
+      margin-bottom: 5px;
+      display: block;
+      width: 48px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      overflow: hidden;
+      font-style: normal;
+    }
+
+    .stuEnName {
+      color: #000;
+      font-size: 12px;
+      margin-bottom: 5px;
+      display: block;
+      width: 48px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+      overflow: hidden;
+      font-style: normal;
+    }
+  }
+}
+
+.tableBox {
+  flex: 1;
+  width: 100%;
+  // overflow: hidden;
+  // height: 100%;
+  // padding-left: 10px;
+  // padding-top: 10px;
+  padding: 10px 12px 0;
+  // overflow-y: scroll;
+  // background: #fff;
+  border-radius: 0 0 15px 15px;
+
+  // margin-bottom: 10px;
+  // :global(.ant-table-tbody) {
+  //     tr:first-child {
+  //         background: #e0f5fe;
+  //     }
+  // }
+
+  :global(.ant-pagination) {
+    float: right;
+  }
+
+  .paginations {
+    background: #fff;
+    height: 32px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .tableBoxHeader {
+    height: 52px;
+    border-radius: 15px 15px 0 0;
+    background: #fff;
+    padding: 0 16px;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    // margin-bottom: 20px;
+    .tabSub {
+      white-space: nowrap;
+      width: 100%;
+      overflow-x: scroll;
+      padding-top: 20px;
+
+      .subBox {
+        display: inline-block;
+        padding: 0 20px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .subBox:hover {
+        border-bottom: 2px solid blue;
+      }
+    }
+
+    :global(.ant-select) {
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    :global(.ant-pagination) {
+      position: absolute;
+      right: 100px;
+      top: 14px;
+    }
+
+    .tableHeaderSpan {
+      height: 16px;
+      width: 8px;
+      display: inline-block;
+      background: #11dc5d;
+      border-radius: 2px;
+      line-height: 52px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .tableHeaderTitle {
+      font-family: PingFangSC-Medium;
+      font-size: 16px;
+      color: #01113d;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+
+    .viewBox {
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    :global(.ant-input-search) {
+      margin: 0 20px;
+    }
+
+    .viewBox > span:nth-child(1) {
+      border-radius: 6px 0 0 6px;
+    }
+
+    .viewBox > span:nth-child(2) {
+      border-radius: 0 6px 6px 0;
+    }
+
+    .viewBox > span:nth-child(3) {
+      border-radius: 0 6px 6px 0;
+    }
+
+    .viewTab {
+      padding: 5px 20px;
+      font-family: PingFangSC-Regular;
+      color: #01113d;
+      font-size: 14px;
+      border: 1px solid rgba(1, 17, 61, 0.05);
+      cursor: pointer;
+    }
+
+    .isCheck {
+      background: #dde5fd;
+      font-family: PingFangSC-Regular;
+      color: #1031fa !important;
+    }
+
+    .export {
+      font-family: PingFangSC-Medium;
+      color: #0445fc;
+      font-size: 14px;
+      position: absolute;
+      top: 15px;
+      cursor: pointer;
+      right: 20px;
+    }
+
+    .setSubsection {
+      font-family: PingFangSC-Medium;
+      color: #0445fc;
+      font-size: 14px;
+      position: absolute;
+      top: 15px;
+      cursor: pointer;
+      right: 70px;
+    }
+  }
+
+  .rateTable {
+    tbody {
+      // :global(.ant-table-row) {
+      //     height: auto !important;
+      // }
+    }
+
+    // .rateScoreTd {
+    //     height: auto !important;
+    // }
+  }
+
+  .tableBoxContent2,
+  .tableBoxContentX {
+    :global(.ant-table-fixed-left) {
+      box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.15);
+    }
+
+    :global(.ant-table-scroll) {
+      overflow-x: unset;
+      overflow: auto;
+      overflow-y: hidden;
+
+      :global(.ant-table-header) {
+        overflow: unset !important;
+      }
+
+      :global(.ant-table-body) {
+        overflow: unset !important;
+      }
+    }
+  }
+
+  .tableBoxContent2 {
+    :global(.ant-table-scroll) {
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      // overflow: hidden !important;
+    }
+
+    :global(.ant-table-header) {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    border-radius: 0 0 15px 15px;
+    // font-family: PingFangSC-Medium;
+    color: #01113d;
+    background: #fff;
+    padding-bottom: 10px;
+
+    thead > tr > th {
+      height: 30px;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      // font-family: PingFangSC-Medium;
+      // color:  #01113D;
+    }
+
+    tr > td > div {
+      height: 35px;
+      line-height: 22px;
+      // font-family: PingFangSC-Medium;
+      // color:  rgba(0,0,0,.65) ;
+    }
+  }
+
+  .tableBoxContent {
+    :global(.ant-table-scroll) {
+      ::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      // overflow: hidden !important;
+    }
+
+    :global(.ant-table-tbody) > tr > td {
+      padding: 0 0 0 16px !important;
+    }
+
+    background: #fff;
+    padding-bottom: 10px;
+
+    td {
+      height: 40px;
+    }
+  }
+
+  .tableKanBan {
+    :global(.ant-table-scroll) {
+      ::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      // overflow: hidden !important;
+    }
+
+    .importMessage {
+      color: rgba(1, 17, 61, 0.85);
+      font-size: 14px;
+    }
+
+    .teacherStatus {
+      color: rgba(1, 17, 61, 0.85);
+      font-size: 14px;
+    }
+
+    .subjectTableHeader {
+      display: flex;
+      width: 140px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .reportLink {
+        color: #0445fc;
+        font-weight: initial;
+      }
+    }
+
+    :global(.ant-table-tbody) > tr > td {
+      padding: 0 8px !important;
+    }
+
+    :global(.ant-table-thead) > tr > th {
+      padding: 9px 8px !important;
+    }
+
+    background: #fff;
+    padding-bottom: 10px;
+
+    td {
+      height: 40px;
+    }
+  }
+
+  .trendBox {
+    display: flex;
+    background: #fff;
+    flex-direction: row;
+
+    .trendParent {
+      flex: 1;
+      padding-right: 10px;
+
+      .fakeTitle {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #01113d;
+      }
+
+      :global(.g2-legend) {
+        top: -10px !important;
+      }
+
+      .fakeBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -40;
+      }
+
+      .chart {
+        div {
+          // text-align: center;
+          // canvas {
+          //     width: 100% !important;
+          // }
+        }
+      }
+
+      :global(.g-label) {
+        top: 285px !important;
+      }
+    }
+
+    .chartName {
+      :global(.g-label) {
+        top: 354px !important;
+      }
+    }
+
+    .stuList {
+      // width: 200px;
+      border-right: 1px solid #ccc;
+      overflow: scroll;
+
+      .isChecked {
+        background: rgba(4, 69, 252, 0.03);
+        font-family: PingFangSC-Medium;
+        color: #0445fc;
+      }
+
+      .userBox {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+        cursor: pointer;
+        align-items: center;
+        padding-left: 20px;
+
+        .imgBox {
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .nameBox {
+          margin-left: 5px;
+          height: 40px;
+          line-height: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .homePage {
+    display: flex;
+    // background: #fff;
+    flex-direction: row;
+
+    .trendParent {
+      background: #fff;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 100px;
+
+      .fakeTitle {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #01113d;
+      }
+
+      :global(.g2-legend) {
+        top: -10px !important;
+      }
+
+      .fakeBottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -40;
+      }
+
+      .chart {
+        div {
+          // text-align: center;
+          // canvas {
+          //     width: 100% !important;
+          // }
+        }
+      }
+
+      :global(.g-label) {
+        top: 285px !important;
+      }
+    }
+
+    .chartName {
+      :global(.g-label) {
+        top: 354px !important;
+      }
+    }
+
+    .stuList {
+      // width: 200px;
+      border-right: 1px solid #ccc;
+      // overflow: scroll;
+      background: #fff;
+      padding-top: 10px;
+      height: 494px;
+
+      .isChecked {
+        background: rgba(4, 69, 252, 0.03);
+        font-family: PingFangSC-Medium;
+        color: #0445fc;
+      }
+
+      .userBox {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+        cursor: pointer;
+        align-items: center;
+        padding-left: 20px;
+
+        .imgBox {
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .nameBox {
+          margin-left: 5px;
+          height: 40px;
+          line-height: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .rightBox {
+      width: calc(~"100% - 220px");
+    }
+  }
+
+  .personList {
+    width: 150px;
+    border-right: 1px solid #ccc;
+    overflow: scroll;
+
+    .isChecked {
+      background: rgba(4, 69, 252, 0.03);
+      font-family: PingFangSC-Medium;
+      color: #0445fc;
+    }
+
+    .nameBox {
+      margin-left: 5px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+  }
+
+  .tableBoxContent1 {
+    :global(.ant-table-scroll) {
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      // overflow: hidden !important;
+    }
+
+    border-radius: 0 0 15px 15px;
+    // font-family: PingFangSC-Medium;
+    // color:  #01113D;
+    background: #fff;
+    padding-bottom: 10px;
+
+    thead > tr > th {
+      height: 48px;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      // font-family: PingFangSC-Medium;
+      // color:  #01113D;
+    }
+
+    td {
+      height: 40px;
+      // font-family: PingFangSC-Medium;
+      // color:  rgba(0,0,0,.65);
+    }
+  }
+
+  .t1 {
+    height: 252px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0;
+  }
+
+  .open {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    // border-top: 1px solid rgba(197, 197, 197,0.4);
+    color: #11dc5d;
+    background: rgb(255, 255, 255);
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+  }
+
+  .clickIcon {
+    color: #0445fc;
+    margin-left: 5px;
+  }
+}
+
+.noSummary {
+  // margin-top: 30px;
+  :global(.ant-table-tbody) {
+    td {
+      background: #fff !important;
+    }
+
+    tr:first-child {
+      background: #fff !important;
+    }
+  }
+}
+
+.customTable {
+  height: calc(~"100vh - 120px") !important;
+}
+
+.questionTable {
+  position: relative;
+  // margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  // height: calc(~'100% - 120px');
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // overflow-y: scroll;
+  // height: calc(~'100vh - 120px');
+  .customAnalysis {
+    width: 100%;
+    // height: calc(~'100vh - 120px');
+    overflow-y: scroll;
+  }
+
+  .rightContent {
+    min-width: 145px;
+    // overflow: scroll;
+    padding: 10px;
+
+    .elevator {
+      background: #fbfbfc;
+      box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+      border-radius: 10px;
+      padding: 15px;
+
+      .elevatorTitle {
+        font-family: PingFangSC-Medium;
+        color: #01113d 100%;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .elevatorListItem {
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      .select {
+        font-family: PingFangSC-Medium;
+        color: #0445fc !important;
+      }
+    }
+  }
+
+  // :global(.ant-table-tbody) {
+  //     tr:first-child {
+  //         background: #e0f5fe;
+  //     }
+  // }
+
+  .importMessage {
+    font-family: AlibabaPuHuiTiR;
+    color: #01113d;
+    font-size: 14px;
+  }
+
+  .publicMessage {
+    font-family: AlibabaPuHuiTiL;
+    color: #01113d;
+    opacity: 0.45;
+    font-size: 12px;
+  }
+
+  .noPass {
+    color: #4818c9 !important;
+    opacity: 1;
+  }
+
+  .reportFormIcon {
+    margin: 0 3px 0 6px;
+  }
+
+  .divider {
+    margin: 0 3px;
+  }
+
+  :global(.ant-table-tbody) > tr > td {
+    padding: 2px 16px !important;
+  }
+
+  :global(.ant-table-tbody) > tr > th {
+    padding: 2px 16px !important;
+  }
+
+  :global(.dimension) {
+    position: absolute;
+    top: -105px;
+    right: 50px;
+  }
+}
+
+.rateScoreTd {
+  overflow: hidden;
+
+  .importMessage {
+    display: -webkit-box;
+
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+
+    /* autoprefixer: on */
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .inline {
+    display: inline-block !important;
+    vertical-align: middle;
+  }
+}
+
+.rateContent {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+
+  .questionTitle {
+    width: 60px;
+    flex-shrink: 0;
+  }
+
+  .questionId {
+    flex: 1;
+  }
+}
+
+.exportImg {
+  font-weight: 700;
+  font-family: PingFangSC-Medium;
+  color: #0445fc;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  cursor: pointer;
+  right: 200px;
+}
+
+@media screen and (max-width: 3000px) {
+  .navContent {
+    a {
+      font-size: 16px;
+      padding: 0 20px;
+      margin: 0 20px;
+    }
+  }
+}
+
+.suyang {
+  padding-top: 100px;
+  // font-size: 16px;
+  text-align: center;
+
+  p {
+    span {
+      display: inline-block;
+      padding-top: 20px;
+      color: #0445fc;
+      cursor: pointer;
+    }
+
+    .upload {
+      margin-right: 200px;
+    }
+  }
+}
+
+.example {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+
+.testIndex {
+  border-bottom: 1px #01113d solid;
+}
+
+.noTask1 {
+  margin-top: -50px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+
+.leftText {
+  display: inline-block;
+  margin-left: 30px;
+  font-family: PingFangSC-Medium;
+  color: #999;
+  padding-top: 40px;
+
+  p {
+    margin-bottom: 10px !important;
+  }
+}
+
+.correct {
+  width: 400px;
+  max-height: 300px;
+  overflow: scroll;
+
+  span {
+    display: inline-block;
+    // margin-right: 20px;
+    width: 100px;
+  }
+}
+
+:global(.tool) {
+  overflow: scroll;
+
+  img {
+    max-width: 600px;
+    max-height: 420px;
+  }
+}
+
+.operation {
+  font-family: PingFangSC-Medium;
+  color: #0445fc;
+  font-size: 14px;
+  margin-left: auto;
+
+  .textWarp {
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #0445fc;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+  }
+
+  .textWarp:last-child {
+    margin-right: 0;
+  }
+
+  .exportImg1 {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .export1 {
+    cursor: pointer;
+    color: #0445fc;
+  }
+
+  .setSubsection1 {
+    cursor: pointer;
+    margin: 0 20px;
+  }
+}
+
+.operationS {
+  font-family: PingFangSC-Medium;
+  color: #0445fc;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  .exportImgS {
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .exportS {
+    cursor: pointer;
+    color: #0445fc;
+  }
+
+  .dataLabels {
+    margin-right: 20px;
+  }
+}
+
+.tableBoxContent3 {
+  :global(.ant-table-header) {
+    margin-bottom: 0 !important;
+  }
+}
+
+.tableBoxContent4 {
+  :global(.ant-table-tbody) {
+    tr > td {
+      padding: 8px 16px !important;
+    }
+  }
+
+  :global(.ant-table-thead) {
+    tr > th {
+      padding: 8px 16px !important;
+    }
+  }
+}
+
+.multiClassList {
+  margin-bottom: 16px;
+  // border: 1px #ccc solid;
+  border-radius: 10px;
+
+  // padding-bottom: 10px;
+  :global(.ant-table-body) {
+    td {
+      div {
+        // line-height: 40px;
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+      }
+    }
+
+    tr > th {
+      text-align: center;
+    }
+  }
+
+  :global {
+    .ant-modal-body {
+      .numPhaseBox {
+        // text-align: center;
+        .numPhase {
+          display: inline-block;
+          width: 67px;
+          height: 36px;
+          border: 1px solid rgba(1, 17, 61, 0.12);
+          border-radius: 6px;
+          line-height: 36px;
+          text-align: center;
+          margin: 15px 12px 38px;
+        }
+
+        .paragraph {
+          display: inline-block;
+          width: 50px;
+          text-align: left;
+          margin-left: 114px;
+        }
+      }
+    }
+  }
+
+  .scoreBtn {
+    float: right;
+
+    // margin-top: -5px;
+    // margin-right: 20px;
+    .scoreCancle {
+      display: inline-block;
+      //   width: 64px;
+      padding: 0 25px;
+      height: 32px;
+      border-radius: 6px;
+      background: rgba(1, 17, 61, 0.07);
+      cursor: pointer;
+      text-align: center;
+      line-height: 32px;
+      margin-right: 7px;
+      font-family: PingFangSC-Medium;
+      color: rgba(1, 17, 61, 0.65);
+    }
+
+    .scoreSave {
+      display: inline-block;
+      //   width: 64px;
+      height: 32px;
+      border-radius: 6px;
+      background: #0445fc;
+      color: #fff;
+      cursor: pointer;
+      text-align: center;
+      line-height: 32px;
+      padding: 0 25px;
+      font-family: PingFangSC-Medium;
+    }
+  }
+
+  .classTextHeader {
+    height: 42px;
+    line-height: 40px;
+    color: #01113d;
+    position: relative;
+    background-color: #f1f1f3;
+    border: 1px solid #e8e8e8;
+    padding: 0 10px;
+  }
+}
+
+.tableTitle {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  // background-color: rgb(241,241,243);
+  border-radius: 10px 10px 0 0;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  .edit {
+    font-size: 14px;
+    color: #0445fc;
+    font-family: PingFangSC-Regular;
+    cursor: pointer;
+    float: right;
+    margin-left: auto;
+  }
+
+  .blueRound {
+    display: inline-block;
+    background: #0445fc;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .titleName {
+    font-family: PingFangSC-Semibold;
+    color: #01113d;
+    font-size: 16px;
+    display: inline-block;
+    width: calc(~"100% - 183px");
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.classTab {
+  // padding: 0 10px;
+  :global(.ant-table-thead) {
+    tr > th {
+      padding: 9px 16px;
+    }
+
+    tr:first-child > th:last-child {
+      border-top-right-radius: 0;
+    }
+
+    tr:first-child > th:first-child {
+      border-top-left-radius: 0;
+    }
+  }
+
+  .classTabTitle {
+    height: 42px;
+    line-height: 40px;
+    color: #01113d;
+    position: relative;
+    background-color: rgb(241, 241, 243);
+    border: 1px solid #e8e8e8;
+    border-bottom: 0;
+    padding: 0 10px;
+    margin-bottom: -2px;
+
+    .topBtn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+
+      .adjusting {
+        font-size: 14px;
+        color: #0445fc;
+        font-family: PingFangSC-Regular;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      .edit {
+        font-size: 14px;
+        color: #0445fc;
+        font-family: PingFangSC-Regular;
+        cursor: pointer;
+      }
+    }
+  }
+
+  :global {
+    .ant-mentions > textarea {
+      height: 100%;
+      min-height: 100px;
+    }
+  }
+
+  .increaseRow {
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+    padding-top: 8px;
+
+    .increase {
+      border: 1px solid rgba(4, 69, 252, 1);
+      height: 28px;
+      width: 104px;
+      color: #0445fc;
+      line-height: 28px;
+      text-align: center;
+      // margin-top: 8px;
+      border-radius: 6px;
+      margin-left: 10px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .tableBoxContent {
+    .propositionalHtml {
+      min-height: 100px;
+      // padding: 0 21px 11px;
+      position: relative;
+
+      div {
+        // height: 40px;
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        // line-height: 40px;
+      }
+
+      :hover {
+        background: rgba(1, 17, 61, 0.05);
+        cursor: pointer;
+      }
+
+      .editFont {
+        position: absolute;
+        top: 0;
+        right: 35px;
+      }
+
+      :global {
+        .ant-empty {
+          margin: 0;
+
+          .ant-empty-description {
+            color: #ccc;
+          }
+        }
+      }
+
+      .notFilled {
+        font-family: AlibabaPuHuiTiR;
+        color: rgba(1, 17, 61, 0.45);
+        font-size: 14px;
+        height: 22px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.personalChartBox {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+
+  :global(.g-label) {
+    top: 162px !important;
+  }
+}
+
+.studentNumMod {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -315px 0 0 -578px;
+  // height: 631px;
+  overflow: hidden;
+
+  :global {
+    .ant-modal-content {
+      // height: 631px;
+    }
+
+    .ant-modal-body {
+      height: 575px !important;
+      overflow-y: scroll;
+      padding: 22px;
+      background: rgba(1, 17, 61, 0.05);
+
+      .singleQuestionAnalysis {
+        display: flex;
+        height: 531px;
+
+        .originalText {
+          // margin-top: 40px;
+          width: 810px;
+          border-radius: 16px;
+          padding: 15px;
+          background-color: #fff;
+        }
+
+        .singleQuestionLeft {
+          // width: 830px;
+          height: 100%;
+          // overflow-y: scroll;
+          position: relative;
+          // margin-top: 40px;
+
+          .singleQuestion {
+            // width: 810px;
+            // height: 258px;
+            width: 100%;
+            background: #ffffff;
+            // border: 2px solid rgba(4,69,252,0.45);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.08);
+            // margin-right: 20px;
+            margin-bottom: 20px;
+            // overflow-y: scroll;
+
+            .singleQuestionHeader {
+              height: 40px;
+              width: 100%;
+              background: rgba(1, 17, 61, 0.02);
+              padding: 0 16px;
+              padding-top: 10px;
+
+              .answerOf {
+                font-family: PingFangSC-Medium;
+                color: rgba(1, 17, 61, 0.85);
+              }
+
+              .seeTest {
+                float: right;
+                font-family: PingFangSC-Regular;
+                color: #0445fc;
+                cursor: pointer;
+              }
+            }
+
+            .singleQuestionBody {
+              // min-height: 218px;
+              padding: 20px;
+
+              img {
+                max-width: 100%;
+                max-height: 100%;
+              }
+            }
+          }
+
+          .singleQuetionBlue {
+            background: #ffffff;
+            border: 2px solid rgba(4, 69, 252, 0.45);
+            box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.08);
+          }
+        }
+
+        .viewBox {
+          vertical-align: middle;
+          // display: inline-block;
+          // margin-bottom: 15px;
+          // margin-top: 7px;
+          position: absolute;
+          top: 2px;
+          // left: 22px;
+        }
+
+        .viewBox > span:nth-child(1) {
+          border-radius: 6px 0 0 6px;
+        }
+
+        .viewBox > span:nth-child(2) {
+          border-radius: 0 6px 6px 0;
+        }
+
+        .viewTab {
+          padding: 5px 20px;
+          font-family: PingFangSC-Regular;
+          color: #01113d;
+          font-size: 14px;
+          border: 1px solid rgba(1, 17, 61, 0.05);
+          cursor: pointer;
+          background-color: #fff;
+        }
+
+        .isCheck {
+          background: #dde5fd;
+          font-family: PingFangSC-Regular;
+          color: #1031fa !important;
+        }
+
+        .singleQuestionStu {
+          flex: 1;
+          // width: 262px;
+          background: #ffffff;
+          box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.04);
+          border-radius: 10px;
+          height: 100%;
+          overflow-y: scroll;
+
+          .subsectionTop {
+            padding: 16px 0;
+
+            // height: 290px;
+            // overflow-y: scroll;
+            .subsectionNum {
+              height: 48px;
+              display: flex;
+              cursor: pointer;
+              position: relative;
+              padding: 0 30px 0 16px !important;
+
+              .leftNumber {
+                width: 73px;
+                // margin-right: 25px;
+              }
+
+              .rightProgress {
+                flex: 1;
+
+                .percentage {
+                  font-family: PingFangSC-Regular;
+                  color: #0b1b45;
+                  font-size: 12px;
+                }
+              }
+
+              .editFont {
+                position: absolute;
+                // background: #01113D;
+                opacity: 0.45079985119047616;
+                font-size: 14px;
+                z-index: 100;
+                cursor: pointer;
+                top: 5px;
+                right: 10px;
+              }
+            }
+
+            .subsectionNumBlur {
+              background: rgba(4, 69, 252, 0.1);
+            }
+          }
+
+          .subsectionBottom {
+            padding-left: 14px;
+            // height: 240px;
+            // overflow-y: scroll;
+            display: flex;
+            place-content: stretch flex-start;
+            flex-basis: 71px;
+            flex-flow: row wrap;
+            align-items: baseline;
+
+            .stuName {
+              display: inline-block;
+              width: 71px;
+              height: 28px;
+              border: 1px solid rgba(1, 17, 61, 0.07);
+              font-family: PingFangSC-Regular;
+              color: rgba(1, 17, 61, 0.85);
+              font-size: 12px;
+              cursor: pointer;
+              line-height: 28px;
+              text-align: center;
+              border-radius: 6px;
+              margin-right: 18px;
+              margin-bottom: 10px;
+              overflow: hidden;
+            }
+
+            .stuNameBlue {
+              color: #fff;
+              background: #0445fc;
+              border: 1px solid rgba(1, 17, 61, 0.07);
+            }
+          }
+        }
+      }
+
+      :global(.ant-spin-nested-loading) {
+        height: 100%;
+      }
+    }
+
+    .ant-modal-close {
+      left: 0;
+      top: 6px;
+      width: 56px;
+
+      :global(svg) {
+        font-size: 22px;
+      }
+    }
+
+    .header {
+      z-index: 99;
+      font-family: PingFangSC-Medium;
+      color: #4a5270;
+      font-size: 14px;
+
+      .questionIndex {
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        position: absolute;
+        top: -1px;
+        left: 13px;
+        z-index: 99;
+      }
+
+      .allClass {
+        font-family: PingFangSC-Regular;
+        // margin: 0 20px;
+        margin-left: 30px;
+
+        .ant-select-selection--single {
+          width: 158px;
+          border-radius: 6px;
+        }
+      }
+
+      .allQuestionNo {
+        font-family: PingFangSC-Regular;
+        margin: 0 20px;
+        position: relative;
+
+        .ant-select-selection--single {
+          width: 158px;
+          padding-left: 40px;
+          border-radius: 6px;
+        }
+      }
+
+      .scoreSpan {
+        font-family: PingFangSC-Regular;
+        // display: inline-block;
+        color: rgba(1, 17, 61, 0.85);
+        font-size: 13px;
+        float: right;
+        margin-top: 5px;
+
+        // margin-left: 27px;
+        .smallGreenDot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background-color: #0f0;
+          border-radius: 4px;
+          margin-right: 5px;
+        }
+
+        .verticalLine {
+          opacity: 0.5;
+          margin: 0 10px;
+        }
+
+        .scoreRateNum {
+          margin-right: 30px;
+        }
+
+        .smallRedDot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background-color: #f00;
+          border-radius: 4px;
+          margin-right: 5px;
+        }
+      }
+
+      .buttonQuestion {
+        margin-left: 40px;
+        display: inline-block;
+
+        .previousQuestion {
+          width: 80px;
+          height: 32px;
+          background: rgba(4, 69, 252, 0.1);
+          border: 0;
+          color: #0445fc;
+          border-radius: 6px;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+
+        .nextQuestion {
+          width: 80px;
+          height: 32px;
+          background: rgba(4, 69, 252, 0.1);
+          border: 0;
+          color: #0445fc;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        .graying {
+          background-color: #f5f5f5;
+          color: #314659;
+        }
+      }
+    }
+  }
+}
+
+.nameSwith2 {
+  color: #01113d;
+  font-family: PingFangSC-Medium;
+  margin-right: 20px;
+}
+
+.teacherStatus {
+  display: flex;
+
+  .teacherName {
+    margin-right: 5px;
+    // display: inline-block;
+    // width: 45px;
+  }
+
+  .notFilled {
+    display: inline-block;
+    padding: 1px 8px;
+    background-color: rgb(245, 245, 245);
+    border: rgba(1, 17, 61, 0.2) 1px solid;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .completed {
+    display: inline-block;
+    padding: 1px 8px;
+    background-color: rgb(138, 207, 85);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+}
+
+.expandContent {
+  width: 100%;
+  font-family: PingFangSC-Medium;
+  background-color: #fff;
+}
+
+.hiden {
+  display: none;
+}
+
+.addAttachment {
+  margin: 10px 20px;
+
+  button {
+    font-family: PingFangSC-Medium;
+    color: #0445fc;
+    margin-right: 5px;
+  }
+
+  .uploadMultiple {
+    font-size: 13px;
+    color: #999;
+  }
+}
+
+.analysisColumn {
+  :global {
+    .ant-mentions {
+      border: none;
+
+      textarea {
+        border: none;
+        resize: vertical;
+        min-height: 65px !important;
+      }
+    }
+
+    .ant-mentions-focused {
+      border: block;
+    }
+  }
+}

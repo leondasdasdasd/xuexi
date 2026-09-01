@@ -1,0 +1,98 @@
+@import "../../utils/global.less";
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 68px);
+  grid-auto-rows: minmax(64px, auto);
+  gap: 0;
+  justify-content: flex-end;
+  justify-self: stretch;
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.actions > * {
+  width: 68px;
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 64px;
+  box-sizing: border-box;
+  padding: 8px 4px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.action-icon,
+.action-text {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.action-icon {
+  font-size: 14px;
+  color: #0445fc;
+}
+
+.action-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.action-item-disabled {
+  cursor: not-allowed;
+  color: #bfbfbf;
+}
+
+.action-item-disabled .action-icon,
+.action-item-disabled .action-text {
+  color: #bfbfbf;
+}
+
+.action-item-disabled:hover {
+  background: transparent;
+  color: #bfbfbf;
+
+  .action-icon,
+  .action-text {
+    color: #bfbfbf;
+  }
+}
+
+.action-item:hover {
+  background: rgba(4, 69, 252, 0.1);
+  color: #0445fc;
+
+  .action-text {
+    color: #0445fc;
+  }
+}
+
+.parallel-paper-popover {
+  color: #01113d;
+}
+
+.parallel-paper-tips {
+  margin-bottom: 10px;
+  max-width: 480px;
+  line-height: 20px;
+}
+
+.parallel-paper-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.parallel-paper-label {
+  color: #01113d;
+  margin-right: 20px;
+}

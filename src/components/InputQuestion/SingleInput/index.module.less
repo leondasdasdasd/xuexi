@@ -1,0 +1,1543 @@
+.singleContent {
+  // padding-bottom: 80px;
+  word-wrap: break-word;
+  height: calc(~"100vh - 60px");
+  // overflow-y: scroll;
+  overflow: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+  :global(.ant-select-tree-dropdown) {
+    max-height: 300px !important;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 60px;
+    width: 100%;
+    color: #333;
+    z-index: 99;
+    box-shadow: 0 4px 18px 0 rgba(59, 111, 245, 0.12);
+
+    .backButton {
+      font-size: 24px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .headerSaveButton {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      padding: 5.5px 10px;
+      border-radius: 10px;
+      background: #0445fc;
+      color: #fff;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+    }
+
+    .title {
+      font-family: PingFangSC-Medium;
+      color: #333333;
+      font-size: 26px;
+      flex: 1;
+      text-align: center;
+    }
+
+    :global(.ant-btn-primary) {
+      font-size: 16px;
+      border-radius: 20px;
+      padding: 0 20px;
+      background: #4d7fff;
+      color: #fff;
+      margin-top: 14px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.drawerMode {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  background: #f5f5f5;
+
+  .header {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    flex: 0 0 60px;
+
+    .backButton {
+      margin-left: 0;
+    }
+  }
+
+  .questionType {
+    display: none;
+  }
+
+  .newSingleArea {
+    flex: 1;
+    min-height: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    display: block;
+    overflow: auto;
+    overflow-x: hidden;
+
+    .leftQuestion,
+    .rightOption {
+      min-height: 0;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+      box-sizing: border-box;
+    }
+
+    .leftQuestion {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
+    .rightOption {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  .scopeRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .rangeSelect,
+  .fieldControl,
+  .questionTypeSelect {
+    display: block;
+    width: 100%;
+  }
+
+  .questionTypeButtons {
+    display: none;
+  }
+}
+
+.rangeSelect {
+  width: 120px;
+}
+
+.fieldControl {
+  width: 200px;
+}
+
+.questionTypeSelect {
+  display: none;
+  width: 100%;
+}
+
+.questionTypeButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.questionType {
+  background-color: #f5f7ff;
+  // border-bottom: 1px solid #e6e6e6;
+  padding: 0 20px;
+}
+
+.newSingleArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+
+  .leftQuestion {
+    flex: 1;
+    overflow: scroll;
+    height: 100%;
+    background: #fff;
+    margin-right: 20px;
+    // margin-left: 40px;
+    border-radius: 10px;
+    padding: 20px 30px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .questionArea {
+      border-bottom: 1px dashed rgba(151, 151, 151, 0.28);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+
+      .analysisArea {
+        // margin-top: 20px;
+        ::-webkit-scrollbar {
+          display: none;
+        }
+
+        .fillAnalysis {
+          width: 100%;
+          // border: 1px solid #e6e6e6;
+          // border-radius: 10px;
+          min-height: 50px;
+          max-height: 400px;
+          overflow: hidden;
+          overflow-y: scroll;
+          padding: 10px;
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.85);
+
+          ::-webkit-scrollbar {
+            display: none;
+          }
+
+          p {
+            display: inline-block;
+          }
+
+          div {
+            display: inline-block;
+          }
+        }
+
+        .noContent {
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.45);
+        }
+      }
+
+      .questionTips {
+        font-family: PingFangSC-Medium;
+        color: #0b1b45;
+        font-size: 16px;
+        margin-bottom: 12px !important;
+
+        .orderTips {
+          margin-left: 10px;
+
+          :global(.ant-checkbox-checked) {
+            :global(.ant-checkbox-inner) {
+              background: #0445fc;
+              border-color: #0445fc;
+            }
+          }
+
+          :global(.ant-checkbox-wrapper) {
+            font-family: PingFangSC-Regular;
+            color: rgba(1, 17, 61, 0.85);
+          }
+        }
+
+        em {
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.45);
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+
+      .fillContent {
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.85);
+      }
+
+      .fillMessage {
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.45);
+      }
+    }
+
+    .analysisChild {
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .fillAnalysis {
+        width: 100%;
+        // border: 1px solid #e6e6e6;
+        // border-radius: 10px;
+        // min-height: 60px;
+        max-height: 200px;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 10px;
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.85);
+
+        ::-webkit-scrollbar {
+          display: none;
+        }
+
+        p {
+          display: inline-block;
+        }
+
+        div {
+          display: inline-block;
+        }
+      }
+
+      .noContent {
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.45);
+      }
+    }
+  }
+
+  .rightOption {
+    width: 320px;
+    overflow: scroll;
+    height: 100%;
+    background: #fff;
+    // margin-right: 40px;
+    border-radius: 10px;
+    padding: 20px 18px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .selectStyle {
+      height: 32px;
+      font-family: PingFangSC-Regular;
+      color: #01113d;
+      margin-right: 10px;
+
+      :global(.ant-select-selection) {
+        border-radius: 10px;
+      }
+
+      :global(.ant-select-selection__placeholder) {
+        color: #01113d;
+        margin-right: 10px;
+      }
+
+      .subjectName {
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+      }
+    }
+
+    .childOptionBox {
+      .childQuestionNo {
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.85);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px;
+        margin-bottom: 10px;
+
+        .childNoTitle {
+          cursor: pointer;
+        }
+
+        .checkChild {
+          font-family: PingFangSC-Regular;
+          color: #ff9c00;
+        }
+
+        .childLine {
+          flex: 1;
+          height: 1px;
+          border-bottom: 1px solid rgba(151, 151, 151, 0.28);
+        }
+      }
+    }
+
+    .optionTitle {
+      font-family: PingFangSC-Medium;
+      color: rgba(1, 17, 61, 0.85);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .optionRow {
+      margin-bottom: 14px;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+
+      &.scopeRow {
+        gap: 10px;
+      }
+
+      &.questionTypeRow {
+        margin-bottom: 4px;
+      }
+
+      .knowledgeBox {
+        background: rgba(1, 17, 61, 0.04);
+        padding: 4px 12px;
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.85);
+        margin-right: 8px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        position: relative;
+
+        .deleteKno {
+          position: absolute;
+          right: -7px;
+          top: -7px;
+          font-size: 14px;
+          color: #8c94a7;
+          cursor: pointer;
+          display: none;
+        }
+      }
+
+      .knowledgeBox:hover {
+        background: rgba(1, 17, 61, 0.07);
+
+        .deleteKno {
+          display: block;
+        }
+      }
+
+      .addIcon {
+        color: #0445fc;
+        font-size: 18px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-right: 8px;
+        position: relative;
+
+        :global(.ant-select) {
+          position: absolute;
+          left: 0;
+
+          :global(.ant-select-selection) {
+            // border: none;
+            outline: none;
+            box-shadow: none;
+            background: none;
+          }
+
+          :global(.ant-select-selection__rendered) {
+            border: none;
+            color: #fff;
+            z-index: -1;
+          }
+
+          :global(.ant-select-arrow) {
+            color: #fff;
+          }
+        }
+      }
+
+      .unSelected {
+        background: rgba(1, 17, 61, 0.04);
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.65);
+        width: 86px;
+        height: 28px;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        box-sizing: border-box;
+
+        i {
+          margin-right: 8px;
+        }
+      }
+
+      .selected1 {
+        background: #fff;
+        font-family: PingFangSC-Regular;
+        color: #0445fc;
+        width: 86px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(4, 69, 252, 1);
+        cursor: pointer;
+        box-sizing: border-box;
+
+        i {
+          margin-right: 8px;
+        }
+      }
+
+      .difficultyBox {
+        padding: 4px 14px;
+        font-size: 14px;
+        background: rgba(1, 17, 61, 0.04);
+        border-radius: 4px;
+        font-family: PingFangSC-Regular;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .checkDiff {
+        background: #fff;
+        color: #0445fc;
+        border: 1px solid rgba(4, 69, 252, 1);
+      }
+    }
+  }
+}
+
+.singleInputArea {
+  position: relative;
+
+  .difficulty {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .selected .unSelected {
+    padding: 5px 12px;
+    border-radius: 7px;
+    display: inline-block;
+    margin-right: 11px;
+    // border: 1px solid #333 !important;
+    cursor: pointer;
+    // &:first-child {
+    //     margin-left: 11px;
+    // }
+    i {
+      font-size: 12px;
+      vertical-align: top;
+    }
+
+    span {
+      font-size: 13px;
+      font-style: normal;
+      // margin-left: 40px;
+    }
+  }
+
+  .selected1 {
+    padding: 5px 12px;
+    border-radius: 7px;
+    // margin-right: 11px;
+    display: inline-block;
+    background: rgba(4, 53, 189, 0.1);
+    color: #0435bd;
+
+    span {
+      font-size: 13px;
+      font-style: normal;
+      // margin-left: 40px;
+    }
+    // border: 1px solid rgba(59,111,245,0.08);
+  }
+
+  .selected2 {
+    padding: 5px 12px;
+    border-radius: 7px;
+    // margin-right: 11px;
+    display: inline-block;
+    background: rgba(5, 125, 230, 0.1);
+    color: #057de6;
+
+    span {
+      font-size: 13px;
+      font-style: normal;
+      // margin-left: 40px;
+    }
+    // border: 1px solid rgba(59,111,245,0.08);
+  }
+
+  .selected3 {
+    padding: 5px 12px;
+    border-radius: 7px;
+    // margin-right: 11px;
+    display: inline-block;
+    background: rgba(103, 48, 251, 0.1);
+    color: #6730fb;
+
+    span {
+      font-size: 13px;
+      font-style: normal;
+      // margin-left: 40px;
+    }
+    // border: 1px solid rgba(59,111,245,0.08);
+  }
+
+  .selected4 {
+    padding: 5px 12px;
+    border-radius: 7px;
+    // margin-right: 11px;
+    display: inline-block;
+    background: rgba(252, 130, 18, 0.1);
+    color: #fc8212;
+
+    span {
+      font-size: 13px;
+      font-style: normal;
+      // margin-left: 40px;
+    }
+    // border: 1px solid rgba(59,111,245,0.08);
+  }
+
+  .selected5 {
+    padding: 5px 12px;
+    border-radius: 7px;
+    // margin-right: 11px;
+    display: inline-block;
+    background: rgba(214, 238, 214, 0.904);
+    color: #fc1231;
+
+    span {
+      font-size: 13px;
+      font-style: normal;
+      // margin-left: 40px;
+    }
+    // border: 1px solid rgba(59,111,245,0.08);
+  }
+
+  .unSelected {
+    padding: 5px 12px;
+    border-radius: 7px;
+    margin-right: 11px;
+    display: inline-block;
+    // border: 1px solid #e6e6e6;
+    color: #666;
+
+    i {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+  //单题输入区域
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+
+  // min-height: 300px;
+  padding: 15px 0 20px;
+
+  .questionArea {
+    margin: 25px auto;
+    padding: 0 20px 25px;
+    border-radius: 10px;
+    // border-bottom: 1px solid #e6e6e6;
+    .questionTips {
+      margin-bottom: 20px !important;
+
+      span {
+        margin-right: 12px;
+        font-family: PingFangSC-Medium;
+        color: #666;
+        font-size: 16px;
+      }
+
+      em {
+        font-family: PingFangSC-Regular;
+        color: #999;
+        font-size: 14px;
+        font-style: normal;
+        margin-left: 12px;
+      }
+    }
+
+    .fillContent {
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      min-height: 150px;
+      max-height: 400px;
+      overflow: hidden;
+      overflow-y: scroll;
+      padding: 20px;
+
+      em {
+        color: #999;
+        font-size: 14px;
+        font-style: normal;
+      }
+
+      p {
+        display: inline-block;
+      }
+
+      div {
+        display: inline-block;
+      }
+    }
+  }
+
+  .questionOption {
+    margin: 0;
+    padding: 0 20px;
+
+    .questionTips {
+      margin-bottom: 20px !important;
+
+      span {
+        margin-right: 12px;
+        font-family: PingFangSC-Medium;
+        color: #666;
+        font-size: 16px;
+      }
+
+      em {
+        font-family: PingFangSC-Regular;
+        color: #999;
+        font-size: 14px;
+        font-style: normal;
+        margin-left: 12px;
+      }
+
+      .completionSwitch {
+        font-size: 14px;
+        float: right;
+
+        button {
+          margin-left: 20px;
+        }
+      }
+
+      i {
+        color: #4d7fff !important;
+        margin-left: 3px !important;
+      }
+    }
+  }
+}
+
+.conditionArea {
+  // background: #fff;
+  // border-radius: 20px 20px 0 0;
+  padding: 15px o;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  z-index: 99;
+  // box-shadow: 0px 4px 18px 0px rgba(59,111,245,0.12);
+  .conditionTop {
+    display: flex;
+  }
+
+  .treeBox {
+    :global(.ant-select-selection) {
+      display: block;
+      border-radius: 20px;
+    }
+  }
+
+  .globalWidth {
+    display: inline-block;
+    font-family: PingFangSC-Medium;
+    color: #666;
+    font-size: 16px;
+
+    span {
+      display: inline-block;
+
+      em {
+        font-style: normal;
+      }
+    }
+
+    .title {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .selectStyle {
+      // min-width: 150px;
+      margin-right: 12px;
+
+      & > div {
+        border-radius: 10px;
+      }
+    }
+
+    .checkedHard {
+      border: 1px solid #4d7fff;
+      border-radius: 20px;
+      color: #4d7fff;
+      font-size: 14px;
+      padding: 5px 18px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .isHard {
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      color: #999;
+      font-size: 14px;
+      padding: 5px 18px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+  }
+
+  .knowledgePoints {
+    display: inline-block;
+    margin-right: 12px;
+
+    :global(.ant-select) {
+      z-index: 99;
+    }
+    // .title {
+    //     display: inline-block;
+    //     min-width: 50px;
+    //     text-align: center;
+    // }
+  }
+
+  .accomplishment {
+    display: inline-block;
+    // .title {
+    //     display: inline-block;
+    //     min-width: 50px;
+    //     text-align: center;
+    // }
+  }
+
+  .condition {
+    // flex: 1;
+    // -webkit-flex: 1;
+    display: inline-block;
+    font-family: PingFangSC-Medium;
+    color: #666;
+    font-size: 16px;
+
+    span {
+      display: inline-block;
+
+      em {
+        font-style: normal;
+      }
+    }
+
+    .title {
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .selectStyle {
+      // min-width: 150px;
+      margin-right: 12px;
+      // height: 36px;
+      & > div {
+        border-radius: 10px;
+        height: 36px;
+      }
+
+      :global(.ant-select-selection__rendered) {
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+
+    .checkedHard {
+      border: 1px solid #4d7fff;
+      border-radius: 20px;
+      color: #4d7fff;
+      font-size: 14px;
+      padding: 5px 18px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .isHard {
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      color: #999;
+      font-size: 14px;
+      padding: 5px 18px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+  }
+
+  .choice {
+    position: absolute;
+    top: 13px;
+    left: 150px;
+    z-index: 99;
+  }
+
+  .bjChoice {
+    left: 50px;
+  }
+}
+
+//操作按钮
+.operBtn {
+  // text-align: right;
+  position: absolute;
+  right: 100px;
+  top: 14px;
+  z-index: 99;
+
+  span {
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5.5px 10px;
+    cursor: pointer;
+
+    &.whiteBtn {
+      background: rgba(1, 17, 61, 0.05);
+      color: #333;
+      // border: 1px solid #4D7FFF;
+      margin-right: 10px;
+    }
+
+    &.blueBtn {
+      background: #0445fc;
+      color: #fff;
+      margin-right: 60px;
+    }
+
+    &.blueBtn1 {
+      background: #0445fc;
+      color: #fff;
+      margin-right: 40px;
+    }
+  }
+}
+
+.level {
+  font-size: 18px;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.subjectName {
+  color: rgba(0, 0, 0, 0.65);
+  display: block;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.childQuestionBox {
+  .childQuestionList {
+    margin-bottom: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(151, 151, 151, 0.28);
+
+    .childHeader {
+      width: 100%;
+      height: 36px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #efefef;
+      padding: 0 20px;
+      justify-content: space-between;
+      font-family: PingFangSC-Medium;
+      color: #01113d;
+
+      .orderTips {
+        margin-left: 10px;
+
+        :global(.ant-checkbox-checked) {
+          :global(.ant-checkbox-inner) {
+            background: #0445fc;
+            border-color: #0445fc;
+          }
+        }
+
+        :global(.ant-checkbox-wrapper) {
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.85);
+        }
+      }
+
+      .optionTrRight {
+        // width: 150px;
+        justify-content: end;
+        padding-right: 10px;
+
+        .rightIcon {
+          cursor: pointer;
+          // background: rgba(1,17,61,0.1);
+          border-radius: 4px;
+          line-height: 24px;
+          text-align: center;
+          margin-left: 5px;
+          color: rgba(1, 17, 61, 0.65);
+        }
+
+        .noCheck {
+          // background: rgba(1,17,61,0.05);
+          color: rgba(1, 17, 61, 0.3);
+        }
+      }
+    }
+
+    .childContent {
+      padding: 20px;
+    }
+  }
+
+  .checkChildQuestion {
+    border: 1px solid #ff9c00;
+  }
+
+  .addBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .addBtn {
+      padding: 6px 18px;
+      background: rgba(4, 69, 252, 0.1);
+      font-family: PingFangSC-Regular;
+      color: #0445fc;
+      border-radius: 6px;
+      margin-right: 10px;
+      cursor: pointer;
+
+      i {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+//选项列表
+.optionList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  position: relative;
+
+  .optionNum {
+    font-family: PingFangSC-Medium;
+    color: rgba(1, 17, 61, 0.85);
+    font-size: 16px;
+  }
+
+  .checkNum {
+    color: #0445fc;
+  }
+
+  :global(.ant-select) {
+    // margin-left: 10px;
+    border-radius: 10px;
+
+    :global(.ant-select-selection__rendered) {
+      padding-bottom: 6px !important;
+
+      ul {
+        li {
+          height: 30px;
+          line-height: 30px;
+          // background: rgba(1,17,61,0.05);
+          // color: #333;
+        }
+      }
+    }
+  }
+
+  :global(.ant-select-selection) {
+    border-radius: 10px;
+  }
+
+  .removeIcon {
+    color: #666;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: move;
+  }
+
+  .completionSerial {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    line-height: 17px;
+    margin-right: 7px;
+    // border-radius: 50%;
+    // border: 1px solid #333;
+  }
+
+  .optionContent {
+    flex: 1;
+    // border: 1px solid #e6e6e6;
+    display: flex;
+    min-height: 40px;
+    border-radius: 10px;
+    line-height: 40px;
+    position: relative;
+    // overflow: hidden;
+    :global(.bf-content) {
+      min-height: 80px !important;
+    }
+
+    :global(.tiankong) {
+      outline: none !important;
+      border: none !important;
+
+      :global(.ant-select-selection) {
+        user-select: none;
+        outline: none !important;
+        // border: none !important;
+        border-color: transparent;
+        box-shadow: none;
+      }
+
+      :global(.ant-select-selection__choice) {
+        background: rgba(1, 17, 61, 0.07);
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.85);
+        border-radius: 4px;
+      }
+
+      :global(.ant-select-selection__rendered) {
+        outline: none !important;
+        border: none !important;
+      }
+    }
+
+    .tagBox {
+      margin-left: 10px;
+
+      :global(.ant-tag) {
+        height: 30px;
+        line-height: 30px;
+        background: rgba(1, 17, 61, 0.05);
+        color: #333;
+      }
+    }
+
+    .optionA {
+      min-width: 40px;
+      text-align: center;
+      display: block;
+      background: #fff;
+      line-height: 40px;
+      cursor: pointer;
+      position: relative;
+
+      i {
+        color: #ccc;
+        font-size: 12px;
+      }
+    }
+
+    .optionASelected {
+      min-width: 40px;
+      text-align: center;
+      display: block;
+      background: #4d7fff;
+      line-height: 40px;
+      cursor: pointer;
+
+      i {
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+
+    .divider {
+      position: absolute;
+      left: 40px;
+      height: 100%;
+      width: 1px;
+      background: #e6e6e6;
+    }
+
+    .braftEditorStyle {
+      margin-left: 2px;
+    }
+
+    .selectArea {
+      margin-left: 10px;
+      width: 100%;
+      font-family: PingFangSC-Regular;
+      color: rgba(1, 17, 61, 0.85);
+
+      .placeholderTxt {
+        font-family: PingFangSC-Regular;
+        color: rgba(1, 17, 61, 0.45);
+        font-size: 14px;
+        font-style: normal;
+      }
+
+      & > div {
+        display: inline-block;
+      }
+
+      p {
+        display: inline-block;
+      }
+    }
+
+    .selectArea:hover {
+      border: 1px solid rgba(4, 69, 252, 0.25);
+    }
+  }
+
+  .optionTrRight {
+    // width: 150px;
+    justify-content: end;
+    padding-right: 10px;
+
+    .rightIcon {
+      cursor: pointer;
+      // background: rgba(1,17,61,0.1);
+      border-radius: 4px;
+      line-height: 24px;
+      text-align: center;
+      margin-left: 5px;
+      color: rgba(1, 17, 61, 0.65);
+    }
+
+    .noCheck {
+      // background: rgba(1,17,61,0.05);
+      color: rgba(1, 17, 61, 0.3);
+    }
+  }
+
+  .deleteIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+    font-size: 16px;
+    // margin: 0 10px;
+    cursor: pointer;
+  }
+}
+
+.addOptionBtn {
+  // background: rgba(1,17,61,0.05);
+  // width: 120px;
+  // text-align: center;
+  // padding: 6px;
+
+  font-size: 14px;
+  // margin-left: 38px;
+  font-family: PingFangSC-Regular;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  color: #0445fc;
+
+  i {
+    font-size: 18px;
+    margin-right: 4px;
+  }
+}
+
+//答案解析
+.answerAnalysis {
+  background: #fff;
+  min-height: 120px;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 20px 20px 35px;
+  // border-top: 1px solid #e6e6e6;
+  .analysisTitle {
+    font-family: PingFangSC-Medium;
+    color: #666;
+    font-size: 16px;
+
+    em {
+      font-family: PingFangSC-Regular;
+      color: #999;
+      font-size: 14px;
+      font-style: normal;
+      margin-left: 12px;
+    }
+  }
+
+  .analysisArea {
+    margin-top: 20px;
+
+    .fillAnalysis {
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      min-height: 50px;
+      max-height: 400px;
+      overflow: hidden;
+      overflow-y: scroll;
+      padding: 10px;
+
+      p {
+        display: inline-block;
+      }
+
+      div {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.judgeBox {
+  .judeg {
+    display: flex;
+    height: 36px;
+    // width: 80px;
+    // line-height: 34px;
+    // text-align: center;
+    font-family: PingFangSC-Regular;
+    color: rgba(1, 17, 61, 0.85);
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    .judgeNum {
+      font-family: PingFangSC-Medium;
+      margin-right: 10px;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .blue {
+    // border: 1px solid rgba(4,69,252,1);
+    color: #0445fc;
+  }
+}
+//导入结果
+.importResult {
+  text-align: center;
+
+  h4 {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    // margin-bottom: 30px;
+  }
+
+  .resultTips {
+    color: #666;
+    font-size: 16px;
+
+    i {
+      color: #51b520;
+      font-size: 23px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .tips {
+      font-size: 18px;
+      color: #51b520;
+      vertical-align: middle;
+    }
+
+    em {
+      margin: 0 5px;
+      font-weight: bold;
+      font-style: normal;
+
+      &.success {
+        color: #4d7fff;
+      }
+
+      &.error {
+        color: #f76377;
+      }
+    }
+  }
+}
+// 知识点&&素养
+.literacyChoice {
+  // border-top: 1px solid #ccc;
+  margin-top: 17px;
+  padding-top: 17px;
+  padding-left: 20px;
+
+  .knowledgePoints {
+    margin-bottom: 18px;
+  }
+
+  .title {
+    display: inline-block;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+
+.answerArea {
+  margin-top: 20px;
+  // .keyWordsContent {
+  //         display: flex;
+  //         flex-direction: row;
+  //         align-items: center;
+  //         margin-top: 15px;
+  //         .keyTitle {
+  //             font-family: PingFangSC-Medium;
+  //             color: rgba(1, 17, 61, 0.85);
+  //             margin-right: 10px;
+  //         }
+  //         .keyContent {
+  //             flex: 1;
+  //             :global(.ant-select-selection__placeholder) {
+  //                 font-family: PingFangSC-Regular;
+  //                 color: rgba(1, 17, 61, 0.45);
+  //             }
+  //             :global(.ant-select-selection) {
+  //                 user-select: none;
+  //                 outline: none !important;
+  //                 // border: none !important;
+  //                 // border-color: transparent;
+  //                 // box-shadow: none;
+  //                 padding-bottom: 0;
+  //             }
+  //             :global(.ant-select-selection__choice) {
+  //                 background: rgba(1,17,61,0.07);
+  //                 font-family: PingFangSC-Regular;
+  //                 color: rgba(1, 17, 61, 0.85);
+  //                 border-radius: 4px;
+  //             }
+  //             :global(.ant-select-selection__rendered) {
+  //                 outline: none !important;
+  //                 border: none !important;
+  //             }
+  //         }
+  //         .keyContent:hover {
+  //             border: 1px solid rgba(4,69,252,0.25);
+  //         }
+  //     }
+  .fillAnswer {
+    width: 100%;
+    // border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    min-height: 50px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    font-family: PingFangSC-Regular;
+    color: rgba(1, 17, 61, 0.85);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .fillTips {
+    height: 50px;
+    font-family: PingFangSC-Regular;
+    color: rgba(1, 17, 61, 0.45);
+  }
+}
+
+.accomplishment {
+  :global {
+    .selectStyles {
+      .ant-select-dropdown-menu {
+        padding: 0;
+      }
+      // width: 152px;
+      height: 120px !important;
+      border-radius: 5px;
+
+      .ant-select-dropdown-menu-item {
+        // padding: 0px 24px;
+        font-size: 14px;
+        height: 40px !important;
+        line-height: 33px;
+        text-align: center;
+      }
+
+      .ant-select-dropdown-menu-item-active {
+        background: rgba(4, 69, 252, 0.1) !important;
+      }
+    }
+  }
+}
+
+.radioBox {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  border: 1px solid rgba(151, 151, 151, 0.28);
+  cursor: pointer;
+  margin-right: 10px;
+
+  .checkedRadioContent {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #0445fc;
+    margin: 2px;
+  }
+}
+
+.checkBox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(151, 151, 151, 0.28);
+  cursor: pointer;
+  margin-right: 10px;
+
+  .checkedCheck {
+    // width: 8px;
+    // height: 8px;
+    background: #0445fc;
+    // margin: 1px;
+    color: #fff;
+    line-height: 14px;
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.checkedRadio {
+  border: 1px solid #0445fc;
+}
+
+.childList {
+  // background:rgba(4,69,252, 0.05);
+  .childItem:hover {
+    background: rgba(4, 69, 252, 0.05);
+  }
+
+  .childItem {
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 12px;
+    font-family: PingFangSC-Regular;
+    color: #01113d;
+    cursor: pointer;
+  }
+}
+
+:global(.addPop) {
+  padding: 0 !important;
+}

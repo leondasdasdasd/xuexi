@@ -1,0 +1,36 @@
+.chartSwitchContainer {
+  display: inline-block;
+  margin-right: 12px;
+
+  :global(.ant-switch-checked) {
+    background-color: #0445fc;
+  }
+
+  :global(.ant-switch) {
+    height: 16px;
+    width: 32px;
+    min-width: 32px;
+  }
+
+  :global(.ant-switch::after) {
+    height: 12px;
+    width: 12px;
+  }
+
+  .chartSwitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.label {
+  opacity: 0.85;
+  font-family: PingFangSC-Regular;
+  font-size: 13px;
+  line-height: 13px;
+  color: #01113d;
+  font-weight: 400;
+  margin-right: 6px;
+  white-space: nowrap;
+}

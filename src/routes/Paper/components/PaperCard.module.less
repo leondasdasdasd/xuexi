@@ -1,0 +1,86 @@
+.card {
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding-right: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #01113d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.metaText {
+  margin-left: 6px;
+}
+
+.stats {
+  width: 150px;
+  border-left: 1px solid #f0f0f0;
+  padding: 0 16px;
+}
+
+.statItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  line-height: 22px;
+}
+
+.statLabel {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.statValue {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+}
+
+.actions {
+  border-left: 1px solid #f0f0f0;
+  padding-left: 16px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  :global {
+    .ant-btn-link {
+      color: #032e92;
+    }
+  }
+}

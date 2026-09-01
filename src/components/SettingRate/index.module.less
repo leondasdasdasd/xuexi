@@ -1,0 +1,74 @@
+@import "../../utils/global.less";
+
+.scoreSettingBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+  cursor: pointer;
+
+  :global(.ant-input-number) {
+    margin-left: 15px;
+    margin-right: 20px;
+  }
+
+  .deleteIcon {
+    display: none;
+  }
+}
+
+.scoreSettingBox:hover {
+  .deleteIcon {
+    display: block !important;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+}
+
+.newSubsection {
+  color: #4d7ff5;
+  margin-top: 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 5px 0;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+
+  .subsectionWord {
+    margin-left: 10px;
+  }
+}
+
+.saveGeneral {
+  background: #0445fc;
+  color: #fff;
+}
+
+.replyDefault {
+  background: rgb(228, 236, 254);
+  color: #0445fc;
+}
+
+.scoreSettingList {
+  color: #01113d;
+
+  .intervalInput {
+    display: flex;
+    align-items: center;
+  }
+
+  .titleInput {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+
+  .addScoreBtn {
+    padding: 6px 15px;
+    color: rgba(4, 69, 252, 1);
+    border: 1px solid rgba(1, 17, 61, 0.1);
+    cursor: pointer;
+    margin-top: 20px;
+  }
+}

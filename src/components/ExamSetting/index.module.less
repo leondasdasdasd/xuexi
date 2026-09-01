@@ -1,0 +1,219 @@
+@import "../../utils/global.less";
+
+.errText {
+}
+
+.errModal {
+  // top: 100px;
+  text-align: center;
+  min-width: 200px;
+  max-width: 520px;
+
+  // line-height: 50px;
+  // left: 50%;
+  // margin-left: -100px;
+  :global(.ant-modal-body) {
+    padding: 0;
+    padding-top: 10px;
+    // height: 50px !important;
+    line-height: 36px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .errTextDiv {
+    width: calc(~"100% - 70px");
+    margin-right: 50px;
+    margin-left: 20px;
+    height: 260px;
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 2;
+    font-size: 18px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.uploadContent {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+
+  .header {
+    position: relative;
+
+    .uploadTitle {
+      line-height: 24px;
+      font-size: 18px;
+      color: #303133;
+    }
+
+    .iconfont {
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 24px;
+      cursor: pointer;
+    }
+
+    margin-bottom: 10px;
+  }
+
+  .uploadBox {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 8px;
+
+    .importMessage {
+      position: absolute;
+      left: 111px;
+      top: 4px;
+      font-family: "PingFang SC";
+      font-size: 13px;
+      line-height: 22px;
+      color: #5a6481;
+    }
+
+    :global {
+      .ant-btn {
+        padding: 6px 10px;
+        font-family: "PingFang SC";
+        font-size: 14px;
+        color: #01113d;
+        border: 0.8px solid #e6e7ec;
+      }
+    }
+  }
+
+  .uploadRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .radioBox {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    .teacherName {
+      height: 30px;
+      min-width: 100px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      padding: 0 10px;
+      line-height: 27px;
+      margin-left: 12px;
+      display: inline-block;
+    }
+
+    :global(.ant-input) {
+    }
+
+    .radioTitle {
+      // min-width: 42px;
+      display: inline-block;
+      text-wrap: nowrap;
+      flex-shrink: 0;
+      font-family: "PingFang SC";
+      font-size: 14px;
+      font-weight: 500;
+      color: #01113d;
+      margin-right: 12px;
+    }
+
+    .platformMessgae {
+      margin-left: 40px;
+      color: red;
+    }
+
+    .uploadBox {
+      width: 241px;
+
+      :global {
+        .ant-upload-list-item {
+          width: 241px;
+        }
+
+        .ant-upload-list-item-card-actions {
+          opacity: 1;
+        }
+
+        .ant-upload-list-item-name {
+          font-family: "PingFang SC";
+          font-size: 13px;
+          font-weight: normal;
+          line-height: 22px;
+          color: #0445fc;
+        }
+      }
+    }
+  }
+
+  .noImportantMessage {
+    font-size: 14px;
+    color: #606266;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+
+    :global(.ant-btn-primary) {
+      margin-left: 20px;
+    }
+  }
+
+  :global(.ant-input) {
+    width: 300px;
+  }
+}
+
+.downLoadContent {
+  height: 500px;
+  text-align: center;
+
+  :global(.ant-btn) {
+    margin-top: 234px;
+  }
+
+  .makePaper {
+    color: #1890ff;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .paperTitle {
+    margin-top: 150px;
+  }
+
+  .paperContent {
+    margin-top: 20px;
+  }
+}
+
+.uploadModal {
+  :global(.ant-modal-body) {
+    padding-top: 0;
+    height: 400px;
+  }
+
+  :global(.ant-modal-title) {
+    text-align: center;
+  }
+}
+
+.matrixPenType {
+  display: inline-block;
+  margin-left: 28px;
+}

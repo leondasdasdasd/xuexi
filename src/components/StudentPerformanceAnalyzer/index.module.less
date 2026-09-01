@@ -1,0 +1,167 @@
+@import "../../utils/global.less";
+
+.studentPerformanceAnalyzer {
+  background-color: #fff;
+  margin: 10px 20px 0;
+  border-radius: 11px;
+}
+
+.selectLabel {
+  font-family: "PingFang SC";
+  font-size: 13px;
+  color: rgba(1, 17, 61, 0.8484);
+  padding: 0 4px;
+}
+
+.contentBody {
+  display: flex;
+}
+
+.leftPanel {
+  width: 182px;
+  height: 456px;
+  border-right: 1px solid rgba(1, 17, 61, 0.07);
+  padding-top: 8px;
+
+  .selectItem {
+    cursor: pointer;
+    align-items: center;
+    width: 182px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(1, 17, 61, 0.75);
+    font-family: "PingFang SC";
+    border-left: 2px solid transparent;
+    white-space: nowrap;
+
+    :global(.ant-input) {
+      width: 62px;
+      height: 28px;
+      margin: 0 8px;
+      border: 1px solid rgba(1, 17, 61, 0.12);
+    }
+  }
+
+  .selectItem:hover {
+    background: rgba(4, 69, 252, 0.03);
+  }
+
+  .active {
+    background: rgba(4, 69, 252, 0.05);
+    color: #0445fc;
+    border-left: 2px solid #0445fc;
+  }
+}
+
+.rightPanel {
+  flex-grow: 1;
+  padding: 12px 16px;
+
+  .analysisTotalTitle {
+    font-family: "PingFang SC";
+    font-size: 13px;
+    font-weight: normal;
+    color: #4818c9;
+    margin-bottom: 12px;
+    padding-left: 16px;
+  }
+
+  :global {
+    .ant-table-wrapper {
+      .ant-table-thead
+        > tr.ant-table-row-hover:not(
+          .ant-table-expanded-row,
+          .ant-table-row-selected
+        )
+        > td,
+      .ant-table-tbody
+        > tr.ant-table-row-hover:not(
+          .ant-table-expanded-row,
+          .ant-table-row-selected
+        )
+        > td,
+      .ant-table-thead
+        > tr:hover:not(.ant-table-expanded-row, .ant-table-row-selected)
+        > td,
+      .ant-table-tbody
+        > tr:hover:not(.ant-table-expanded-row, .ant-table-row-selected)
+        > td {
+        background: rgba(4, 69, 252, 0.05);
+      }
+
+      .ant-table-thead
+        > tr
+        > th
+        .ant-table-column-sorter
+        .ant-table-column-sorter-inner
+        .ant-table-column-sorter-down.on,
+      .ant-table-thead
+        > tr
+        > th
+        .ant-table-column-sorter
+        .ant-table-column-sorter-inner
+        .ant-table-column-sorter-up.on {
+        color: #0445fc;
+      }
+
+      .ant-table-body {
+        .examScoreCol {
+          border-left: 1px solid rgba(1, 17, 61, 0.07);
+        }
+
+        .scoreChangesCol {
+          border-right: 1px solid rgba(1, 17, 61, 0.07);
+        }
+
+        .rankChangesCol {
+          border-right: 1px solid rgba(1, 17, 61, 0.07);
+        }
+      }
+
+      .table-operate-btn {
+        margin-right: 10px;
+        cursor: pointer;
+        color: #0445fc;
+        font-size: 13px;
+        display: inline-block;
+      }
+
+      .table-operate-btn:last-child {
+        margin-right: 0;
+      }
+
+      .ant-table-content
+        .ant-table-body
+        .ant-table-thead
+        .ant-table-column-title {
+        // border-right: 1px solid red;
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(1, 17, 61, 0.75);
+      }
+
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        padding: 11px 10px;
+      }
+
+      .ant-table-tbody > tr > td {
+        border-bottom: 1px solid rgba(1, 17, 61, 0.07);
+      }
+
+      .ant-table-thead > tr > th {
+        border-bottom: 1px solid rgba(1, 17, 61, 0.07);
+        background: rgba(1, 17, 61, 0.04);
+      }
+
+      .ant-table-content .ant-table-tbody .ant-table-row td {
+        font-size: 13px;
+        font-weight: normal;
+        color: rgba(1, 17, 61, 0.85);
+      }
+    }
+  }
+}

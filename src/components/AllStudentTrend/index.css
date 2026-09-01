@@ -1,0 +1,87 @@
+.questionTable {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.questionTable .customAnalysis {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.questionTable .rightContent {
+  width: 200px;
+  padding: 10px;
+}
+
+.questionTable .rightContent .elevator {
+  background: #fbfbfc;
+  box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.questionTable .rightContent .elevator .elevatorTitle {
+  font-family: PingFangSC-Medium;
+  color: #01113d 100%;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+.questionTable .rightContent .elevator .elevatorListItem {
+  font-family: PingFangSC-Regular;
+  color: #01113d;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.questionTable .rightContent .elevator .select {
+  font-family: PingFangSC-Medium;
+  color: #0445fc !important;
+}
+
+.questionTable :global(.ant-table-tbody) tr:first-child {
+  background: #e0f5fe;
+}
+
+.questionTable .importMessage {
+  font-family: AlibabaPuHuiTiR;
+  color: #01113d;
+  font-size: 14px;
+}
+
+.questionTable .publicMessage {
+  font-family: AlibabaPuHuiTiL;
+  color: #01113d;
+  opacity: 0.45;
+  font-size: 12px;
+}
+
+.questionTable .noPass {
+  color: #4818c9 !important;
+  opacity: 1;
+}
+
+.questionTable .reportFormIcon {
+  margin: 0 3px 0 6px;
+}
+
+.questionTable .divider {
+  margin: 0 3px;
+}
+
+.questionTable :global(.ant-table-tbody) > tr > td {
+  padding: 2px 16px !important;
+}
+
+.questionTable :global(.ant-table-tbody) > tr > th {
+  padding: 2px 16px !important;
+}
+
+.questionTable :global(.dimension) {
+  position: absolute;
+  top: -105px;
+  right: 50px;
+}

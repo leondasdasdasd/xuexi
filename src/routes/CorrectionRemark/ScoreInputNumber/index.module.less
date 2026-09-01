@@ -1,0 +1,76 @@
+.errMessageBox {
+  font-size: 12px;
+  color: red;
+  padding-left: 97px;
+  line-height: 17px;
+  display: none;
+}
+
+:global {
+  .gradingPapersQuestionScoreNumber {
+    margin-right: 5px;
+    width: 103px;
+    height: 36px;
+
+    /* 隐藏上下按钮 */
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+  }
+}
+
+.inputToolIcon:hover {
+  color: #0445fc;
+  cursor: pointer;
+}
+
+.scoreBox {
+  display: flex;
+  align-items: center;
+}
+
+.questionNumBox {
+  min-width: 37px;
+  font-size: 16px;
+  color: rgba(1, 17, 61, 0.85);
+  font-weight: 600;
+}
+
+.questionScoreBox {
+  min-width: 60px;
+  font-size: 14px;
+  color: rgba(1, 17, 61, 0.85);
+}
+
+.inputToolBox {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 23px;
+  font-size: 12px;
+  z-index: 9;
+}
+
+.scoreResultText {
+  font-weight: 500;
+  color: rgba(1, 17, 61, 0.65);
+  font-size: 14px;
+}
+
+.scoreResultNum {
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.scoreResult {
+  border: 1px solid rgba(1, 17, 61, 0.2);
+  border-radius: 4px;
+  padding: 8px 5px;
+  height: 36px;
+  line-height: 36px;
+  width: 87px;
+  display: flex;
+  align-items: center;
+}

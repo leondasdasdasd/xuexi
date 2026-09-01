@@ -1,0 +1,142 @@
+@import "antd/lib/style/themes/default.less";
+
+.header {
+  position: relative;
+  font-family: PingFangSC-Regular;
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(59, 111, 245, 0.12);
+
+  .headerTitle {
+    display: inline-block;
+    position: relative;
+    z-index: 9;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .titleTxt {
+      font-size: 18px;
+      color: #666;
+      margin-left: 10px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .right {
+    .globalNav {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+    }
+
+    .treeHeader {
+      position: absolute;
+      right: 300px;
+      top: 13px;
+    }
+
+    .utilContent {
+      position: absolute;
+      top: 0;
+      right: 2%;
+
+      :global(.ant-popover-inner) {
+        border-radius: 15px;
+      }
+
+      :global(.ant-popover-inner-content) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+i.trigger {
+  font-size: 20px;
+  line-height: 64px;
+  cursor: pointer;
+  transition:
+    all 0.3s,
+    padding 0s;
+  padding: 0 24px;
+  color: #fff;
+  display: none;
+}
+
+.triggerIcon {
+  font-size: 20px;
+  line-height: 64px;
+  cursor: pointer;
+  transition:
+    all 0.3s,
+    padding 0s;
+  padding: 0 24px;
+  color: #666;
+  position: relative;
+  z-index: 9;
+  top: 3px;
+}
+
+.buyCar {
+  position: absolute;
+  left: -50px;
+  height: 64px;
+  display: inline-block;
+  padding-top: 19px;
+  font-size: 20px;
+  color: #4d7fff;
+
+  .buyCarIcon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  & > span > sup {
+    background: #4d7fff;
+    min-width: 15px;
+    height: 15px;
+    line-height: 15px;
+  }
+}
+
+.navContent {
+  text-align: center;
+  margin-top: 5px;
+  height: 58px;
+  display: flex;
+  display: -moz-flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  a {
+    display: inline-block;
+    // font-weight: bold;
+    height: 39px;
+    color: #8288f4;
+    font-family: PingFangSC-Medium;
+
+    &.cur {
+      color: #3b6ff5;
+      border-bottom: 2px solid #3b6ff5;
+    }
+  }
+}
+
+@media screen and (max-width: 3000px) {
+  .navContent {
+    a {
+      font-size: 16px;
+      padding: 0 20px;
+      margin: 0 20px;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+.structureBox {
+  height: 100%;
+
+  .structureHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 40px;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #e6e6e6;
+
+    .structureHeaderButton {
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      background: rgba(50, 217, 231, 0.15);
+      color: #0ba8d2;
+      border: 1px solid #0ba8d2;
+      border-radius: 4px;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+  }
+
+  .structureContent {
+    .structureTh {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: rgba(1, 17, 61, 1);
+      font-family: PingFangSC-Medium;
+
+      .thTd {
+        width: 60px;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+        border-right: none;
+      }
+
+      .thFlexTd {
+        flex: 1;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+        border-right: none;
+      }
+
+      .thTd:last-child {
+        border-right: 1px solid #e6e6e6;
+      }
+    }
+
+    .modalDom {
+      :global {
+        .ant-modal-wrap {
+          right: 450px !important;
+
+          .ant-modal {
+            position: absolute !important;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    .structureListItem {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 30px;
+      line-height: 30px;
+      color: rgba(1, 17, 61, 0.85);
+      font-family: PingFangSC-Regular;
+
+      .itemTd {
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+        border-right: none;
+
+        .add {
+          background: rgba(50, 217, 231, 0.15);
+          color: #0ba8d2;
+          border: 1px solid #0ba8d2;
+          width: 24px;
+          display: inline-block;
+          border-radius: 4px;
+          font-size: 12px;
+          height: 24px;
+          line-height: 24px;
+          margin-right: 2px;
+          cursor: pointer;
+        }
+
+        .delete {
+          background: rgba(255, 43, 0, 0.15);
+          color: #ff2b00;
+          border: 1px solid #ff2b00;
+          width: 24px;
+          display: inline-block;
+          border-radius: 4px;
+          font-size: 12px;
+          height: 24px;
+          line-height: 24px;
+          cursor: pointer;
+        }
+      }
+
+      .itemFlexTd {
+        flex: 1;
+        text-align: center;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+        border-right: none;
+      }
+
+      .clickSpan {
+        color: #ff5658;
+      }
+
+      .itemTd:last-child {
+        border-right: 1px solid #e6e6e6;
+      }
+    }
+  }
+}
+
+.changeQuestionPop {
+  display: flex;
+  flex-direction: row;
+
+  .typePopButton {
+    background: rgba(1, 17, 61, 0.03);
+    color: rgba(1, 17, 61, 0.85);
+    border-radius: 4px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 80px;
+    margin-right: 20px;
+  }
+}
+
+.typePop {
+  .typePopButton {
+    background: rgba(1, 17, 61, 0.03);
+    color: rgba(1, 17, 61, 0.85);
+    border-radius: 4px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+}

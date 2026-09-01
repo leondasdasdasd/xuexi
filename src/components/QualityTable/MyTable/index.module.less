@@ -1,0 +1,40 @@
+.myTable {
+  :global {
+    .ant-table {
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        padding: 5px 10px;
+      }
+
+      .ant-table-thead > tr > th {
+        background: rgba(1, 17, 61, 0.03);
+        font-family: "PingFang SC";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        color: rgba(1, 17, 61, 1);
+      }
+
+      .ant-table-tbody > tr > td {
+        font-family: "PingFang SC";
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 22px;
+        color: rgba(1, 17, 61, 0.85);
+      }
+    }
+
+    .ant-table-bordered .ant-table-thead > tr > th,
+    .ant-table-bordered .ant-table-tbody > tr > td {
+      border-color: rgba(242, 243, 245, 1) !important;
+      box-shadow: inset 1px -1px 0 0 rgba(1, 17, 61, 0.05);
+    }
+
+    .ant-table-bordered .ant-table-header > table,
+    .ant-table-bordered .ant-table-body > table,
+    .ant-table-bordered .ant-table-fixed-left table,
+    .ant-table-bordered .ant-table-fixed-right table {
+      border-color: rgba(242, 243, 245, 1) !important;
+    }
+  }
+}

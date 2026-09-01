@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 101备份 9</title>
+    <defs>
+        <filter x="-71.3%" y="-74.7%" width="242.7%" height="249.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="逐题分析" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-101备份-9" filter="url(#filter-1)" transform="translate(9.000000, 9.000000)" fill="#FFFFFF" stroke="#9DA4B5">
+            <path d="M8.22923769,0 C9.44824811,0 10.7633996,1.07589962 10.7633996,2.81451231 C10.7633996,3.60345644 10.7223011,4.15535038 10.6430398,4.60890152 L13.018679,4.60890152 C13.8142282,4.60890152 14.5143703,4.96704545 14.9906723,5.61581439 C15.3506899,6.12005688 15.4917511,6.74834821 15.3818419,7.35809659 C15.2130445,8.26666667 14.1819129,12.9247396 13.9727509,13.3408617 C13.7731297,13.7349669 13.4707623,14.0674242 13.0979403,14.3015388 C12.7060833,14.5481328 12.2523843,14.6786698 11.7893939,14.6780975 C8.57685261,14.6780975 6.01077512,14.6780975 4.09116147,14.6780975 C3.7027364,14.6780975 3.23695357,14.6780975 2.69381299,14.6780975 C2.69381299,14.0600852 2.68794177,14.0600852 2.68794177,13.3298532 L2.69381299,6.52291667 C2.69381299,5.80222538 2.69381299,6.1011406 2.69381299,5.21510417 L4.09116147,5.15785985 C5.45181488,5.06098485 5.7662642,3.89921875 5.80442708,2.45857008 C5.80369318,1.0648911 6.84656723,0 8.22923769,0 Z" id="路径" fill-rule="nonzero"></path>
+            <path d="M2,5.1925 L2.7125,5.1925 L2.7125,5.1925 L2.7125,14.725 L2,14.725 C0.8954305,14.725 1.3527075e-16,13.8295695 0,12.725 L0,7.1925 C-1.3527075e-16,6.0879305 0.8954305,5.1925 2,5.1925 Z" id="矩形"></path>
+        </g>
+    </g>
+</svg>

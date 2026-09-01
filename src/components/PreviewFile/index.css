@@ -1,0 +1,290 @@
+.previewModal {
+  position: fixed;
+  background-color: rgba(38, 38, 38, 0.85);
+  inset: 0;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: PingFangSC-Regular;
+}
+
+.modalBtn {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.modalBtn i {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalBtn .closeBtn {
+  margin-left: 17px;
+  font-size: 24px;
+}
+
+.modalBtn .downIcon {
+  margin-right: 17px;
+}
+
+.operation {
+  text-align: center;
+}
+
+.operation .imageIcon {
+  color: rgba(255, 255, 255, 0.65);
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.operation .scaleIcon {
+  margin-right: 38px;
+}
+
+.operation .scaleIcon i {
+  font-size: 18px;
+}
+
+.operation .resetImg {
+  margin: 0 15px;
+  font-size: 12px;
+}
+
+.filesArea {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  z-index: 8;
+  align-items: center;
+  overflow: scroll;
+  justify-content: center;
+}
+
+.imageStyle {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageStyle img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 8px;
+}
+
+.iframeStyle {
+  border: 0 none;
+  height: 100%;
+  padding: 8px;
+}
+
+.videoStyle {
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+}
+
+.audioStyle {
+  width: 80%;
+  max-width: 381px;
+}
+
+.audioStyle .closeModal {
+  display: none;
+}
+
+.audioStyle .playTime {
+  color: #fff;
+}
+
+.audioStyle .duration {
+  color: #fff;
+}
+
+.noFullAudioStyle {
+  width: 458px;
+  height: 203px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+  position: relative;
+}
+
+.noFullAudioStyle .closeModal {
+  position: absolute;
+  right: 28px;
+  font-size: 13px;
+  color: rgba(38, 38, 38, 0.85);
+  cursor: pointer;
+}
+
+.noFullAudioStyle .playTime {
+  color: #5a6481;
+}
+
+.noFullAudioStyle .duration {
+  color: #5a6481;
+}
+
+.audioStyle,
+.noFullAudioStyle {
+  text-align: center;
+}
+
+.audioStyle .audioPreview,
+.noFullAudioStyle .audioPreview {
+  display: block;
+}
+
+.audioStyle .audioPreview .playButton,
+.noFullAudioStyle .audioPreview .playButton {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.audioStyle .audioPreview .playIcon,
+.noFullAudioStyle .audioPreview .playIcon {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  color: rgba(1, 17, 61, 0.45);
+  display: inline-block;
+  line-height: 60px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 16px 0 rgba(1, 17, 61, 0.2);
+}
+
+.audioBar {
+  width: 100%;
+  height: 9px;
+  display: block;
+  position: relative;
+  border-radius: 20px;
+}
+
+.audioBar .dot {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  font-size: 20px;
+}
+
+.audioBar .playedBar {
+  position: absolute;
+  left: 0;
+  height: 9px;
+  background: rgba(4, 69, 252, 0.45);
+  width: 0;
+  border-radius: 20px 0 0 20px;
+}
+
+.audioTime {
+  display: block;
+}
+
+.playTime {
+  float: left;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.duration {
+  float: right;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.noPreview {
+  text-align: center;
+}
+
+.noPreview i {
+  font-size: 66px;
+  display: block;
+  margin-bottom: 37px;
+}
+
+.noPreview span {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+}
+
+.borderRadiusBox {
+  border-radius: 20px;
+}
+
+.borderRadiusBox .filesArea {
+  border-radius: 20px;
+}
+
+.showFileName {
+  position: absolute;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.65);
+  padding: 8px 20px;
+  border-radius: 10px;
+  z-index: 9;
+  display: inline-block;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.switchBtn {
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  margin-top: -23px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 52px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.previousBtn {
+  left: 8px;
+}
+
+.nextBtn {
+  right: 8px;
+}

@@ -1,0 +1,201 @@
+.boldStyle {
+  font-size: 14px;
+  color: #000;
+  font-family: PingFangSC-Medium;
+  display: block;
+  font-style: normal;
+}
+
+.grayStyle {
+  font-size: 12px;
+  color: #666;
+  font-family: PingFangSC-Medium;
+  display: block;
+  font-style: normal;
+}
+
+.scoreCol {
+  text-align: left;
+}
+
+.scoreCol .iconfont {
+  font-size: 17px;
+}
+
+.scoreCol em {
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.scoreCol em i {
+  color: #666;
+  font-style: normal;
+}
+
+.scoreCol em .allScore {
+  color: #666;
+}
+
+.scoreCol .startTime {
+  color: #999;
+  font-size: 12px;
+}
+
+.unFinishStatus {
+  color: #e9b635;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.lookPaperStatus {
+  color: #4d7ff5;
+  font-size: 14px;
+}
+
+.columnStyle {
+  padding: 0 !important;
+  position: relative;
+}
+
+.columnStyle .examTitle {
+  font-size: 14px;
+  font-style: normal;
+  color: #666;
+}
+
+.columnStyle .exambar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  width: 100%;
+  display: block;
+  height: 12px;
+}
+
+.columnStyle .exambar .greenbar {
+  background: rgba(103, 178, 81, 0.8);
+  height: 12px;
+  display: inline-block;
+}
+
+.columnStyle .exambar .redbar {
+  background: rgba(229, 73, 46, 0.8);
+  height: 12px;
+  display: inline-block;
+}
+
+.columnStyle .exambar .yellowbar {
+  background: #e9b635;
+  height: 12px;
+  display: inline-block;
+}
+
+.renderQuesionCol {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+}
+
+.renderQuesionCol em {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-style: normal;
+  color: #000;
+  font-size: 14px;
+}
+
+.renderQuesionCol i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+}
+
+.renderQuesionCol i.rightIcon {
+  color: #67b251;
+}
+
+.renderQuesionCol i.wrongIcon {
+  color: #e5492e;
+}
+
+.showPage {
+  text-align: right;
+  margin: 30px 0;
+}
+
+.lookPaper {
+  color: #4d7fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.unLookPaper {
+  color: #999;
+  font-size: 14px;
+}
+
+.questionType {
+  background: rgba(59, 111, 245, 0.08);
+  font-family: PingFangSC-Medium;
+  color: #4d7fff;
+  padding: 4px 20px 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.questionLevel {
+  display: inline-block;
+  padding: 4px 20px 4px 10px;
+  font-family: PingFangSC-Medium;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.questionLevel i {
+  font-size: 18px;
+}
+
+.easy {
+  color: #67b251;
+  background: rgba(103, 178, 81, 0.04);
+}
+
+.general {
+  background-color: rgba(233, 182, 53, 0.04);
+  color: #e9b635;
+}
+
+.difficult {
+  background-color: rgba(221, 107, 71, 0.04);
+  color: #dd6b47;
+}
+
+.progressBar {
+  height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+  background: #ddd;
+  width: 200px;
+  position: relative;
+}
+
+.progressBar em {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 2px;
+}
+
+.analysisNum {
+  color: #666;
+  font-size: 12px;
+}

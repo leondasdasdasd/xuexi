@@ -1,0 +1,76 @@
+.gradeSelectBox {
+  margin-right: 10px;
+
+  :global {
+    .ant-select-focused .ant-select-selection,
+    .ant-select-selection:focus,
+    .ant-select-selection:active {
+      border: none;
+      box-shadow: none;
+    }
+
+    .ant-select-selection--single {
+      background: #3fb203;
+      color: #fff;
+      font-family: "PingFang SC";
+      font-size: 14px;
+      font-weight: 600;
+      height: 36px;
+      line-height: 36px;
+    }
+
+    .ant-select-selection__rendered {
+      height: 36px;
+      line-height: 36px;
+    }
+
+    .ant-select-arrow {
+      color: #fff;
+    }
+  }
+
+  .gradeSelect {
+    padding: 0 10px;
+    height: 36px;
+    border-radius: 7px;
+    background: #3fb203;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.hidden_popover_arrow {
+  padding-top: 0;
+  // :global(.ant-popover-arrow) {
+  //     display: none;
+  // }
+}
+
+.stage-subject-list {
+  box-sizing: border-box;
+  max-height: calc(100vh - 5rem);
+  padding-top: 0.625rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.school_level {
+  margin-right: 16px;
+  text-wrap: nowrap;
+}
+
+.school_level_content {
+  display: flex;
+  margin-bottom: 23px;
+  max-width: 400px;
+}
+
+.school_level_subject {
+  display: flex;
+  flex-wrap: wrap;
+}

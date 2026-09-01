@@ -1,0 +1,124 @@
+.library-modal-wrap {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  overflow: hidden;
+
+  :global(.ant-modal) {
+    top: 0;
+    padding-bottom: 0;
+    margin: auto;
+  }
+
+  :global(.ant-modal-content) {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 3rem);
+  }
+
+  :global(.ant-modal-header),
+  :global(.ant-modal-footer) {
+    flex: 0 0 auto;
+  }
+
+  :global(.ant-modal-body) {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+}
+
+.library-query-scroll {
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.library-query-row {
+  display: grid;
+  grid-template-columns:
+    minmax(8rem, 0.7fr) minmax(8rem, 0.7fr) minmax(9rem, 0.8fr)
+    minmax(16rem, 1.4fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  min-width: 58rem;
+}
+
+.library-query-row :global(.ant-input-search) {
+  width: 100%;
+}
+
+.library-selected-count {
+  white-space: nowrap;
+}
+
+.library-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.library-footer-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.library-list {
+  display: grid;
+  gap: 0.75rem;
+  min-height: 16rem;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.library-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.75rem;
+  color: inherit;
+  border: 1px solid rgba(1, 17, 61, 0.14);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.library-select {
+  display: inline-flex;
+  gap: 0.375rem;
+  align-items: center;
+  min-height: 2rem;
+  color: rgba(1, 17, 61, 0.55);
+  white-space: nowrap;
+}
+
+.library-alert,
+.library-retry {
+  margin-top: 0.75rem;
+}
+
+.library-pagination {
+  flex: 0 1 auto;
+}
+
+@media (max-width: 40rem) {
+  .library-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .library-footer-actions {
+    justify-content: flex-end;
+  }
+
+  .library-pagination {
+    overflow-x: auto;
+  }
+
+  .library-item {
+    grid-template-columns: 1fr;
+  }
+}

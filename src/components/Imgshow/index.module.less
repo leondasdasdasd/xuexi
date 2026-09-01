@@ -1,0 +1,29 @@
+@import "../../utils/global.less";
+
+.imgBox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #000;
+  opacity: 0.7;
+
+  .header {
+    height: 64px;
+    width: 100%;
+    line-height: 64px;
+
+    .closeIcon {
+      cursor: pointer;
+      font-size: 24px;
+      margin-left: 20px;
+      color: #fff;
+    }
+  }
+
+  .show {
+    margin: 10px auto;
+    max-width: calc(~"100% - 10px");
+    height: auto;
+    overflow: scroll;
+  }
+}

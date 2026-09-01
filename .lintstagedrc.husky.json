@@ -1,0 +1,11 @@
+{
+  "*.{js,jsx,ts,tsx,mjs,cjs}": [
+    "sh -c 'eslint --fix \"$@\" || true' --",
+    "prettier --write"
+  ],
+  "*.{css,less}": [
+    "sh -c 'stylelint --fix \"$@\" || true' --",
+    "prettier --write"
+  ],
+  "*.{json,md}": "prettier --write"
+}

@@ -1,0 +1,1 @@
+请始终使用简体中文撰写 Git Commit Message。遵循 Conventional Commits 规范（格式如：feat: 添加了新功能，或者 fix: 修复了登录 bug）。

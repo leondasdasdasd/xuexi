@@ -1,0 +1,65 @@
+.DotMatrixPen {
+  :global {
+    .ant-table {
+      .ant-table-scroll {
+        overflow: auto;
+      }
+
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        padding: 5px 10px;
+      }
+
+      .ant-table-thead > tr > th {
+        background: rgba(1, 17, 61, 0.03);
+        font-family: "PingFang SC";
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        color: rgba(1, 17, 61, 1);
+      }
+
+      .ant-table-tbody > tr > td {
+        height: 58px;
+        font-family: "PingFang SC";
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 22px;
+        color: rgba(1, 17, 61, 0.85);
+      }
+    }
+
+    .ant-table-bordered .ant-table-thead > tr > th,
+    .ant-table-bordered .ant-table-tbody > tr > td {
+      border-color: #cccfd8 !important;
+    }
+
+    .ant-table-bordered .ant-table-header > table,
+    .ant-table-bordered .ant-table-body > table,
+    .ant-table-bordered .ant-table-fixed-left table,
+    .ant-table-bordered .ant-table-fixed-right table {
+      border-color: #cccfd8 !important;
+    }
+  }
+
+  :global(.ant-table-tbody) {
+    .columnsBox {
+      padding: 0 !important;
+    }
+  }
+
+  .cells {
+    height: 100%;
+    width: 100%;
+    padding: 5px 10px;
+    color: #000;
+  }
+
+  .correct {
+    background-color: rgba(103, 178, 81, 0.3);
+  }
+
+  .error {
+    border: 1px solid rgb(229, 73, 46);
+  }
+}

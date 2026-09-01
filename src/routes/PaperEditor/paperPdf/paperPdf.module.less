@@ -1,0 +1,44 @@
+.surface {
+  position: fixed;
+  top: 0;
+  left: -10000px;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm;
+  color: #000;
+  background: #fff;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.body {
+  width: 180mm;
+  max-height: none !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  color: #000;
+  background: #fff;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+.body section > header {
+  position: static;
+}
+
+.body button {
+  display: none !important;
+}
+
+.body img,
+.body canvas,
+.body svg,
+.body table {
+  max-width: 100%;
+}
+
+.body * {
+  overflow-wrap: anywhere;
+}

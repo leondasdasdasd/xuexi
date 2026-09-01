@@ -1,0 +1,159 @@
+.questionContent {
+  text-align: left;
+  display: inline;
+}
+
+.lookDetails {
+  color: #4d7fff;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline;
+}
+
+.accuracy em {
+  font-style: normal;
+}
+
+.accuracy .rightTxt {
+  color: #666;
+}
+
+.accuracy .rightPercent {
+  color: #000;
+  margin: 0 5px;
+}
+
+.accuracy .accuracyIcon {
+  color: #4d7fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.groupName {
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.classSourceRate {
+  max-width: 600px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.classSourceRate::-webkit-scrollbar {
+  display: none;
+}
+
+.classSourceRate .questionType {
+  background: rgba(59, 111, 245, 0.08);
+  font-family: PingFangSC-Medium;
+  color: #4d7fff;
+  padding: 4px 20px 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.classSourceRate .questionLevel {
+  display: inline-block;
+  padding: 4px 20px 4px 10px;
+  font-family: PingFangSC-Medium;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.classSourceRate .questionLevel i {
+  font-size: 18px;
+}
+
+.classSourceRate .easy {
+  color: #67b251;
+  background: rgba(103, 178, 81, 0.04);
+}
+
+.classSourceRate .general {
+  background-color: rgba(233, 182, 53, 0.04);
+  color: #e9b635;
+}
+
+.classSourceRate .difficult {
+  background-color: rgba(221, 107, 71, 0.04);
+  color: #dd6b47;
+}
+
+.classSourceRate .rateQustionTxt {
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.optionArea {
+  display: flex;
+  align-items: center;
+}
+
+.optionStyle {
+  color: #666;
+  width: 480px;
+  min-height: 32px;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 6px 20px;
+  position: relative;
+}
+
+.optionStyle::after {
+  clear: both;
+}
+
+.optionStyle p:first-child {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.optionStyle div:first-child {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.optionStyle img {
+  max-width: 900px !important;
+  max-height: 300px !important;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.optionStyle .rateBar {
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+.optionStyle .choose {
+  margin-right: 8px;
+}
+
+.analysisPerson {
+  margin-left: 20px;
+  color: #999;
+}
+
+.analysisPerson .person {
+  display: block;
+  font-size: 14px;
+}
+
+.analysisPerson .rate {
+  display: block;
+  font-size: 12px;
+}
+
+.showPage {
+  text-align: right;
+  margin: 30px 0;
+}

@@ -1,0 +1,105 @@
+.container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 900;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+  background: #0445fc;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 5px 14px rgba(1, 17, 61, 0.22);
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 260ms ease;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid #0445fc;
+  outline-offset: 3px;
+}
+
+.menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  width: 148px;
+  padding: 6px;
+  visibility: hidden;
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(1, 17, 61, 0.16);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
+}
+
+.menu::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 44px;
+  height: 8px;
+  content: "";
+}
+
+.menu-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 36px;
+  padding: 0 10px;
+  color: #01113d;
+  font-size: 14px;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+  color: #0445fc;
+  background: #f5f7ff;
+}
+
+.menu-item:focus-visible {
+  outline: 2px solid #0445fc;
+  outline-offset: -2px;
+}
+
+.container:hover .trigger,
+.container:focus-within .trigger {
+  background: #245efc;
+  box-shadow: 0 7px 18px rgba(4, 69, 252, 0.3);
+  transform: rotate(180deg);
+}
+
+.container:hover .menu,
+.container:focus-within .menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger,
+  .menu {
+    transition: none;
+  }
+}

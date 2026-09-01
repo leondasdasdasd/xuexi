@@ -1,0 +1,107 @@
+@import "../../utils/global.less";
+
+.mistakesCollectionBox {
+  height: 100%;
+
+  .header {
+    font-family: PingFangSC-Medium;
+    color: #000;
+    font-size: 18px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+
+    .goBackBox {
+      position: absolute;
+      // top: 10px;
+      left: 20px;
+
+      i {
+        // margin-left: 20px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .goBack {
+        cursor: pointer;
+        margin-left: 3px;
+      }
+    }
+
+    .title {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  .stuWrongQuestion {
+    background: #fff;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    position: relative;
+    height: 100%;
+    padding: 10px;
+
+    :global(.ant-table-thead) > tr > th {
+      padding: 9px 0 9px 10px !important;
+    }
+
+    :global(.ant-table-tbody) > tr > td {
+      padding: 9px 0 9px 10px !important;
+    }
+
+    .operate {
+      color: #0445fc;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    .tableBody {
+      // height: calc(~"100vh-350px");
+      height: calc(~"100% - 150px");
+      overflow-y: scroll;
+    }
+
+    .paginations {
+      background: #fff;
+      height: 32px;
+      // border-radius: 0 0 15px 15px ;
+      position: absolute;
+      bottom: 68px;
+      right: 20px;
+      z-index: 99;
+    }
+
+    .tabSub {
+      white-space: nowrap;
+      width: 100%;
+      margin-bottom: 20px;
+      overflow-x: scroll;
+      // overflow-x: scroll;
+      // padding-top: 20px;
+      .subBox {
+        display: inline-block;
+        padding: 5px 20px;
+        // padding-bottom: 7px;
+        // border-bottom: 1px solid #ccc;
+        background: #fff;
+        cursor: pointer;
+        border: 1px solid rgba(1, 17, 61, 0.12);
+      }
+
+      .subBox:hover {
+        // border-bottom: 2px solid blue;
+        color: #0445fc;
+        background: rgb(212, 223, 253);
+      }
+    }
+  }
+}

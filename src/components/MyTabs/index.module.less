@@ -1,0 +1,64 @@
+.tabsNavContainer {
+  background: rgba(1, 17, 61, 0.05);
+  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.tabsNavWrap {
+  display: flex;
+  padding: 1px 2px;
+  width: 100%;
+}
+
+.tabsBar {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 24px;
+  height: 26px;
+  padding: 0 10px;
+  font-family: PingFangSC-Regular;
+  font-size: 13px;
+  color: rgba(1, 17, 61, 0.5);
+  font-weight: 400;
+  transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.tabsBar::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  border-right: 1px solid;
+  border-color: rgba(1, 17, 61, 0.2);
+  top: 6px;
+  right: 0;
+}
+
+.tabsBar:last-child::after {
+  display: none;
+}
+
+.tabsTabActive {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(1, 17, 61, 0.85);
+  box-shadow: 0 1px 0.75px 0 rgba(0, 0, 0, 0.05);
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  position: relative;
+  z-index: 11;
+}
+
+.tabsTabActive::after {
+  display: none;
+}
+
+.getPrevBar::after {
+  display: none;
+}

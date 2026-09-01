@@ -1,0 +1,215 @@
+:global {
+  /* end */
+}
+:global a[href="https://froala.com/wysiwyg-editor"],
+:global a[href="https://www.froala.com/wysiwyg-editor?k=u"] {
+  display: none !important;
+}
+
+:global .fr-wrapper > div[style*="z-index: 9999"] {
+  position: absolute;
+  top: -10000px;
+  opacity: 0;
+}
+
+:global #preview {
+  overflow-y: scroll;
+  padding: 0 24px 24px;
+}
+
+:global #preview img {
+  max-width: 100% !important;
+  max-height: 300px !important;
+  object-fit: contain;
+}
+
+:global #preview .question {
+  padding-top: 20px !important;
+}
+
+:global .fr-toolbar {
+  display: none !important;
+}
+
+:global .fr-buttons,
+:global .fr-arrow {
+  display: none !important;
+}
+
+:global .fr-popup {
+  border: 0 !important;
+  box-shadow: none;
+}
+
+:global .fr-wrapper {
+  border: 0 none !important;
+}
+
+:global .fr-element.fr-view {
+  min-height: 100% !important;
+}
+
+:global .fr-box.fr-basic .fr-wrapper {
+  background: none !important;
+}
+
+:global .fr-box.fr-basic.fr-top .fr-wrapper {
+  box-shadow: none !important;
+  line-height: 31px;
+}
+
+:global .second-toolbar {
+  display: none !important;
+}
+
+:global .type-box {
+  display: block;
+  margin-bottom: 13px !important;
+}
+
+:global .type-name {
+  border: 1px solid #ccc;
+  margin: 0;
+  border-radius: 2px;
+  width: 54px;
+  height: 22px;
+  display: inline-block;
+  line-height: 20px;
+  text-align: center;
+}
+
+:global .type-name-1 {
+  border-color: #1a8cfe;
+  color: #1a8cfe !important;
+}
+
+:global .type-name-2 {
+  border-color: #1dc88c;
+  color: #1dc88c !important;
+}
+
+:global .type-name-3 {
+  border-color: #f76377;
+  color: #f76377 !important;
+}
+
+:global .type-name-4 {
+  border-color: #a06ad2;
+  color: #a06ad2 !important;
+}
+
+:global .type-name-5 {
+  border-color: #c9a310;
+  color: #c9a310 !important;
+}
+
+:global .change-type {
+  float: right;
+}
+
+:global .change-type input {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+:global .question {
+  padding: 12.8px 47.7px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #494949;
+  letter-spacing: -0.44px;
+  line-height: 22px;
+  border: 1px solid #dedede;
+  margin-top: 20px;
+  position: relative;
+}
+
+:global .question p {
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: inherit;
+}
+
+:global .question p .checkOrRadio {
+  margin: 0 10px;
+}
+
+:global .question .qt_title {
+  margin: 0 0 6px;
+}
+
+:global .question .qt_title .title {
+  font-family: MicrosoftYaHei;
+  font-size: 24px;
+  color: #5d9cec;
+  letter-spacing: -0.88px;
+  line-height: 22px;
+  position: absolute;
+  left: 9px;
+}
+
+:global .question .key_A,
+:global .question .key_B,
+:global .question .key_C,
+:global .question .key_D,
+:global .question .key_E,
+:global .question .key_F,
+:global .question .key_G,
+:global .question .key_H {
+  /* border: 1px solid #e6e6e6; */
+  border-radius: 10px;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+  min-height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #000;
+  display: inline-block;
+  margin-right: 5px !important;
+  padding-right: 5px !important;
+}
+
+:global .question .key_A .title,
+:global .question .key_B .title,
+:global .question .key_C .title,
+:global .question .key_D .title,
+:global .question .key_E .title,
+:global .question .key_F .title,
+:global .question .key_G .title,
+:global .question .key_H .title {
+  margin-right: 3px;
+  color: #333;
+}
+
+:global .question .qt_answer,
+:global .question .qt_analysis {
+  margin: 0 0 5px;
+  line-height: 24px !important;
+}
+
+:global .question .qt_error {
+  padding-left: 35px;
+}
+
+:global .question .qt_error,
+:global .question .error {
+  color: #fff;
+  font-weight: bold;
+  background-color: #ff4848;
+  border-radius: 2px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-bottom: 5px;
+}
+
+:global .question.check_error {
+  border: 1px solid #ff4848 !important;
+}
+
+:global .question .title {
+  color: #4d7fff;
+}
+
+:global .fr-wrapper.show-placeholder .fr-placeholder {
+  white-space: normal !important;
+}

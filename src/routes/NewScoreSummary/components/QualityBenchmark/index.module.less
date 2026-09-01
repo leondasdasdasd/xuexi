@@ -1,0 +1,623 @@
+/* stylelint-disable selector-class-pattern */
+
+.qualityBenchmark {
+  height: 100%;
+  overflow: hidden auto;
+  color: #01113d;
+  background: #f7f8f9;
+}
+
+.qualityBenchmark :global(.ant-btn) {
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+
+.qualityBenchmark :global(.ant-btn-primary) {
+  background: #0445fc;
+  border-color: #0445fc;
+}
+
+.qualityBenchmark :global(.ant-input),
+.qualityBenchmark :global(.ant-input-number),
+.qualityBenchmark :global(.ant-select-selection) {
+  border-color: #e6e7ec;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.visualArea {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.reportSection {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  margin-bottom: 6px;
+  color: #01113d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subSectionHead {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sectionActions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.subSectionHead strong {
+  color: #01113d;
+  font-size: 14px;
+}
+
+.subSectionHead span {
+  color: #5a6481;
+  font-size: 12px;
+}
+
+.comparisonTable {
+  max-width: 100%;
+}
+
+.comparisonTable :global(.ant-table) {
+  max-width: 100%;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparisonTable :global(.ant-table-small) {
+  border: 0;
+}
+
+.comparisonTable
+  :global(.ant-table-small > .ant-table-content > .ant-table-body) {
+  margin: 0;
+}
+
+.comparisonTable :global(.ant-table-thead > tr > th) {
+  height: 40px;
+  padding: 8px 10px;
+  color: #27355a;
+  font-weight: 500;
+  text-align: center;
+  background: #f7f8f9;
+  border-bottom-color: #e6e7ec;
+}
+
+.comparisonTable :global(.ant-table-tbody > tr > td) {
+  min-height: 36px;
+  padding: 8px 10px;
+  border-bottom-color: #e6e7ec;
+}
+
+.comparisonTable :global(.ant-table-tbody > tr:hover > td) {
+  background: #f2f6ff;
+}
+
+.metricValue {
+  color: #01113d;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.schoolNameCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.schoolNameCell span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schoolNameCell em {
+  flex: 0 0 auto;
+  height: 20px;
+  padding: 0 6px;
+  color: #0445fc;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 20px;
+  background: #f2f5ff;
+  border: 1px solid #dce5ff;
+  border-radius: 4px;
+}
+
+.firstPlaceValue {
+  color: #3f9378;
+  font-weight: 700;
+}
+
+.goodText {
+  color: #3f9378;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.riskText {
+  color: #ff6559;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.warningText {
+  color: #ffb300;
+  font-weight: 600;
+}
+
+.localBenchmarkRow > td {
+  background: #fffbe8;
+  font-weight: 600;
+}
+
+.averageBenchmarkRow > td {
+  background: #f7f8f9;
+  color: #27355a;
+}
+
+.summaryBenchmarkRow > td {
+  background: #fff;
+  border-top: 1px solid #c7cdd8;
+  font-weight: 600;
+}
+
+.benchmarkNotePanel {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: #f7f8f9;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+.benchmarkNoteHead {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.benchmarkNoteHead > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.benchmarkNoteHead strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #01113d;
+  font-size: 14px;
+}
+
+.benchmarkNoteHead span {
+  color: #5a6481;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.benchmarkNoteGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.benchmarkNoteCard {
+  min-width: 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 7px;
+}
+
+.benchmarkNoteCard span,
+.benchmarkNoteCard em {
+  display: block;
+  overflow: hidden;
+  color: #5a6481;
+  font-size: 12px;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.benchmarkNoteCard strong {
+  display: block;
+  margin: 4px 0 2px;
+  font-size: 14px;
+}
+
+.customCompareStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  min-height: 32px;
+  padding-top: 2px;
+}
+
+.customCompareStrip span {
+  color: #27355a;
+  font-size: 13px;
+}
+
+.customCompareStrip em {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-style: normal;
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 4px;
+}
+
+.targetTableBlock {
+  min-width: 0;
+}
+
+.targetAnalysisBlock {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.targetGapCell {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.targetGapCell strong {
+  font-size: 13px;
+}
+
+.targetGapCell span {
+  overflow: hidden;
+  color: #5a6481;
+  font-size: 12px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.targetCompareStrip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(118px, 1fr));
+  gap: 8px;
+}
+
+.targetCompareCard {
+  min-width: 0;
+  padding: 9px 10px;
+  background: #f7f8f9;
+  border: 1px solid #e6e7ec;
+  border-radius: 7px;
+}
+
+.targetCompareCard > span {
+  display: block;
+  margin-bottom: 4px;
+  color: #01113d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.targetCompareCard > em {
+  display: block;
+  margin-top: 6px;
+  overflow: hidden;
+  font-size: 12px;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.targetCompareCell {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  min-width: 96px;
+  font-variant-numeric: tabular-nums;
+}
+
+.targetCompareCell strong {
+  color: #01113d;
+  font-size: 14px;
+}
+
+.targetCompareCell span {
+  color: #5a6481;
+  font-size: 12px;
+}
+
+.targetRankCell {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  text-align: left;
+}
+
+.targetRankCell strong {
+  font-size: 13px;
+}
+
+.targetRankCell span {
+  overflow: hidden;
+  color: #5a6481;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.targetRankCell em {
+  font-size: 12px;
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+.estimateTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  color: #5a6481;
+  font-size: 12px;
+  font-style: normal;
+  background: #f2f3f5;
+  border-radius: 4px;
+}
+
+.aiReport {
+  padding: 14px 16px;
+  color: #27355a;
+  line-height: 1.8;
+  background: #f7f8f9;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+.aiReport :global(h3) {
+  margin: 0 0 8px;
+  color: #01113d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.aiReport :global(ul) {
+  margin: 0 0 12px 18px;
+  padding: 0;
+}
+
+.aiReport :global(li) {
+  margin-bottom: 6px;
+}
+
+.aiReport :global(p) {
+  margin: 0;
+}
+
+.loadingText {
+  padding: 16px;
+  color: #5a6481;
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+.importFlow {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.importModal {
+  max-width: 1320px;
+}
+
+.importModal :global(.ant-modal-body) {
+  max-height: calc(100vh - 170px);
+  overflow: hidden auto;
+}
+
+.smartImportArea {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+}
+
+.smartImportArea :global(.ant-radio-button-wrapper) {
+  height: 32px;
+  line-height: 30px;
+}
+
+.smartImportArea :global(.ant-radio-button-wrapper-checked) {
+  color: #0445fc;
+  border-color: #0445fc;
+  box-shadow: -1px 0 0 0 #0445fc;
+}
+
+.importEntryBlock {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+.importEntryTitle {
+  margin-bottom: 10px;
+  color: #01113d;
+  font-weight: 600;
+}
+
+.recognitionNotice {
+  padding: 9px 12px;
+  color: #5a6481;
+  font-size: 13px;
+  line-height: 1.6;
+  background: #f2f6ff;
+  border: 1px solid #dce5ff;
+  border-radius: 8px;
+}
+
+.rateOverrideTip {
+  margin-bottom: 12px;
+  color: #5a6481;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.rateThresholdGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rateThresholdItem {
+  display: grid;
+  gap: 6px;
+  color: #01113d;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.confirmArea {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.modalLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+  color: #01113d;
+  font-weight: 600;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.modalTable {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  margin-bottom: 8px;
+  max-width: 100%;
+}
+
+.modalTable :global(.ant-table) {
+  width: 100%;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modalTable :global(.ant-table-content) {
+  width: 100%;
+  max-width: 100%;
+}
+
+.modalTable :global(.ant-table-scroll) {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.modalTable :global(.ant-table-body) {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto !important;
+}
+
+.askContext {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: #f7f8f9;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+.askContext strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.askContext p {
+  margin: 0;
+  color: #27355a;
+}
+
+.askAnswer {
+  margin-top: 12px;
+  padding: 12px;
+  color: #27355a;
+  line-height: 1.7;
+  background: #f2f6ff;
+  border: 1px solid #e6e7ec;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .benchmarkNoteGrid,
+  .targetCompareStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .reportSection {
+    padding: 12px;
+  }
+
+  .benchmarkNoteGrid,
+  .targetCompareStrip {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,582 @@
+@import "../../utils/global.less";
+
+.analysis {
+  width: 100%;
+  height: 100%;
+
+  .header {
+    text-align: left;
+    height: 120px;
+    background: #fff;
+    position: relative;
+    padding-top: 10px;
+
+    > i {
+      position: absolute;
+      font-size: 24px;
+      top: 10px;
+      left: 20px;
+      cursor: pointer;
+    }
+
+    .headerContent {
+      margin-left: 60px;
+      font-family: PingFangSC-Regular;
+      color: #999999;
+      font-size: 12px;
+
+      .detailSpan {
+        margin-right: 20px;
+
+        i {
+          color: #666;
+        }
+      }
+
+      i {
+        font-size: 14px;
+        margin-right: 6px;
+      }
+
+      .headerTitle {
+        font-family: PingFangSC-Medium;
+        color: #4c4c4c;
+        font-size: 20px;
+        margin-bottom: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .tabBar {
+      margin-left: 60px;
+      position: absolute;
+      bottom: 0;
+      color: #999;
+      font-size: 14px;
+
+      span {
+        display: inline-block;
+        padding-bottom: 10px;
+        min-width: 90px;
+        text-align: center;
+
+        &.activeBar {
+          font-family: PingFangSC-Semibold;
+          color: #4d7fff;
+          border-bottom: 2px solid #4d7fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .analysisMain {
+    height: calc(~"100% - 120px");
+    overflow-y: scroll;
+    position: relative;
+  }
+
+  .detail {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #fff;
+
+    .detailHeader {
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      border-bottom: 1px solid #ccc;
+      font-size: 14px;
+      line-height: 40px;
+      color: #000;
+
+      .headerTitle {
+        font-size: 18px;
+        margin-left: 20px;
+      }
+
+      .detailLink {
+        color: #3b6ff5;
+        margin-left: 10px;
+        margin-right: 50px;
+      }
+
+      .message {
+        margin-left: 20px;
+      }
+    }
+
+    .detailContent {
+      display: flex;
+      flex-direction: row;
+      padding: 10px 20px;
+      overflow: scroll;
+      align-items: center;
+
+      .contentList {
+        margin-left: 30px;
+        color: #808080;
+        flex: 1;
+
+        i {
+          font-size: 15px;
+          cursor: pointer;
+          margin-left: 3px;
+        }
+
+        .number,
+        .numbers {
+          font-size: 20px;
+          font-family: PingFangSC-Medium;
+          color: #000;
+        }
+
+        .passNumber {
+          font-size: 20px;
+          color: #67b251;
+          font-family: PingFangSC-Medium;
+        }
+
+        .contentListMessage {
+          font-family: PingFangSC-Regular;
+          color: #999999;
+          font-size: 12px;
+        }
+
+        > div {
+          margin-top: 12px;
+        }
+      }
+
+      .chart {
+        width: 260px;
+        position: relative;
+
+        .push {
+          display: inline-block;
+          position: absolute;
+          top: 70px;
+          font-size: 12px;
+          color: #a3a3a3;
+
+          .circle {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin-right: 8px;
+            border-radius: 5px;
+            border: 1px solid #67b251;
+          }
+        }
+
+        .chartBox {
+          height: 15px;
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 10px;
+        }
+
+        .chartList {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .chartMessage {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .filterArea {
+    width: 98%;
+    margin: 0 auto;
+    background: #fff;
+    border-top: 2px solid #f2f2f2;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+
+    .viewStatus {
+      position: absolute;
+      right: 10px;
+      background: #0445fc;
+      color: #fff;
+      font-size: 16px;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    .viewTo {
+      position: absolute;
+      right: 200px;
+      background: #0445fc;
+      color: #fff;
+      font-size: 16px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .viewToModal {
+      top: 0;
+      padding-bottom: 0;
+
+      .closeIcon {
+        position: absolute;
+        right: 24px;
+        top: 0;
+        cursor: pointer;
+      }
+
+      .noView {
+        padding-top: 100px;
+        text-align: center;
+        font-family: PingFangSC-Medium;
+      }
+
+      .viewSelectImg {
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        opacity: 0.8;
+        text-align: center;
+        z-index: 100;
+
+        .closeIcon {
+          color: #fff;
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .imgBox {
+        width: 25%;
+        padding-right: 20px;
+        padding-top: 20px;
+        display: inline-block;
+
+        img {
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+
+      :global(.ant-modal-body) {
+        padding: 0;
+      }
+
+      :global(.ant-modal-content) {
+        border-radius: 0;
+        height: 100%;
+      }
+    }
+
+    .filterTab {
+      span {
+        display: inline-block;
+        font-size: 16px;
+        color: #666;
+        cursor: pointer;
+      }
+
+      .leftTab {
+        border-right: 1px solid #ddd;
+        padding: 7px 7px 7px 11px;
+        border-left: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-radius: 20px 0 0 20px;
+        background: #fff;
+      }
+
+      .leftActiveTab {
+        border-right: 1px solid #3b6ff5;
+        padding: 7px 7px 7px 11px;
+        border-left: 1px solid #3b6ff5;
+        border-top: 1px solid #3b6ff5;
+        border-bottom: 1px solid #3b6ff5;
+        border-radius: 20px 0 0 20px;
+        background: rgba(59, 111, 245, 0.1);
+        color: #4d7fff;
+      }
+
+      .middleFirst {
+        border-right: 1px solid #ddd;
+      }
+
+      .middleTab {
+        padding: 7px 7px 7px 11px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+      }
+
+      .middleActiveTab {
+        padding: 7px 11px 7px 7px;
+        border-top: 1px solid #3b6ff5;
+        border-bottom: 1px solid #3b6ff5;
+        background: rgba(59, 111, 245, 0.1);
+        color: #4d7fff;
+        border-left: 1px solid #3d6ff5;
+        border-right: 1px solid #3d6ff5;
+      }
+
+      .rightTab {
+        padding: 7px 11px 7px 7px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0 20px 20px 0;
+      }
+
+      .rightActiveTab {
+        padding: 7px 11px 7px 7px;
+        border-right: 1px solid #3b6ff5;
+        border-top: 1px solid #3b6ff5;
+        border-bottom: 1px solid #3b6ff5;
+        border-radius: 0 20px 20px 0;
+        border-left: 1px solid #3b6ff5;
+        background: rgba(59, 111, 245, 0.1);
+        color: #4d7fff;
+      }
+    }
+
+    .filterSelect {
+      padding: 0 24px;
+      border-right: 1px solid #ddd;
+      margin-right: 20px;
+
+      .selectName {
+        color: #3a3a3a;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+      }
+    }
+
+    .inputSearch {
+      & > input {
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .tabContent {
+    margin-top: 10px;
+
+    :global(.ant-tabs-bar) {
+      margin-bottom: 0;
+    }
+
+    :global(.ant-tabs-content) {
+      background: #fff;
+    }
+  }
+
+  .analysisContent {
+    width: 100%;
+    height: calc(~"100% - 120px");
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+
+    h2 {
+      text-align: center;
+    }
+
+    .contentRight {
+      width: 360px;
+      padding: 10px;
+      padding-top: 0;
+
+      .contentRightOption {
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+
+        .optionTitleBox {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 10px;
+
+          .optionTitleLeft {
+            font-family: PingFangSC-Medium;
+            color: #000000 100%;
+            font-size: 16px;
+          }
+
+          .optionTitleRight {
+            font-family: PingFangSC-Light;
+            color: #666666;
+            font-size: 16px;
+            cursor: pointer;
+
+            i {
+              font-size: 16px;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .moveList {
+          border-radius: 10px;
+          border: 1px solid rgba(230, 230, 230, 1);
+          margin-bottom: 12px;
+
+          .moveListTitle {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(230, 230, 230, 1);
+
+            .contentVisible {
+              display: inline-block;
+              max-width: 120px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              vertical-align: top;
+            }
+
+            .modultScore {
+              color: #4d7fff;
+
+              .score {
+                margin: 0 5px;
+                display: inline-block;
+              }
+            }
+          }
+
+          .moveListContent {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 5px;
+
+            .optionBox {
+              width: 32px;
+              height: 32px;
+              background: #ffffff;
+              border: 1px solid rgba(230, 230, 230, 1);
+              border-radius: 4px;
+              text-align: center;
+              line-height: 32px;
+              margin-right: 10px;
+              margin-bottom: 6px;
+              cursor: pointer;
+              position: relative;
+
+              i {
+                position: absolute;
+                right: 0;
+                bottom: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contentLeft {
+      flex: 1;
+      padding-left: 10px;
+      overflow: scroll;
+
+      .testList {
+        background: #fff;
+        margin-top: 10px;
+        padding: 10px;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+        .testName {
+          background: #fff;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+
+          .testNameLeft {
+            font-family: PingFangSC-Regular;
+            width: 100px;
+            height: 100%;
+            line-height: 50px;
+            color: #666;
+            font-size: 14px;
+            border-right: 1px solid #ccc;
+            text-align: center;
+          }
+
+          .testNameSwitch {
+            line-height: 50px;
+
+            .switchTitle {
+              font-family: PingFangSC-Regular;
+              color: #666666 100%;
+              font-size: 14px;
+              margin-right: 12px;
+            }
+          }
+
+          .testNameRight {
+            flex: 1;
+            width: 100%;
+
+            :global(.ant-input) {
+              width: calc(~"100% - 30px");
+              outline: none;
+              height: 99%;
+              border: none;
+              padding: 0;
+              padding-left: 20px;
+              text-align: center;
+              box-shadow: 0 0 0 transparent;
+            }
+
+            h2 {
+              margin: 0 !important;
+              height: 50px;
+              line-height: 50px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tableMain {
+  width: 98%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+}
+
+.testNum {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 1200px) {
+  .analysis .detail .detailContent .chart {
+    width: 300px !important;
+  }
+}

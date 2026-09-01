@@ -1,0 +1,178 @@
+@import "../../utils/global.less";
+
+.stuMobile {
+  height: 100%;
+  background: #fff;
+  padding: 12px 0;
+
+  :global(.ant-table-scroll) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    // overflow: hidden !important;
+  }
+
+  :global(.ant-table-header) {
+    margin-bottom: 0 !important;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  :global(.ant-table-body) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  :global(.ant-table-tbody) > tr > td {
+    padding: 2px 16px !important;
+    height: 32px;
+    line-height: 32px;
+    font-family: PingFangSC-Regular;
+    color: rgba(1, 17, 61, 0.8);
+  }
+
+  :global(.ant-table-header) {
+    background: none;
+
+    :global(.firstTh) {
+      font-family: PingFangSC-Medium;
+      // color: #01113D;
+      color: rgba(1, 17, 61, 0.8);
+    }
+
+    :global(.topConor) {
+      border-bottom: none;
+      padding: 0 20px;
+    }
+
+    :global(.bottomConor) {
+      padding: 0 10px;
+    }
+
+    :global(.noRightTd) {
+      border-right: none;
+    }
+    // :global(.ant-table-row-cell-break-word) {
+    //   padding: 2px 10px !important;
+    // }
+  }
+
+  :global(.ant-table-tbody) {
+    :global(.noRightTd) {
+      border-right: none;
+    }
+
+    :global(.ant-table-row-cell-break-word) {
+      padding: 0 10px !important;
+    }
+  }
+
+  :global(.ant-table-thead) > tr > th {
+    height: 30px;
+    padding-top: 0 !important;
+    background: rgba(1, 17, 61, 0.04);
+    color: rgba(1, 17, 61, 0.5);
+    padding-bottom: 0 !important;
+    padding: 0;
+    font-family: PingFangSC-Regular;
+  }
+
+  .mobileHeader {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .headerTab {
+      background: rgba(1, 17, 61, 0.05);
+      font-family: PingFangSC-Light;
+      color: rgba(1, 17, 61, 0.65);
+      line-height: 30px;
+      font-size: 12px;
+      padding: 0 6px;
+      margin-left: 10px;
+      border-radius: 6px;
+    }
+
+    .checkTab {
+      background: rgba(4, 69, 252, 0.1);
+      // font-family: PingFangSC-Semibold;
+      color: #0445fc;
+    }
+  }
+
+  .mobileDomList {
+    height: calc(~"100% - 30px");
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .mobileDom {
+    margin-top: 20px;
+    padding: 0 10px;
+
+    .domTabList {
+      margin-top: 10px;
+    }
+
+    .domTitle {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .domTitleBetween {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .titleBar {
+      display: inline-block;
+      vertical-align: middle;
+      height: 15px;
+      width: 7px;
+      background: #1f54ae;
+      margin-right: 6px;
+    }
+
+    .titleSpan {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: PingFangSC-Medium;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 19px;
+      color: #333333;
+    }
+
+    .tableSubject {
+      color: #0445fc;
+      border-bottom: 1px solid #0445fc;
+    }
+
+    .scoreLine {
+      width: 100%;
+      height: 240px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .subjectRadar {
+    width: 100%;
+    height: 280px;
+  }
+}

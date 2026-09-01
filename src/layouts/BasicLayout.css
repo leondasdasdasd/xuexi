@@ -1,0 +1,27 @@
+.mainPage {
+  height: 100%;
+}
+
+.menu {
+  padding: 24px;
+}
+
+.menu a {
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.menu a:first-child {
+  margin-left: 0;
+}
+
+.menu span.menuTitle {
+  color: #999;
+  font-size: 14px;
+}
+
+.menu span.selectedMenu {
+  color: #4d7fff;
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+}

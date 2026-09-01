@@ -1,0 +1,168 @@
+@import "../../utils/global.less";
+
+.reviseBox {
+  height: 100%;
+  background: #f5f5f5;
+
+  .header {
+    height: 64px;
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+
+    .back {
+      font-size: 16px;
+      cursor: pointer;
+      line-height: 64px;
+    }
+
+    .headerTitle {
+      font-family: PingFangSC-Semibold;
+      color: #01113d;
+      line-height: 64px;
+      font-size: 18px;
+    }
+
+    .headerLeft {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .tabList {
+      height: 100%;
+      text-align: center;
+      line-height: 64px;
+      font-family: PingFangSC-Regular;
+      color: #01113d;
+      font-size: 16px;
+
+      .tabDiv {
+        margin: 0 20px;
+        height: 100%;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .SelectDiv {
+        font-family: PingFangSC-Semibold;
+        color: #0445fc;
+        border-bottom: 4px solid #0445fc;
+      }
+    }
+  }
+
+  .testContent {
+    width: 90%;
+    margin: 22px auto;
+    height: calc(~"100% - 64px");
+
+    .revisedListBox {
+      border-radius: 20px;
+      height: 100%;
+
+      .searchBar {
+        height: 36px;
+        margin-bottom: 12px;
+
+        .searchTitle {
+          font-family: PingFangSC-Regular;
+          color: #000;
+          margin: 0 10px 0 15px;
+        }
+
+        .semesterSelect {
+          :global(.ant-select) {
+            width: 190px !important;
+          }
+        }
+
+        .inline {
+          display: inline-block;
+          vertical-align: middle;
+
+          :global(.ant-select) {
+            width: 150px;
+          }
+
+          :global(.ant-select-selection) {
+            border: none;
+            border-radius: 8px;
+            margin-right: 20px;
+            font-family: PingFangSC-Regular;
+            color: #01113d;
+            font-size: 14px;
+          }
+
+          :global(.ant-select-selection--single) {
+            height: 36px;
+          }
+
+          :global(.ant-select-selection__rendered) {
+            line-height: 36px;
+          }
+
+          :global(.ant-input) {
+            height: 36px;
+          }
+        }
+
+        .addCorrection {
+          float: right;
+          background: #0445fc;
+          font-family: PingFangSC-Medium;
+          color: #ffffff;
+          font-size: 14px;
+          padding: 0 14px;
+          border-radius: 6px;
+          height: 36px;
+          line-height: 36px;
+          cursor: pointer;
+
+          & > i {
+            margin-right: 9px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .revisedMapListWrap {
+        height: calc(~"100% - 70px");
+        overflow: hidden;
+
+        .revisedMapList {
+          height: calc(~"100% - 52px");
+          border-radius: 10px;
+          background: #fff;
+          padding: 0 40px;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        .showPage {
+          height: 32px;
+          margin: 10px 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.emptyContent {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(1, 17, 61, 0.45);
+  height: 100%;
+
+  & > img {
+    display: block;
+    margin: 0 auto;
+  }
+}

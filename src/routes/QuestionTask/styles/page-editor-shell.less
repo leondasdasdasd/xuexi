@@ -1,0 +1,199 @@
+.editor-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px 10px;
+}
+
+.editor-toolbar-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.editor-title {
+  color: #01113d;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.editor-page-count {
+  margin-left: 8px;
+  color: #8c93a8;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.preview-switch {
+  display: inline-flex;
+  width: fit-content;
+  padding: 3px;
+  border: 1px solid #dfe5f1;
+  border-radius: 999px;
+  background: #f6f8fc;
+}
+
+.preview-switch-button {
+  height: 26px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #5a6481;
+  font-size: 12px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.preview-switch-button-active {
+  background: #fff;
+  color: #0445fc;
+  box-shadow: 0 4px 10px rgba(17, 35, 82, 0.08);
+}
+
+.editor-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.zoom-controls {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 4px;
+  border: 1px solid #d7def2;
+  border-radius: 999px;
+  background: #fff;
+  transition:
+    box-shadow 0.16s ease,
+    border-color 0.16s ease,
+    background 0.16s ease;
+}
+
+.zoom-button,
+.zoom-reset-button {
+  height: 24px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #3a4563;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.zoom-button {
+  width: 24px;
+  font-size: 16px;
+}
+
+.zoom-button:disabled {
+  color: #c6ccd8;
+  cursor: not-allowed;
+}
+
+.zoom-value {
+  min-width: 42px;
+  color: #01113d;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+}
+
+.zoom-reset-button {
+  padding: 0 8px;
+  color: #0445fc;
+}
+
+.editor-toggle-button {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border: 1px solid #d7def2;
+  border-radius: 8px;
+  background: #fff;
+  color: #3a4563;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.editor-toggle-button:hover {
+  border-color: #0445fc;
+  color: #0445fc;
+}
+
+.editor-body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding-bottom: 88px;
+  scroll-padding-bottom: 96px;
+}
+
+.editor-canvas-top-actions {
+  position: sticky;
+  top: 12px;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  height: 0;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.editor-canvas-float-button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgba(215, 222, 242, 0.96);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 28px rgba(17, 35, 82, 0.14);
+  color: #3a4563;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 34px;
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    color 0.16s ease,
+    transform 0.16s ease;
+}
+
+.editor-canvas-float-button:hover {
+  border-color: rgba(4, 69, 252, 0.32);
+  box-shadow: 0 14px 32px rgba(17, 35, 82, 0.18);
+  color: #0445fc;
+  transform: translateY(-1px);
+}
+
+.editor-canvas-bottom-dock {
+  position: sticky;
+  bottom: 16px;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  height: 0;
+  margin-top: -56px;
+  padding: 0 18px 0 0;
+  pointer-events: none;
+}
+
+.editor-canvas-bottom-dock .zoom-controls {
+  height: 40px;
+  padding: 0 6px;
+  border: 1px solid rgba(215, 222, 242, 0.96);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 32px rgba(17, 35, 82, 0.16);
+  pointer-events: auto;
+  backdrop-filter: blur(12px);
+}

@@ -1,0 +1,547 @@
+@import "../../utils/global.less";
+
+.reviseBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #f5f5f5;
+
+  .header {
+    background: #fff;
+    box-shadow: 0 2px 8px -2px rgba(1, 17, 61, 0.1);
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+
+    .headerLeft {
+      font-size: 18px;
+      font-family: PingFangSC-Semibold;
+      color: #01113d;
+
+      .closeIcon {
+        cursor: pointer;
+        margin-right: 17px;
+        font-size: 20px;
+      }
+    }
+
+    .headerRight {
+      padding-right: 50px;
+      display: flex;
+      align-items: center;
+
+      .cancelBtn,
+      .agreeBtn {
+        padding: 9px 31px;
+        font-family: PingFangSC-Medium;
+        color: #515c7a;
+        font-size: 14px;
+        background: rgba(1, 17, 61, 0.1);
+        border-radius: 7px;
+        cursor: pointer;
+      }
+
+      .agreeBtn {
+        margin-left: 10px;
+        background: #0445fc;
+        color: #fff;
+      }
+    }
+  }
+
+  .content {
+    height: calc(~"100% - 60px");
+    padding: 25px 95px;
+
+    .reviseContent {
+      box-sizing: border-box;
+      height: 100%;
+      background: #fff;
+      border-radius: 10px;
+      padding: 40px 59px 10px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .detailItem {
+        align-items: baseline !important;
+      }
+
+      .titleMessage {
+        padding: 5px 30px 5px 10px;
+        display: inline-block;
+        background: #e6f7ff;
+        border: 1px solid #1890ff;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-bottom: 32px;
+
+        .toast {
+          color: #4d7eff;
+          font-size: 14px;
+          margin-right: 5px;
+        }
+      }
+
+      .formIetem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 19px;
+
+        .formTitle {
+          width: 77px;
+          min-width: 77px;
+          max-width: 77px;
+          font-family: PingFangSC-Semibold;
+          color: #01113d;
+          font-size: 14px;
+          text-align: right;
+          margin-right: 10px;
+        }
+
+        .reviseDetail {
+          .evaluationTable {
+            width: 900px !important;
+          }
+
+          .reviseTable {
+            width: 718px;
+            border: 1px solid rgba(1, 17, 61, 0.12);
+
+            .rowContent {
+              display: flex;
+              flex-direction: row;
+              //   margin-bottom: 10px;
+              padding: 3.5px 44px 3.5px 19px;
+              border-bottom: 1px solid rgba(1, 17, 61, 0.12);
+
+              .questionIdTit {
+                width: 140px;
+                margin-right: 34px;
+              }
+
+              .scoreTit {
+                width: 50px;
+                margin-right: 34px;
+              }
+
+              .studentTit {
+                width: 225px;
+                margin-right: 34px;
+
+                :global {
+                  .ant-select-selection__choice__content {
+                    & > span {
+                      margin-left: 5px;
+                    }
+                  }
+                }
+              }
+
+              .newScoreTit {
+                width: 107px;
+                margin-right: 45px;
+              }
+
+              .oldAnswerTit {
+                width: 107px;
+                margin: 0 34px 0 60px;
+              }
+
+              .newAnswerTit {
+                width: 275px;
+              }
+
+              .deleteIcon {
+                font-size: 20px;
+                color: rgba(1, 17, 61, 0.45);
+                cursor: pointer;
+              }
+            }
+
+            .tabTitle {
+              font-family: PingFangSC-Regular;
+              color: rgba(1, 17, 61, 0.65);
+              font-size: 14px;
+              background: #f0f0f0;
+              padding: 10px 44px 10px 19px;
+            }
+          }
+
+          .oldAnswer {
+            width: 100%;
+            background: #fff;
+            display: block;
+            padding: 5px 0;
+          }
+
+          button {
+            margin-top: 10px;
+          }
+        }
+
+        .addQuestionNo {
+          cursor: pointer;
+          border: 1px solid rgba(4, 69, 252, 1);
+          padding: 0 11px;
+          font-family: PingFangSC-Regular;
+          color: #0445fc;
+          font-size: 14px;
+          display: inline-block;
+          border-radius: 7px;
+          margin-left: 19px;
+          margin-bottom: 17px;
+          height: 36px;
+          line-height: 34px;
+          margin-top: 15px;
+
+          & > i {
+            margin-right: 7px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlayBox {
+  background-color: #fff;
+  width: 450px;
+  max-width: initial;
+
+  > div > div:first-child {
+    display: none;
+  }
+
+  > div > div:last-child {
+    max-width: none;
+    background-color: inherit;
+  }
+}
+
+.multiSelect {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.floatBox {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.listKey {
+  padding: 10px 15px;
+  font-size: 17px;
+}
+
+.multiSelect {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.levelBox {
+  padding: 0;
+}
+
+.levelBox li {
+  padding: 15px;
+  list-style: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+// .levelBox li:link{
+//   background: red
+// }
+
+.levelBox li.select {
+  color: #fff;
+  background: #3b6ff5;
+
+  span {
+    color: #fff;
+  }
+}
+
+.levelBox li span {
+  float: right;
+  color: #2a2a2a;
+  font-size: 14px;
+  // border-radius: 50%;
+  // padding: 0.02rem 0.1rem;
+}
+
+.grayBg span {
+  border-radius: 0;
+}
+
+.grayBg label {
+  font-size: 14px !important;
+}
+
+.gradeClass {
+  position: absolute;
+  right: 2%;
+  top: 17px;
+}
+
+.borderBox {
+  margin-right: 5px;
+}
+
+.actionBox {
+  display: inline-block;
+  padding: 10px 0;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+}
+
+.actionBox:hover {
+  color: #000;
+}
+
+.drawerBox {
+  // background-color: #fff;
+  // right: 0;
+  // left: 0;
+  // top: 0;
+  // bottom: 0;
+  // height: 100%;
+  // overflow: hidden;
+  // box-shadow: 0 6px 25px 0 rgba(59,111,245,0.12);
+  display: flex;
+  flex-direction: column;
+
+  /* position: relative; */
+  background-color: #fff;
+  inset: 0;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 6px 25px 0 rgba(59, 111, 245, 0.12);
+
+  :global(.am-search) {
+    margin-top: 10px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.flexBox {
+  height: 100%;
+  display: flex;
+}
+
+.flexBox > div {
+  flex: 1;
+}
+
+.rightFlexItem {
+  border-left: 1px solid #efefef;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mydrawer {
+  position: absolute;
+  inset: 0;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+
+  > div {
+    right: 0;
+  }
+}
+
+.cancel {
+  // margin-top: 20px;
+  // color: #3B6FF5;
+  // font-size: 14px;
+  // margin-left: 15px;
+  // margin: 0;
+  // padding-left: 20px;
+  // padding-bottom: 15px;
+  // border-bottom:1px solid #EFEFEF;
+  // display: flex;
+  // align-items: center;
+  // padding-bottom: 15px;
+  color: #3b6ff5;
+  font-size: 14px;
+  margin-left: 15px;
+  margin: 0;
+  padding-left: 20px;
+  border-bottom: 1px solid #efefef;
+  display: flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 15px;
+  flex: 10%;
+
+  span:nth-of-type(1) {
+    margin-right: 10px;
+  }
+}
+
+.row {
+  // top:70px;
+  // left: 0;
+  // right: 0;
+  overflow: scroll;
+}
+
+.bottom {
+  justify-content: space-between;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  height: 50px;
+  line-height: 50px;
+  background: white;
+  border-top: 1px solid #efefef;
+  color: #3b6ff5;
+  display: flex;
+  padding: 0 15px;
+}
+
+.remark {
+  width: 718px;
+}
+
+//新入样式
+.tableContent {
+  display: flex;
+  align-items: center;
+  font-family: PingFangSC-Regular;
+  color: rgba(1, 17, 61, 0.65);
+  font-size: 14px;
+  background: #f0f0f0;
+  padding: 3px 10px;
+  border-bottom: 1px solid rgba(1, 17, 61, 0.12);
+
+  .fixedWidth {
+    width: 100px;
+
+    span {
+      display: block;
+      position: relative;
+      cursor: pointer;
+
+      .nameStyle {
+        width: 80%;
+        display: block;
+        font-style: normal;
+      }
+
+      .levelName {
+        position: absolute;
+        font-size: 12px;
+        font-style: normal;
+        transform: scale(0.8);
+        top: -5px;
+        right: 0;
+        border-radius: 8px;
+        background: #00a63f;
+        color: #fff;
+        padding: 2px 4px;
+      }
+    }
+  }
+
+  .scoreWidth {
+    width: 50px;
+    margin: 0 5px;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .center {
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+
+  .inputWidth {
+    width: 100px;
+  }
+
+  .headerPart {
+    width: 80px;
+
+    span {
+      display: block;
+    }
+  }
+
+  .deleteIcon {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-left: 18px;
+    cursor: pointer;
+  }
+}
+
+:global {
+  .singleQuestion {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.08);
+    margin-bottom: 20px;
+
+    .singleQuestionHeader {
+      height: 40px;
+      width: 100%;
+      background: rgba(1, 17, 61, 0.02);
+      padding: 0 16px;
+      padding-top: 10px;
+
+      .answerOf {
+        font-family: PingFangSC-Medium;
+        color: rgba(1, 17, 61, 0.85);
+      }
+
+      .seeTest {
+        float: right;
+        font-family: PingFangSC-Regular;
+        color: #0445fc;
+        cursor: pointer;
+      }
+    }
+
+    .singleQuestionBody {
+      // min-height: 218px;
+      padding: 20px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

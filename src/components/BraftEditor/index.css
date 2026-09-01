@@ -1,0 +1,17 @@
+:global .bf-content {
+  height: auto !important;
+  min-height: 150px !important;
+}
+
+:global .bf-container .public-DraftEditor-content {
+  word-break: keep-all;
+}
+
+:global .bf-table-container .bf-col-tool-handler {
+  height: 15px !important;
+}
+
+.editorWrapper {
+  word-wrap: break-word;
+  word-break: keep-all;
+}

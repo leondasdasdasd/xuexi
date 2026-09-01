@@ -1,0 +1,246 @@
+@import "../../utils/global.less";
+
+.errText {
+  .errModal {
+    top: 100px;
+    text-align: center;
+    line-height: 50px;
+    left: 50%;
+    margin-left: -100px;
+
+    :global(.ant-modal-body) {
+      padding: 0;
+      padding-top: 10px;
+      height: 50px !important;
+      line-height: 36px;
+    }
+  }
+}
+
+.uploadContent {
+  position: relative;
+
+  .header {
+    position: relative;
+
+    .uploadTitle {
+      line-height: 24px;
+      font-size: 18px;
+      color: #303133;
+    }
+
+    .iconfont {
+      position: absolute;
+      right: 0;
+      top: 0;
+      line-height: 24px;
+      cursor: pointer;
+    }
+
+    margin-bottom: 10px;
+  }
+
+  .importMessage {
+    color: red;
+    font-weight: 500;
+  }
+
+  .uploadBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .fileContent {
+      flex: 1;
+      border: 1px solid #e1e1e1;
+      height: 32px;
+
+      .fileBox {
+        overflow: hidden;
+        max-width: 750px;
+        display: block;
+
+        /* height: 32px; */
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .fileItem {
+        display: inline-block;
+        line-height: 32px;
+        width: 100%;
+        padding-left: 10px;
+        position: relative;
+
+        i {
+          position: absolute;
+          right: 10px;
+          top: 0;
+          color: #606266;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    :global(.ant-upload) {
+      width: 65px;
+    }
+  }
+
+  .uploadRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .radioBox {
+    margin-bottom: 12px;
+    display: flex;
+
+    :global(.ant-checkbox-group) {
+      flex: 1;
+    }
+
+    :global(.ant-input) {
+      // max-width: 500px;
+    }
+
+    :global(.ant-radio-group) {
+      flex: 1;
+    }
+
+    :global(.ant-checkbox + span) {
+      padding-right: 0;
+    }
+
+    :global(.ant-radio + span) {
+      padding-right: 0;
+    }
+    // padding-top: 15px;
+    .radioTitle {
+      min-width: 100px;
+      display: inline-block;
+      text-align: right;
+      line-height: 30px;
+    }
+
+    .platformMessgae {
+      margin-left: 40px;
+      color: red;
+    }
+
+    .uploadDown {
+      display: inline-block;
+
+      .downloadBox {
+        margin-bottom: 12px;
+
+        .downloadTemplate {
+          margin-left: 12px;
+          display: inline-block;
+          padding: 0 12px;
+          height: 32px;
+          color: #0445fc;
+          font-family: PingFangSC-Semibold;
+          font-size: 14px;
+          text-align: center;
+          line-height: 32px;
+          border-radius: 7px;
+          cursor: pointer;
+          background: rgba(4, 69, 252, 0.1);
+        }
+
+        .noDownloadTemplate {
+          margin-left: 12px;
+          display: inline-block;
+          padding: 0 12px;
+          height: 32px;
+          font-family: PingFangSC-Semibold;
+          font-size: 14px;
+          text-align: center;
+          line-height: 32px;
+          border-radius: 7px;
+          color: rgba(1, 17, 61, 0.65);
+          background: rgba(1, 17, 61, 0.07);
+        }
+
+        .fileBox {
+          display: inline-block;
+          text-align: center;
+          margin-left: 12px;
+
+          .fileName {
+            font-family: PingFangSC-Medium;
+            padding: 5px 10px;
+            border: 1px #ccc solid;
+            border-radius: 8px;
+            position: relative;
+
+            .closeIcon {
+              position: absolute;
+              top: -15px;
+              right: -10px;
+              font-size: 23px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .noImportantMessage {
+    font-size: 14px;
+    color: #606266;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+
+    :global(.ant-btn-primary) {
+      margin-left: 20px;
+    }
+  }
+
+  :global(.ant-input) {
+    width: 300px;
+  }
+}
+
+.downLoadContent {
+  height: 500px;
+  text-align: center;
+
+  :global(.ant-btn) {
+    margin-top: 234px;
+  }
+
+  .makePaper {
+    color: #1890ff;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .paperTitle {
+    margin-top: 150px;
+  }
+
+  .paperContent {
+    margin-top: 20px;
+  }
+}
+
+.uploadModal {
+  :global(.ant-modal-body) {
+    padding-top: 0;
+    height: 500px;
+    overflow-y: clip;
+  }
+
+  :global(.ant-modal-title) {
+    text-align: center;
+  }
+}

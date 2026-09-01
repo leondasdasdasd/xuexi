@@ -1,0 +1,138 @@
+@import "../../utils/global.less";
+
+.topicStyle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #01113d;
+  margin-bottom: 20px;
+}
+
+.mainContent {
+  margin-bottom: 12px;
+  border-radius: 11px;
+  overflow: hidden;
+  border: 2px solid transparent;
+
+  .topicContent {
+    background-color: #fff;
+    padding: 11px 11px 0;
+  }
+
+  .bottomOpetare {
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    padding: 0 16px;
+    border-top: 1px solid #eee;
+    // border-bottom: 1px solid #eee;
+
+    .topicDetail {
+      display: flex;
+      align-items: center;
+    }
+
+    .modalTypeTag {
+      font-family: "PingFang SC";
+      border-radius: 3px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+      color: rgba(1, 17, 61, 0.65);
+      background: rgba(1, 17, 61, 0.05);
+      margin-right: 6px;
+      padding: 0 10px;
+    }
+
+    .operaStyle {
+      display: flex;
+
+      .optionBtn {
+        height: 24px;
+        font-size: 12px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(1, 17, 61, 0.05);
+        margin-left: 8px;
+        padding: 0 8px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .optionBtn.active {
+        color: #0445fc;
+      }
+
+      .operaTopic {
+        color: #0445fc;
+        background: rgba(4, 69, 252, 0.1);
+      }
+
+      .operaTopic.active {
+        color: #fc491e;
+        background-color: rgba(1, 17, 61, 0.05);
+      }
+    }
+  }
+
+  .bottomOpetare.borderBottom {
+    border-bottom: 1px solid #eee;
+  }
+
+  .statisticsDetail {
+    position: relative;
+    background-color: #fff;
+    padding-left: 16px;
+    min-height: 60px;
+
+    .subsectionTop {
+      padding: 8px 0 16px;
+      width: 353px;
+      // display: flex;
+    }
+  }
+}
+
+.mainContent.active {
+  border: 2px solid rgba(4, 69, 252, 0.6543);
+}
+
+.mainContent:hover {
+  border: 2px solid rgba(4, 69, 252, 0.6543);
+}
+
+.iconStyle {
+  display: inline-block;
+  width: 10.54px;
+  height: 8.14px;
+  margin: 0 7px 0 0;
+}
+
+.childOpt {
+  margin-bottom: 0 !important;
+}
+
+.textBtn {
+  font-family: "PingFang SC";
+  font-size: 12px;
+  font-weight: normal;
+  color: #0445fc;
+  cursor: pointer;
+  text-wrap: nowrap;
+  margin-left: 10px;
+  margin-top: 6px;
+}
+
+.childContent {
+  display: flex;
+  padding-left: 20px;
+}

@@ -1,0 +1,94 @@
+@import "../../utils/global.less";
+
+.journalBox {
+  padding: 12px 8px;
+  height: 100%;
+  background: #fff;
+
+  .tableBox {
+    :global {
+      .ant-table-body {
+        tr > td {
+          padding: 9px 16px !important;
+        }
+      }
+
+      .ant-table-thead {
+        tr > th {
+          padding: 9px 16px !important;
+        }
+      }
+    }
+  }
+
+  :global(.ant-pagination) {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+  }
+
+  .searchBar {
+    height: 40px;
+    position: relative;
+
+    .selectDate {
+      margin-right: 12px;
+    }
+
+    :global(.ant-select-selection) {
+      height: 32px;
+      line-height: 32px;
+    }
+
+    :global(.ant-select-selection__rendered) {
+      line-height: 32px;
+    }
+
+    :global(.ant-input-search) {
+      height: 32px !important;
+      line-height: 32px;
+      // top: 2px;
+    }
+
+    .searchTitle {
+      font-family: PingFangSC-Regular;
+      color: #000;
+      margin: 0 10px 0 15px;
+    }
+
+    .examBtn {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .semesterSelect {
+      :global(.ant-select) {
+        width: 145px !important;
+      }
+    }
+
+    .semesterSelect1 {
+      :global(.ant-select-dropdown) {
+        width: 245px !important;
+      }
+    }
+
+    .inline {
+      display: inline-block;
+      vertical-align: middle;
+
+      :global(.ant-select) {
+        width: 150px;
+      }
+
+      :global(.ant-select-selection) {
+        border-radius: 8px;
+        margin-right: 12px;
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        font-size: 14px;
+      }
+    }
+  }
+}

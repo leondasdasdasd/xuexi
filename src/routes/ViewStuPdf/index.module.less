@@ -1,0 +1,28 @@
+@import "../../utils/global.less";
+
+.pdfDiv {
+  height: 100vh;
+  width: 100%;
+
+  .pdfHeader {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-align: right;
+
+    .download {
+      color: #4d7ff5;
+    }
+  }
+
+  .pdfFrame {
+    height: calc(~"100% - 40px");
+    overflow: scroll;
+
+    iframe {
+      min-height: 100%;
+      width: 100%;
+      border: none;
+    }
+  }
+}

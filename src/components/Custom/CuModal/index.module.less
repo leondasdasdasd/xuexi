@@ -1,0 +1,79 @@
+.modal_default {
+  .ant-modal {
+    border-radius: 11px;
+  }
+
+  :global {
+    .ant-modal-content {
+      border-radius: 11px;
+
+      .ant-modal-close {
+        right: 0;
+        width: 56px;
+        color: #27355a;
+      }
+
+      .ant-modal-header {
+        padding: 16px;
+        border-radius: 11px 11px 0 0;
+
+        .ant-modal-title {
+          text-align: center;
+          font-family: "PingFang SC";
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          color: #01113d;
+        }
+      }
+
+      .ant-modal-body {
+        padding: 16px 32px;
+      }
+
+      .ant-modal-footer {
+        padding: 12px 16px;
+
+        .ant-btn {
+          font-family: "PingFang SC";
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: normal;
+          text-align: center;
+          border: 0.8px solid #e6e7ec;
+          color: #01113d;
+          padding: 6px 10px;
+          min-width: 76px;
+          width: auto;
+        }
+
+        .ant-btn:hover,
+        .ant-btn:focus,
+        .ant-btn:active,
+        .ant-btn.active {
+          color: #01113d;
+        }
+
+        .ant-btn-primary {
+          background-color: #0445fc;
+          border: none;
+          color: #ffffff;
+        }
+
+        .ant-btn-primary:hover,
+        .ant-btn-primary:focus,
+        .ant-btn-primary:active,
+        .ant-btn-primary.active {
+          color: #ffffff;
+        }
+
+        .ant-btn-primary:disabled {
+          background-color: rgba(1, 17, 61, 0.07);
+          border: none;
+          color: rgba(0, 0, 0, 0.25);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

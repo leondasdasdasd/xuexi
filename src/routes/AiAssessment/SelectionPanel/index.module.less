@@ -1,0 +1,97 @@
+.studentArea {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .classList {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    cursor: pointer;
+
+    .groupName {
+      font-size: 14px;
+      color: rgba(1, 17, 61, 0.85);
+
+      i {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .studentNameList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 11px 16px;
+    overflow-y: scroll;
+    height: calc(~"100% - 46px");
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* 滚动条整体样式 */
+    &::-webkit-scrollbar {
+      width: 3px;
+
+      /* 竖向滚动条宽度 */
+      height: 3px;
+
+      /* 横向滚动条高度 */
+    }
+
+    /* 滚动条轨道 */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+
+      /* 轨道颜色 */
+      border-radius: 4px;
+    }
+
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      background: #f7f3ff;
+
+      /* 滑块颜色 */
+      border-radius: 3px;
+      height: 5px;
+    }
+
+    /* 滑块悬停时 */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #f7f3ff;
+    }
+
+    span {
+      font-size: 14px;
+      color: rgba(1, 17, 61, 0.85);
+      display: block;
+      margin-bottom: 14px;
+      cursor: pointer;
+      word-break: break-word;
+
+      &.studentSelect {
+        color: #612aee;
+      }
+    }
+  }
+}
+
+.studentList {
+  //学生列表
+  width: 150px;
+  align-self: flex-start;
+  min-width: 150px;
+  max-width: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  overflow-y: hidden;
+}

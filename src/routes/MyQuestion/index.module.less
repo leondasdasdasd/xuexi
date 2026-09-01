@@ -1,0 +1,1106 @@
+@import "../../utils/global.less";
+
+.questionContent {
+  width: 100%;
+  // padding: 0 24px;
+  height: calc(~"100%");
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  padding: 0 8px;
+
+  .pagination {
+    flex-shrink: 0;
+    height: 50px;
+    padding-top: 10px;
+    z-index: 999;
+
+    :global {
+      .ant-pagination {
+        float: right;
+      }
+    }
+  }
+
+  .tabList {
+    font-size: 14px;
+    // line-height: 50px;
+    margin: auto 0;
+    padding: 10px 0;
+    width: 100%;
+    flex-shrink: 0;
+
+    .filterToolbar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1;
+      min-width: 0;
+
+      /* 换行后行与行之间 8px；同一行内控件之间 10px（由 column-gap 控制） */
+      gap: 8px 10px;
+
+      > * {
+        flex-shrink: 0;
+      }
+
+      :global(.ant-select-selection) {
+        min-height: 36px !important;
+        line-height: 36px !important;
+      }
+
+      :global(.ant-select-selection:not(.ant-select-selection--multiple)) {
+        height: 36px !important;
+      }
+
+      :global(.ant-select-selection--multiple) {
+        padding-bottom: 0;
+      }
+
+      :global(.ant-select-selection__rendered) {
+        line-height: 34px !important;
+      }
+
+      :global(.ant-select-selection__choice) {
+        margin-top: 3px;
+      }
+
+      :global(.ant-input-search) {
+        height: 36px !important;
+      }
+
+      :global(.ant-input-search .ant-input) {
+        height: 36px !important;
+        line-height: 36px !important;
+      }
+    }
+
+    .menuTab {
+      display: inline-block;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+
+      .normal {
+        display: inline-block;
+        height: 36px;
+        border: 1px solid rgba(1, 17, 61, 0.05);
+        padding: 0 8px;
+        // margin-top: 10px;
+        line-height: 36px;
+        font-family: PingFangSC-Regular;
+        color: #01113d;
+        cursor: pointer;
+      }
+
+      .cur {
+        background: rgba(4, 69, 252, 0.1);
+        font-family: PingFangSC-Regular;
+        color: #0445fc;
+      }
+
+      .leftMal {
+        border-radius: 5px 0 0 5px;
+      }
+
+      .rightMal {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+
+    .subjectNetwork {
+      padding: 8px 10px;
+      height: 36px;
+      background: #0445fc;
+      color: #fff;
+      font-family: PingFangSC-Medium;
+      cursor: pointer;
+      border-radius: 7px;
+      margin-right: 12px;
+    }
+
+    .entryTitle {
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      cursor: pointer;
+      font-family: PingFangSC-Medium;
+      color: #fff !important;
+      background: #0445fc;
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+
+    .buyCar {
+      display: inline-block;
+      margin-right: 12px;
+      height: 36px;
+      line-height: 36px;
+      cursor: pointer;
+      font-family: PingFangSC-Regular;
+      color: #0445fc !important;
+      background: rgba(4, 69, 252, 0.1);
+      border-radius: 10px;
+      padding: 0 10px;
+
+      .count {
+        margin-left: 5px;
+      }
+
+      .split {
+        color: rgb(148, 170, 244) !important;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    .searchBar {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .searchTitle {
+        font-family: PingFangSC-Regular;
+        color: #000;
+        margin: 0 15px;
+      }
+
+      .inline {
+        // display: inline-block;
+        // vertical-align: middle;
+        margin-right: 10px;
+
+        :global(.ant-select-selection) {
+          border-radius: 7px;
+          // height: 6px;
+          color: #01113d;
+          // top: 2px;
+        }
+
+        :global(.ant-input-search) {
+          height: 36px !important;
+          line-height: 36px;
+          // top: 2px;
+        }
+
+        :global(.ant-select-selection) {
+          height: 36px;
+          line-height: 36px;
+          // overflow-y: auto;
+        }
+
+        :global(.ant-select-selection__rendered) {
+          line-height: 36px;
+        }
+
+        :global(.ant-input) {
+          border-radius: 7px;
+          color: #01113d;
+        }
+
+        :global(.ant-input-search) {
+          // margin-left: 20px;
+          // width: 200px;
+          width: 120px;
+          height: 34px;
+        }
+
+        :global(.ant-select-selection__choice) {
+          margin-top: 5px;
+        }
+      }
+
+      .inlineKnowledgePoints {
+        margin-right: 10px;
+
+        :global(.ant-select-selection) {
+          color: #01113d;
+        }
+
+        :global(.ant-input-search) {
+          height: 36px !important;
+          line-height: 36px;
+        }
+
+        :global(.ant-select-selection) {
+          height: 36px;
+          line-height: 36px;
+        }
+
+        :global(.ant-select-selection__rendered) {
+          line-height: 36px;
+        }
+
+        :global(.ant-input) {
+          border-radius: 7px;
+          color: #01113d;
+        }
+
+        :global(.ant-input-search) {
+          width: 150px;
+          height: 34px;
+        }
+
+        :global(.ant-select-selection__choice) {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  :global(.editModal) {
+    :global(.ant-modal) {
+      width: 100% !important;
+      height: 100% !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+
+      :global(.ant-modal-content) {
+        height: 100%;
+        background: #f5f5f5;
+      }
+
+      :global(.ant-modal-body) {
+        height: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  /* 编辑弹窗内容：顶部固定操作栏 + 下方可滚动的录题编辑器 */
+  .editModalBody {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .editModalHeader {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .editModalTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .editModalActions {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .editModalEditor {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .menu {
+    a {
+      margin: 0 20px;
+      display: inline-block;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    span {
+      &.menuTitle {
+        color: #999;
+        font-size: 14px;
+      }
+
+      &.selectedMenu {
+        color: #4d7fff;
+        font-family: PingFangSC-Medium;
+        font-size: 16px;
+      }
+    }
+  }
+
+  /* 列表区域外层：占满标题以下剩余高度，loading 遮罩相对其定位 */
+  .questionListSpin {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .questionListLoadingMask {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 245, 245, 0.65);
+  }
+
+  .questionListLoadingIcon {
+    font-size: 36px;
+    color: #0445fc;
+  }
+
+  .questionListBox {
+    // background: #fff;
+    border-radius: 20px;
+    // padding: 20px;
+    padding-top: 3px;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .questionMapList {
+      // background: #FFFFFF;
+      flex: 1;
+      min-height: 0;
+      overflow: auto;
+
+      .noQuestionList {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+        color: #999;
+        font-family: PingFangSC-Regular;
+        height: 100%;
+
+        .canOpen {
+          color: #4d7fff;
+          cursor: pointer;
+          margin-top: 10px;
+
+          a {
+            color: #4d7fff;
+          }
+        }
+
+        .iconBox {
+          height: 50%;
+          position: relative;
+        }
+
+        .noSourceIcon {
+          font-size: 60px;
+          margin-bottom: 10px;
+          position: absolute;
+          bottom: 10px;
+          left: calc(~"50% - 30px");
+        }
+      }
+
+      .questionList {
+        background-color: #fff;
+        box-shadow: 0 2px 6px 0 rgba(59, 111, 245, 0.18);
+        // width: calc(~'100% - 20px');
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 20px;
+        padding-bottom: 1px;
+        padding-top: 15px;
+
+        .header {
+          display: none;
+          // height: 40px;
+          // border-bottom: 1px solid #ccc;
+          // margin-bottom: 10px;
+          .level {
+            display: inline-block;
+            font-family: PingFangSC-Medium;
+            font-size: 13px;
+            min-width: 46px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            // padding:10px;
+            border-radius: 7px;
+            margin-left: 12px;
+
+            i {
+              margin-right: 5px;
+              font-size: 14px;
+            }
+          }
+
+          .questionType {
+            // background: rgba(59,111,245,0.08);
+            font-family: PingFangSC-Medium;
+            // color: #4D7FFF;
+            font-size: 13px;
+            // padding: 10px;
+            height: 30px;
+            min-width: 77px;
+            border-radius: 7px;
+            text-align: center;
+            line-height: 30px;
+            display: inline-block;
+
+            i {
+              margin-right: 5px;
+            }
+          }
+
+          .questionType1 {
+            background: rgba(4, 53, 189, 0.1);
+            color: #0435bd;
+          }
+
+          .questionType2 {
+            background: rgba(5, 125, 230, 0.1);
+            color: #057de6;
+          }
+
+          .questionType3 {
+            background: rgba(103, 48, 251, 0.1);
+            color: #6730fb;
+          }
+
+          .questionType4 {
+            background: rgba(252, 130, 18, 0.1);
+            color: #fc8212;
+          }
+
+          .questionType5 {
+            background: rgba(214, 238, 214, 0.904);
+            color: #fc1231;
+          }
+        }
+
+        .modulecontent {
+          margin-bottom: 15px;
+          overflow: hidden;
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.85);
+
+          .childContent {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            padding-left: 20px;
+
+            .childTitle {
+              width: 30px;
+            }
+
+            .childBox {
+              flex: 1;
+              white-space: pre-wrap;
+            }
+          }
+
+          img {
+            max-width: 900px !important;
+            max-height: 300px !important;
+            object-fit: contain;
+            cursor: pointer;
+          }
+        }
+
+        .questionClickable {
+          cursor: pointer;
+        }
+
+        .optionBox {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .optionList {
+          background: #ffffff;
+          // border: 1px solid rgba(230,230,230,1);
+          // border-radius: 8px;
+          margin-bottom: 8px;
+          display: flex;
+          flex-direction: row;
+          line-height: 40px;
+          margin-right: 20px;
+          min-width: 20%;
+          align-items: center;
+
+          .opListLeft {
+            width: 30px;
+            // border-right: 1px solid #ccc;
+            text-align: center;
+
+            .optionIcon {
+              font-size: 20px;
+              color: #000;
+              opacity: 0.1;
+            }
+          }
+
+          .opListRight {
+            flex: 1;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: PingFangSC-Regular;
+            color: rgba(1, 17, 61, 0.85);
+
+            p:first-child {
+              display: inline-block;
+              margin-bottom: 0;
+            }
+
+            div:first-child {
+              display: inline-block;
+              margin-bottom: 0;
+              // width: 98%;
+            }
+
+            img {
+              max-width: 900px !important;
+              max-height: 300px !important;
+              object-fit: contain;
+              cursor: pointer;
+            }
+
+            p {
+              display: inline-block;
+            }
+
+            div {
+              display: inline-block;
+            }
+          }
+        }
+
+        .trueValue {
+          background: #ffffff;
+          // border: 1px solid rgba(103,178,81,1) !important;
+          .opListLeft {
+            color: #67b251;
+            font-weight: 500;
+          }
+        }
+
+        .moduleBottom {
+          width: 100%;
+          // margin-top: 10px;
+          border-top: 1px solid #ccc;
+          position: relative;
+
+          .knowLedgeBox {
+            // display: inline-block;
+            margin-left: 20px;
+            display: flex;
+            // width: 500px;
+            align-items: center;
+
+            .knowLedge {
+              margin-right: 8px;
+              display: inline-block;
+              // width: 200px;
+            }
+          }
+
+          .createUser {
+            display: inline-block;
+            font-family: PingFangSC-Regular;
+            color: rgba(1, 17, 61, 0.85);
+            margin-left: 15px;
+            font-size: 13px;
+            vertical-align: middle;
+          }
+
+          .viewBottom {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .level {
+              display: inline-block;
+              font-size: 13px;
+              min-width: 46px;
+              height: 28px;
+              width: 65px;
+              text-align: center;
+              line-height: 28px;
+              padding: 0 5px !important;
+              border-radius: 7px;
+              margin-left: 12px;
+              background: rgba(1, 17, 61, 0.05) !important;
+              font-family: PingFangSC-Medium;
+              color: rgba(1, 17, 61, 0.65) !important;
+
+              i {
+                margin-right: 5px;
+                font-size: 14px;
+              }
+            }
+
+            .questionType {
+              // background: rgba(59,111,245,0.08);
+              // color: #4D7FFF;
+              font-size: 13px;
+              margin-left: 5px;
+              // padding: 10px;
+              height: 30px;
+              min-width: 77px;
+              border-radius: 7px;
+              background: rgba(1, 17, 61, 0.05) !important;
+              font-family: PingFangSC-Medium;
+              color: rgba(1, 17, 61, 0.85) !important;
+              text-align: center;
+              line-height: 30px;
+              padding: 0 5px;
+              display: inline-block;
+
+              i {
+                margin-right: 5px;
+              }
+            }
+
+            .questionType1 {
+              background: rgba(4, 53, 189, 0.1);
+              color: #0435bd;
+            }
+
+            .questionType2 {
+              background: rgba(5, 125, 230, 0.1);
+              color: #057de6;
+            }
+
+            .questionType3 {
+              background: rgba(103, 48, 251, 0.1);
+              color: #6730fb;
+            }
+
+            .questionType4 {
+              background: rgba(252, 130, 18, 0.1);
+              color: #fc8212;
+            }
+
+            .questionType5 {
+              background: rgba(214, 238, 214, 0.904);
+              color: #fc1231;
+            }
+
+            .inlineDifficulty {
+              :global {
+                .ant-select-selection--single {
+                  height: 29px;
+                  background: rgba(1, 17, 61, 0.05) !important;
+                  margin-left: 12px;
+                }
+              }
+
+              :global(.ant-select-selection__rendered) {
+                color: rgba(1, 17, 61, 0.85);
+              }
+            }
+          }
+
+          :global(.ant-popover-inner-content) {
+            padding: 20px;
+            text-align: right;
+            max-width: 300px;
+
+            :global(.ant-btn) {
+              margin-left: 10px;
+              border-radius: 7px;
+            }
+
+            :global(.ant-btn-primary) {
+              background: #4d7fff;
+            }
+
+            .messageContent {
+              font-family: PingFangSC-Regular;
+              color: #000000;
+              font-size: 16px;
+              text-align: center;
+              margin-bottom: 10px;
+            }
+          }
+          // .isAddedContent {
+          // 	display: inline-block;
+          // 	.isAdded {
+          // 		font-family: PingFangSC-Regular;
+          // 		color: #0258BF;
+          // 	}
+          // }
+          .rightButton {
+            position: absolute;
+            margin-left: 20px;
+            right: 0;
+            top: 0;
+            background: #4d7fff;
+            color: #fff;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+
+            .iconfont {
+              transform: translateY(0);
+              transition: 5s;
+            }
+          }
+
+          .bottomBtn {
+            margin-top: 0;
+            display: flex;
+            flex: 1;
+            flex-direction: row-reverse;
+          }
+          // .viewResolution {
+          // 	min-width: 99px;
+          // 	height: 32px;
+          // 	text-align: center;
+          // 	line-height: 32px;
+          // 	font-size: 14px;
+          // 	font-family: PingFangSC-Medium;
+          // 	background: rgba(1,17,61,0.05)!important;
+          // 	font-family: PingFangSC-Medium;
+          // 	color: rgba(1,17,61,0.65)!important;
+          // 	cursor: pointer;
+          // 	// margin-top: 10px;
+          // 	padding: 0 6px;
+          // 	margin-right: 15px;
+          // 	border-radius: 7px;
+          // 	background: rgba(1,17,61,0.10);
+          // 	i {
+          // 		font-size: 14px;
+          // 		margin-right: 7px;
+          // 	}
+          // }
+          // .rightCancel {
+          // 	// background: #4d7fff;
+          // 	color: #0445FC ;
+          // 	font-size: 14px;
+          // 	// padding: 10px;
+          // 	border-radius: 7px;
+          // 	// margin-top: 10px;
+          // 	height: 32px;
+          // 	width: 94px;
+          // 	text-align: center;
+          // 	line-height: 32px;
+          // 	background: rgba(4,69,252,0.10);
+          // 	cursor: pointer;
+          // 	display: inline-block;
+          // 	// margin-right: 200px;
+          // }
+          .bianji {
+            display: inline-block;
+            height: 32px;
+            margin-right: 15px;
+            border-radius: 7px;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+            cursor: pointer;
+            background: rgba(1, 17, 61, 0.05);
+            font-family: PingFangSC-Medium;
+            color: rgba(1, 17, 61, 0.65);
+            padding: 0 6px;
+            white-space: nowrap;
+          }
+
+          .bianji.active {
+            color: #0445fc;
+            background-color: rgba(4, 69, 252, 0.1);
+          }
+
+          .inline {
+            display: inline-block;
+            vertical-align: middle;
+            background: #f5f6f7;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #666;
+            // margin-top: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+
+            i {
+              font-size: 14px;
+              margin-right: 7px;
+            }
+          }
+        }
+
+        .analysisBox {
+          display: none;
+          margin-top: 10px;
+          // background: #FAFBFF;
+          padding: 10px;
+          margin-bottom: 10px;
+
+          .analysisItem {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            font-size: 14px;
+            margin-top: 10px;
+
+            .chapterSort {
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 5px;
+            }
+
+            .chapterItem {
+              border: 1px solid rgba(1, 17, 61, 0.12);
+              font-size: 12px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 20px;
+            }
+
+            .itemTitle {
+              min-width: 80px;
+              font-family: PingFangSC-Semibold;
+              color: rgba(1, 17, 61, 0.85);
+              white-space: nowrap;
+              flex-shrink: 0;
+            }
+
+            .itemChildAnswer {
+              font-family: PingFangSC-Regular;
+              color: #01113d;
+              flex: 1;
+              white-space: pre-wrap;
+              display: flex;
+              flex-flow: row wrap;
+              align-items: start;
+
+              .childAnsContent {
+                margin-right: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+
+                .answerFLex {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                }
+              }
+            }
+
+            .itemContent {
+              font-family: PingFangSC-Regular;
+              color: rgba(1, 17, 61, 0.85);
+              flex: 1;
+              white-space: pre-wrap;
+
+              .analysisItemTitle {
+                margin-right: 5px;
+              }
+
+              .analysisChild {
+                display: flex;
+                flex-direction: row;
+                white-space: pre-wrap;
+                align-items: start;
+              }
+            }
+
+            .itemAnalysisContent {
+              color: rgba(1, 17, 61, 1);
+            }
+          }
+          // div:nth-child(2) {
+          // 	p {
+          // 		display: inline-block;
+          // 	}
+          // 	div {
+          // 		display: inline;
+          // 	}
+          // }
+          .rightTitle {
+            font-family: PingFangSC-Medium;
+            color: #4d7fff;
+
+            span {
+              margin-left: 5px;
+
+              p {
+                display: inline-block;
+              }
+            }
+          }
+
+          .buleTitle {
+            font-family: PingFangSC-Medium;
+
+            span {
+              margin-left: 5px;
+
+              p {
+                display: inline-block;
+              }
+            }
+          }
+
+          img {
+            max-width: 900px !important;
+            max-height: 300px !important;
+            object-fit: contain;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .questionMapList::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+:global {
+  .inputStem {
+    width: 152px;
+    border-radius: 15px;
+    top: 52px !important;
+
+    .ant-dropdown-menu {
+      padding: 0;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .ant-dropdown-menu-item {
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 17px;
+        overflow: hidden;
+
+        a {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .ant-dropdown-menu-item-active {
+        background: rgba(4, 69, 252, 0.1);
+      }
+    }
+  }
+}
+
+.difficulty {
+  margin-right: 10px;
+
+  :global(.ant-select) {
+    min-width: 90px !important;
+    line-height: 36px;
+  }
+
+  :global(.ant-select-selection__choice__content) {
+    font-size: 12px;
+  }
+
+  :global(.ant-select-selection) {
+    border-radius: 7px;
+    // height: 6px;
+    color: #999;
+    // top: 2px;
+  }
+
+  :global(.ant-input-search) {
+    height: 36px !important;
+    line-height: 36px;
+    // top: 2px;
+  }
+
+  :global(.ant-select-selection) {
+    height: 36px;
+    line-height: 36px;
+    // overflow-y: auto;
+  }
+
+  :global(.ant-select-selection__rendered) {
+    line-height: 36px;
+  }
+
+  :global(.ant-select-selection__rendered) > ul > li {
+    margin-top: 5.5px;
+  }
+
+  :global(.ant-input) {
+    border-radius: 7px;
+    color: #999;
+  }
+
+  :global(.ant-input-search) {
+    // margin-left: 20px;
+    // width: 200px;
+    width: 150px;
+    height: 34px;
+  }
+
+  :global(.ant-select-selection__choice) {
+    margin-top: 5px;
+  }
+}
+
+.allQuestionTypes {
+  :global(.ant-select) {
+    width: 100px !important;
+  }
+}
+
+.canClickText {
+  color: rgb(0, 84, 247);
+}
+
+.spinWarp {
+  width: 100%;
+  height: calc(~"100% - 90px");
+
+  :global(.ant-spin-container) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.versionChecked {
+  position: fixed;
+  right: 10px;
+  bottom: 30%;
+  z-index: 10;
+  border: 1px solid #ff9c00;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 48px;
+  height: 48px;
+  padding: 2px 0;
+  border-radius: 5px;
+  background: #ffffff;
+  text-align: center;
+  font-family: "PingFang SC";
+  font-size: 14px;
+  font-weight: normal;
+  color: #ff9c00;
+}
+
+.qualityTreeSelect {
+  width: 125px;
+
+  :global {
+    .ant-select-selection {
+      min-height: 36px;
+    }
+  }
+}

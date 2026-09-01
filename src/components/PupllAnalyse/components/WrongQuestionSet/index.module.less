@@ -1,0 +1,98 @@
+@import "../../../../utils/global.less";
+
+.wrongQuestionSet {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.rowBox {
+  border: 1px solid #cccfd8;
+  padding: 8px;
+  border-bottom: none;
+}
+
+.rowBox:last-child {
+  border-bottom: 1px solid #cccfd8;
+}
+
+.setSubRangeBtn {
+  font-family: "PingFang SC";
+  display: inline-block;
+  cursor: pointer;
+  color: #01113d;
+  margin-right: 12px;
+  font-size: 13px;
+  // line-height: 14px;
+}
+
+.projectStyle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #01113d;
+  display: flex;
+  margin: 0 0 4px 16px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .itemContent {
+    line-height: 22px;
+
+    .chapterSort {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .chapterItem {
+      display: inline-block;
+      border-radius: 5px;
+      border: 1px solid rgba(1, 17, 61, 0.2);
+      font-family: "PingFang SC";
+      font-size: 12px;
+      font-weight: normal;
+      height: 22px;
+      line-height: 22px;
+      padding: 0 8px;
+      letter-spacing: 0;
+      color: #01113d;
+      margin-right: 12px;
+      text-wrap: nowrap;
+      white-space: pre;
+    }
+  }
+
+  .labelStyle {
+    display: inline-block;
+    min-width: 84px;
+    margin-right: 14px;
+    text-wrap: nowrap;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: rgba(1, 17, 61, 0.7477);
+  }
+
+  .projectDetail {
+    flex-grow: 1;
+    font-family: "PingFang SC";
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    color: rgba(1, 17, 61, 0.7477);
+
+    :global {
+      .ant-checkbox-group-item {
+        color: rgba(1, 17, 61, 0.7477);
+      }
+    }
+  }
+
+  // img {
+  //     max-width: 300px;
+  // }
+}
+
+.questName {
+  margin-bottom: 16px;
+}

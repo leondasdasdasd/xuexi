@@ -1,0 +1,73 @@
+@import (reference) "antd/lib/style/themes/default.less";
+
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: iconfont; /* Project id 789461 */
+  src:
+    url("//at.alicdn.com/t/c/font_789461_6fumqpsw41m.woff2?t=1766568844647")
+      format("woff2"),
+    url("//at.alicdn.com/t/c/font_789461_6fumqpsw41m.woff?t=1766568844647")
+      format("woff"),
+    url("//at.alicdn.com/t/c/font_789461_6fumqpsw41m.ttf?t=1766568844647")
+      format("truetype");
+}
+
+@font-face {
+  font-family: taskicon;
+
+  /* project id 789461 */
+  src: url("//at.alicdn.com/t/font_789461_jqn8ias1pfl.eot");
+  src:
+    url("//at.alicdn.com/t/font_789461_jqn8ias1pfl.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_789461_jqn8ias1pfl.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_789461_jqn8ias1pfl.woff") format("woff"),
+    url("//at.alicdn.com/t/font_789461_jqn8ias1pfl.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_789461_jqn8ias1pfl.svg#iconfont") format("svg");
+}
+
+.taskicon {
+  font-family: taskicon !important;
+  font-style: normal;
+}
+
+.iconfont {
+  font-family: iconfont !important;
+  font-size: 12px;
+  font-style: normal;
+}
+
+@groupColor: #4b77ed;
+@groupFontColor: #727272;
+@groupBg: #4372ed;
+@boxShadow: 00 10px 0 rgba(59, 111, 245, 0.08);
+@targetBg: #e9f7fe;
+@targetBorder: #b9e0fa;
+@targetColor: #509df8;
+@borderColor: #e5e5e5;
+@timeColor: #afafaf;
+@inputBorder: #e3e3e3;
+@origin: #eba844;
+
+body {
+  .ant-btn-primary,
+  .ant-btn-primary:hover,
+  .ant-btn-primary:active,
+  .ant-btn-primary:visited {
+    background-color: @groupBg;
+    border-color: @groupBg;
+  }
+
+  .ant-switch-checked {
+    background-color: @groupBg;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: @groupBg;
+    border-color: @groupBg;
+  }
+
+  .ant-checkbox-wrapper {
+    color: @groupFontColor;
+  }
+}

@@ -1,0 +1,80 @@
+.classReport {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f6f7;
+  overflow-x: auto;
+}
+
+.leftContent {
+  flex-shrink: 0;
+  width: 191px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 11px;
+  flex-grow: 0;
+}
+
+.centerWarp {
+  flex-shrink: 0;
+  width: 957px;
+  height: 100%;
+  padding: 21px 9px 21px 28px;
+  background-color: #fff;
+  border-radius: 11px;
+  margin: 0 12px;
+  flex-grow: 0;
+  overflow-y: auto;
+}
+
+.rightContent {
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  border-radius: 11px;
+  flex-grow: 0;
+  overflow-y: auto;
+}
+
+.centerContent {
+  width: 100%;
+  background-color: #fff;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.scrollbar {
+  /* 滚动条样式 */
+  &::-webkit-scrollbar {
+    width: 8px;
+
+    /*  设置纵轴（y轴）轴滚动条 */
+    height: 4px;
+
+    /*  设置横轴（x轴）轴滚动条 */
+  }
+
+  /* 滚动条滑块（里面小方块） */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #c1c1c1;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #7d7d7d;
+  }
+
+  /* 滚动条轨道 */
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background: #fafafa;
+    box-shadow: inset 0 0 5px rgba(104, 100, 100, 0.2);
+  }
+}
+
+@keyframes fill-progress {
+  to {
+    width: 90%;
+
+    /* 实际进度条宽度 */
+  }
+}

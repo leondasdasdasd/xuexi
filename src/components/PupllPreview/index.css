@@ -1,0 +1,139 @@
+.pupllAnalyseBox {
+  padding: 20px;
+  display: flex;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft {
+  flex: 1;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft .stodyTitle {
+  height: 108px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px rgba(1, 17, 61, 0.12) solid;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft .stodyTitle .titltInput .ccc {
+  position: absolute;
+  top: 50px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.pupllAnalyseBox
+  .pupllAnalyseBoxLeft
+  .stodyTitle
+  .titltInput
+  :global(.ant-input) {
+  width: 800px;
+  outline: none;
+  height: 40px;
+  border: none;
+  padding: 0;
+  padding-left: 20px;
+  text-align: center;
+  box-shadow: 0 0 0 transparent;
+  font-size: 20px;
+  font-family: PingFangSC-Semibold;
+  color: #01113d;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft .stodyTitle .stuHead {
+  background: #0f0;
+  width: 80px;
+  height: 100px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft .stodyTitle .stuName {
+  font-family: PingFangSC-Regular;
+  color: rgba(1, 17, 61, 0.85);
+  margin-top: 5px;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft .youSituationBox .tableHeader {
+  height: 52px;
+  background: #fff;
+  padding: 0 20px;
+  position: relative;
+}
+
+.pupllAnalyseBox
+  .pupllAnalyseBoxLeft
+  .youSituationBox
+  .tableHeader
+  .tableHeaderSpan {
+  height: 16px;
+  width: 8px;
+  display: inline-block;
+  background: #11dc5d;
+  border-radius: 2px;
+  line-height: 52px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.pupllAnalyseBox
+  .pupllAnalyseBoxLeft
+  .youSituationBox
+  .tableHeader
+  .tableHeaderTitle {
+  font-family: AlibabaPuHuiTiM;
+  color: #01113d;
+  line-height: 52px;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxLeft .youSituationBox .youChart {
+  height: 150px;
+  background: #fff;
+  border-radius: 0 0 15px 15px;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxRight {
+  width: 182px;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxRight .batchDownload {
+  background: #0445fc;
+  box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+  display: block;
+  width: 136px;
+  height: 36px;
+  color: #fff;
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 8px;
+  margin-left: 33px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.pupllAnalyseBox .pupllAnalyseBoxRight .previewStudentReport {
+  background: #ffffff;
+  border: 1px solid #0445fc;
+  box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+  display: block;
+  width: 136px;
+  height: 36px;
+  color: #0445fc;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 8px;
+  margin-left: 33px;
+  cursor: pointer;
+}

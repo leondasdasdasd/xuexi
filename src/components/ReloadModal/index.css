@@ -1,0 +1,25 @@
+.modalContent p {
+  font-size: 16px;
+  font-family: PingFangSC-Regular;
+  color: #01113d;
+  width: 264px;
+  margin: 10px auto 20px;
+}
+
+.modalContent .buttonStyle {
+  text-align: center;
+}
+
+.modalContent .buttonStyle span {
+  display: inline-block;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalContent .buttonStyle .startEdit {
+  background: #0445fc;
+  color: #fff;
+  padding: 7px 14px;
+}

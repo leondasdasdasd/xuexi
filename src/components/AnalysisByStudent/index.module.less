@@ -1,0 +1,321 @@
+@import "../../utils/global.less";
+
+.boldStyle {
+  font-size: 14px;
+  color: #000;
+  font-family: PingFangSC-Medium;
+  display: block;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+.grayStyle {
+  font-size: 12px;
+  color: #666;
+  font-family: PingFangSC-Medium;
+  display: block;
+  font-style: normal;
+}
+
+.scoreCol {
+  text-align: left;
+
+  > div {
+    height: 18px;
+    line-height: 18px;
+    white-space: nowrap;
+  }
+
+  .iconfont {
+    font-size: 17px;
+    color: #01113d;
+  }
+
+  em {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+
+    i {
+      color: #666;
+      font-style: normal;
+    }
+
+    .allScore {
+      color: #666;
+    }
+  }
+
+  .startTime {
+    color: #999;
+    font-size: 12px;
+  }
+
+  .textStyle {
+    margin-left: 5px;
+    font-family: "PingFang SC";
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  .allScore {
+  }
+}
+
+.unFinishStatus {
+  color: #e9b635;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.lookPaperStatus {
+  color: #4d7ff5;
+  font-size: 14px;
+}
+
+.columnStyle {
+  padding: 0 !important;
+  position: relative;
+
+  .examTitle {
+    font-size: 14px;
+    font-style: normal;
+    color: #666;
+  }
+
+  .exambar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    width: 100%;
+    display: block;
+    height: 12px;
+
+    .greenbar {
+      background: rgba(103, 178, 81, 0.8);
+      height: 12px;
+      display: inline-block;
+    }
+
+    .redbar {
+      background: rgba(229, 73, 46, 0.8);
+      height: 12px;
+      display: inline-block;
+    }
+
+    .yellowbar {
+      background: #e9b635;
+      height: 12px;
+      display: inline-block;
+    }
+  }
+}
+
+.renderQuesionCol {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: #fff;
+  display: inline-block;
+
+  em {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-style: normal;
+    color: #000;
+    font-size: 14px;
+  }
+
+  .answerSummary,
+  .answerSummaryClickable {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    max-height: 20px;
+    overflow: hidden;
+    line-height: 20px;
+    text-align: left;
+    text-overflow: ellipsis;
+    transform: translateY(-50%);
+    white-space: nowrap;
+  }
+
+  .answerSummaryClickable {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #4d7ff5;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .point {
+    width: 4px;
+    height: 4px;
+    background: #0445fc;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+  }
+
+  .bottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+
+    &.rightIcon {
+      color: #67b251;
+    }
+
+    &.wrongIcon {
+      color: #e5492e;
+    }
+  }
+}
+
+.showPage {
+  text-align: right;
+  margin: 30px 0;
+}
+
+.uplaodSpan {
+  color: #4d7fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fileItem {
+  color: #4d7fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fileBox {
+  position: relative;
+
+  .deleteIcon {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .cancelIcon {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}
+
+.lookPaper {
+  color: #4d7fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+.unLookPaper {
+  color: #999;
+  font-size: 14px;
+  margin-right: 3px;
+}
+
+.questionType {
+  background: rgba(59, 111, 245, 0.08);
+  font-family: PingFangSC-Medium;
+  color: #4d7fff;
+  padding: 4px 20px 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.questionLevel {
+  display: inline-block;
+  padding: 4px 20px 4px 10px;
+  font-family: PingFangSC-Medium;
+  border-radius: 20px;
+  margin-left: 10px;
+
+  i {
+    font-size: 18px;
+  }
+}
+
+.easy {
+  color: #67b251;
+  background: rgba(103, 178, 81, 0.04);
+}
+
+.general {
+  background-color: rgba(233, 182, 53, 0.04);
+  color: rgb(233, 182, 53);
+}
+
+.difficult {
+  background-color: rgba(221, 107, 71, 0.04);
+  color: rgb(221, 107, 71);
+}
+
+.progressBar {
+  height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+  background: #ddd;
+  width: 200px;
+  position: relative;
+
+  em {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 2px;
+  }
+}
+
+.analysisNum {
+  color: #666;
+  font-size: 12px;
+}
+
+.analysisStudent {
+  height: 100%;
+
+  :global {
+    tr > th,
+    tr > td {
+      padding: 5px 16px;
+    }
+
+    .ant-table-tbody > tr {
+      height: 48px;
+    }
+
+    .ant-table-tbody > tr > td {
+      box-sizing: border-box;
+      height: 48px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.questionsAnswers {
+  max-height: 400px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.answerDetail {
+  max-height: 70vh;
+  overflow: auto;
+}

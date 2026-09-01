@@ -1,0 +1,36 @@
+.arithmetic {
+  display: flex;
+  flex-flow: row wrap;
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  color: #01113d;
+
+  .scoreNum:nth-child(5n + 1) {
+    border-left: 1px #e9eaee solid;
+  }
+
+  .scoreNum {
+    user-select: none;
+    box-sizing: content-box;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 55px;
+    cursor: pointer;
+    border-right: 1px #e9eaee solid;
+    border-bottom: 1px #e9eaee solid;
+  }
+
+  .scoreNumZero {
+    color: #e02020;
+  }
+
+  .scoreNumTotal {
+    color: #03cc36;
+  }
+
+  .scoreNum.active {
+    background: #0445fc;
+    color: #fff;
+  }
+}

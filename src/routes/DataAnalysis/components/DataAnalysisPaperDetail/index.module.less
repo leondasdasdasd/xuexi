@@ -1,0 +1,32 @@
+.paper-detail-content {
+  --paper-detail-height: calc(100vh - 8.125rem);
+
+  padding: 0.75rem 0;
+  background: #f3f5f9;
+}
+
+.paper-detail-state {
+  display: grid;
+  gap: 1rem;
+  min-height: calc(100vh - 7.5rem);
+  padding: 1rem;
+  background: #f3f5f9;
+  place-items: center;
+}
+
+.paper-detail-state :global(.ant-alert),
+.paper-detail-state :global(.ant-btn) {
+  width: min(42rem, 100%);
+}
+
+@media (max-width: 48rem) {
+  .paper-detail-content {
+    --paper-detail-height: auto;
+
+    padding: 0.5rem 0;
+  }
+
+  .paper-detail-state {
+    min-height: 20rem;
+  }
+}

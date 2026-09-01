@@ -1,0 +1,105 @@
+.modalTest {
+  .operateSuccess {
+    text-align: center;
+    margin-bottom: 53px;
+
+    .successTip {
+      font-family: PingFangSC-Medium;
+      color: #0b1b45;
+      font-size: 24px;
+    }
+  }
+
+  .operateButton {
+    display: flex;
+    align-items: stretch;
+
+    .lanTit {
+      font-family: PingFangSC-Semibold;
+      font-size: 15px;
+      color: rgba(1, 17, 61, 0.85);
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .actionCard {
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+
+    .actionCardBody {
+      display: block;
+    }
+
+    .actionCardFooter {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: auto;
+      padding-top: 15px;
+    }
+
+    .actionButton {
+      display: block;
+      width: 100%;
+      height: 32px;
+      border: 0;
+      border-radius: 8px;
+      padding: 0;
+      font-family: inherit;
+      text-align: center;
+      line-height: 32px;
+      cursor: pointer;
+
+      &:disabled {
+        background: #f5f5f5;
+        color: rgba(0, 0, 0, 0.25);
+        cursor: not-allowed;
+      }
+    }
+
+    .disabled-action-tooltip {
+      display: block;
+      width: 100%;
+    }
+
+    .primaryActionButton {
+      background: #0445fc;
+      color: #fff;
+    }
+
+    .machineActionButton {
+      background: #ccc;
+      color: #fff;
+    }
+
+    .machineTestActive {
+      background: #0445fc;
+    }
+
+    .secondaryActionButton {
+      background: rgba(4, 69, 252, 0.1);
+      color: #0445fc;
+    }
+
+    .machineBox {
+      margin: 0 20px;
+
+      .incomplete {
+        align-self: flex-end;
+        font-size: 12px;
+        font-family: PingFangSC-Medium;
+        color: #999;
+      }
+    }
+  }
+
+  .operateButton > span {
+    width: 260px;
+    background: rgba(216, 216, 216, 0.19721);
+    font-family: PingFangSC-Regular;
+    padding: 40px 20px;
+  }
+}

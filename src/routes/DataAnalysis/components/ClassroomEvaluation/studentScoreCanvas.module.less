@@ -1,0 +1,67 @@
+@import "antd/lib/style/themes/default.less";
+@import "../../../../utils/global.less";
+
+.stuScoreOutBox {
+  width: 100%;
+  border-radius: 15px;
+  padding: 0;
+  background-color: #fff;
+
+  :global(.ant-table-tbody) > tr > td {
+    padding: 1px 16px !important;
+    height: 40px;
+  }
+
+  :global(.ant-table-tbody) > tr > th {
+    padding: 4px 16px !important;
+  }
+
+  .inline {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .importMessage {
+    font-family: AlibabaPuHuiTiR;
+    color: #01113d;
+    font-size: 14px;
+  }
+
+  .publicMessage {
+    font-family: AlibabaPuHuiTiL;
+    color: #01113d;
+    opacity: 0.45;
+    font-size: 12px;
+  }
+
+  .reportFormIcon {
+    margin: 0 3px 0 6px;
+  }
+
+  .divider {
+    margin: 0 3px;
+  }
+}
+
+.imgBox {
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.noPass {
+  color: #4818c9 !important;
+  opacity: 1;
+}

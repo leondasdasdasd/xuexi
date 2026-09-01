@@ -1,0 +1,392 @@
+body {
+  word-wrap: break-word;
+}
+
+.mainContent {
+  font-family: PingFangSC-Regular;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  word-break: break-all;
+  background-color: #fff;
+  // padding: 0 24px 24px 24px;
+  word-wrap: break-word;
+  // overflow-y: scroll;
+  .tabList {
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 8px;
+    font-size: 14px;
+    padding: 12px 16px;
+
+    .questionBank {
+      position: absolute;
+      right: 307px;
+      top: 7px;
+      font-size: 14px;
+      width: 90px;
+      height: 32px;
+      background: rgba(1, 17, 61, 0.05);
+      text-align: center;
+      line-height: 32px;
+      border-radius: 10px;
+    }
+
+    .testBasket {
+      position: absolute;
+      right: 160px;
+      top: 7px;
+      font-size: 14px;
+      height: 32px;
+      width: 137px;
+      text-align: center;
+      line-height: 32px;
+      background: #0445fc;
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    .returnMy {
+      font-size: 16px;
+      cursor: pointer;
+      line-height: 36px;
+      flex-shrink: 0;
+
+      .returnIcon {
+        // margin-right: 8px;
+      }
+    }
+
+    .cur {
+      margin-right: 10px;
+
+      a {
+        color: #3b6ff5 !important;
+      }
+    }
+
+    .normal {
+      margin-right: 10px;
+
+      a {
+        color: #ccc !important;
+      }
+    }
+
+    .entryTitle {
+      position: absolute;
+      right: 50px;
+      top: 7px;
+      height: 36px;
+      line-height: 36px;
+      cursor: pointer;
+      font-family: PingFangSC-Medium;
+      color: #0445fc !important;
+      background: rgba(4, 69, 252, 0.1);
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+
+    .buyCar {
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+      font-family: PingFangSC-Medium;
+      color: #0445fc !important;
+      background: rgba(4, 69, 252, 0.1);
+      border-radius: 10px;
+      padding: 0 10px;
+
+      .count {
+        margin-left: 5px;
+      }
+
+      .split {
+        color: rgb(148, 170, 244) !important;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .menu {
+    a {
+      margin: 0 20px;
+      display: inline-block;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    span {
+      &.menuTitle {
+        color: #999;
+        font-size: 14px;
+      }
+
+      &.selectedMenu {
+        color: #4d7fff;
+        font-family: PingFangSC-Medium;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .inputType {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 30px;
+
+    .inputArea {
+      display: flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      justify-content: space-between;
+
+      .inputTitle {
+        font-size: 18px;
+        display: block;
+
+        em {
+          display: inline-block;
+          font-style: normal;
+        }
+
+        .newIcon {
+          width: 33px;
+          vertical-align: bottom;
+        }
+      }
+
+      .inputTips {
+        font-size: 12px;
+        display: block;
+        margin-top: 4px;
+        word-break: break-word;
+      }
+
+      .inputButton {
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px 20px;
+        min-width: 400px;
+        flex: 1;
+        margin: 0 15px;
+        cursor: pointer;
+
+        .inputTitle {
+          color: #666;
+          font-size: 18px;
+          display: block;
+        }
+
+        .inputTips {
+          color: #999;
+          font-size: 12px;
+          display: block;
+          margin-top: 4px;
+        }
+      }
+
+      .selectInputButton {
+        border: 1px solid #4d7fff;
+        border-radius: 10px;
+        text-align: center;
+        padding: 12px 20px;
+        min-width: 400px;
+        flex: 1;
+        margin: 0 15px;
+        cursor: pointer;
+
+        .inputTitle {
+          color: #4d7fff;
+        }
+
+        .inputTips {
+          color: #4d7fff;
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .inputStem {
+    .ant-dropdown-menu {
+      padding: 0;
+    }
+
+    width: 152px;
+    height: 88px !important;
+    border-radius: 10px;
+
+    .ant-dropdown-menu-item {
+      padding: 0 24px;
+      font-size: 16px;
+      height: 42px;
+      line-height: 42px;
+    }
+
+    .ant-dropdown-menu-item-active {
+      background: rgba(4, 69, 252, 0.1);
+    }
+  }
+}
+
+.questionArea {
+  padding: 0 24px 24px;
+}
+
+.filterPanel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex: 1 1 720px;
+  min-width: 0;
+}
+
+.filterChoice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.filterItem {
+  min-width: 100px;
+  max-width: 180px;
+  flex: 1 1 100px;
+  font-family: PingFangSC-Medium;
+  color: #666;
+  font-size: 16px;
+  vertical-align: middle;
+
+  :global(.ant-select-selection) {
+    border-radius: 10px;
+    width: 100%;
+    height: 36px;
+  }
+
+  :global(.ant-select-selection__rendered) {
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    padding-right: 10px;
+  }
+}
+
+.treeBox {
+  :global(.ant-select-selection) {
+    display: block;
+  }
+}
+
+.selectStyle {
+  width: 100%;
+
+  :global(.ant-select-selection) {
+    border-radius: 10px;
+    height: 36px;
+  }
+
+  :global(.ant-select-selection__rendered) {
+    height: 36px;
+    line-height: 36px;
+  }
+}
+
+.filterActions {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.filterTools {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.whiteBtn,
+.blueBtn {
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 5.5px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.whiteBtn {
+  background: rgba(1, 17, 61, 0.05);
+  color: #333;
+}
+
+.blueBtn {
+  background: #0445fc;
+  color: #fff;
+}
+
+.subjectName {
+  color: rgba(0, 0, 0, 0.65);
+  display: block;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.importResult {
+  text-align: center;
+
+  h4 {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+}
+
+.resultTips {
+  color: #666;
+  font-size: 16px;
+
+  em {
+    margin: 0 5px;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.success {
+  color: #4d7fff;
+}
+
+.error {
+  color: #f76377;
+}
+
+.operBtn1 {
+  text-align: center;
+
+  .blueBtn {
+    width: 76px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 7px;
+    padding: 0;
+  }
+}

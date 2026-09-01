@@ -1,0 +1,35 @@
+.formula-image-rich-text img:not([src*="mathUrl="]) {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.formula-image-rich-text img[src*="mathUrl="]:not([src*="math-svg"]) {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: calc(30px * var(--question-task-formula-scale)) !important;
+  object-fit: contain;
+  vertical-align: var(--question-task-formula-vertical-align);
+}
+
+.formula-image-rich-text img[src*="math-svg"][data-math="inline"],
+.formula-image-rich-text img[src*="math-svg"][src*="display=inline"] {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.formula-image-rich-text img[src*="math-svg"][data-math="block"],
+.formula-image-rich-text img[src*="math-svg"][src*="display=block"] {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  height: var(--question-task-svg-block-formula-height) !important;
+  object-fit: contain;
+  margin: var(--question-task-svg-block-formula-margin) !important;
+}

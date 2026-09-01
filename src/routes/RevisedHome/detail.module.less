@@ -1,0 +1,642 @@
+@import "../../utils/global.less";
+
+@media only screen and (min-device-width: 768px) {
+  .revsedDetailBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f5f5f5;
+
+    .header {
+      height: 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0 2px 8px -2px rgba(1, 17, 61, 0.1);
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      .headerLeft {
+        font-family: PingFangSC-Semibold;
+        color: #01113d;
+        display: flex;
+        align-items: center;
+
+        & > i {
+          margin: 0 20px 0 12px;
+          cursor: pointer;
+        }
+
+        & > span {
+          font-size: 14px;
+          font-family: PingFangSC-Medium;
+          color: rgba(1, 17, 61, 0.45);
+          margin-left: 25px;
+        }
+      }
+
+      .headerRight {
+        padding-left: 95px;
+        font-family: PingFangSC-Semibold;
+        color: #5db202;
+      }
+    }
+
+    .content {
+      height: calc(~"100% - 70px");
+      overflow-y: auto;
+      padding: 23px 95px 0;
+      box-sizing: border-box;
+
+      .approvalContent,
+      .progressBox,
+      .btnBox {
+        width: 100%;
+        background: #fff;
+        border-radius: 8px;
+        padding: 17px 21px 16px;
+        margin-bottom: 11px;
+      }
+
+      .approvalContent {
+        .approvalItem {
+          display: flex;
+          margin-bottom: 18px;
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.85);
+
+          .approvalTitle {
+            width: 77px;
+            font-family: PingFangSC-Semibold;
+            color: #01113d;
+            font-size: 14px;
+            text-align: left;
+            margin-right: 10px;
+          }
+
+          &:first-child {
+            margin-bottom: 30px;
+
+            .approvalTitle {
+              font-size: 16px;
+              width: 90%;
+            }
+          }
+
+          .detailBox {
+            flex: 0.8;
+            max-width: 837px;
+            border: 1px solid rgba(1, 17, 61, 0.12);
+            border-bottom: none;
+
+            .questionId {
+              padding-left: 19px;
+              width: 147px;
+              box-sizing: border-box;
+            }
+
+            .studentNames {
+              max-width: 280px;
+              padding-right: 30px;
+            }
+
+            :global {
+              .ant-table-column-title {
+                font-family: PingFangSC-Regular;
+                color: rgba(0, 0, 0, 0.4);
+                font-size: 14px;
+              }
+
+              .ant-table-thead > tr > th {
+                background: #f0f0f0;
+              }
+
+              .ant-table-thead > tr,
+              .ant-table-tbody > tr {
+                font-family: PingFangSC-Regular;
+                color: rgba(1, 17, 61, 0.65);
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .progressBox {
+        .progressTitle {
+          font-family: PingFangSC-Semibold;
+          color: #01113d;
+          font-size: 16px;
+          margin-bottom: 18px;
+        }
+
+        .progressContent {
+          .progressItem {
+            position: relative;
+            display: flex;
+            height: 90px;
+            padding-left: 60px;
+
+            .progressStatus {
+              position: absolute;
+              left: 35px;
+              top: 10px;
+
+              .round {
+                display: block;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #5db202;
+                margin-bottom: 3px;
+              }
+
+              .line {
+                display: block;
+                width: 4px;
+                height: 70px;
+                background: #5db202;
+                margin-left: 4px;
+              }
+            }
+
+            .itemLeft {
+              width: 50px;
+              height: 50px;
+              margin-right: 20px;
+
+              & > img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+              }
+            }
+
+            .itemRight {
+              .userName {
+                font-family: PingFangSC-Semibold;
+                color: #01113d;
+                font-size: 18px;
+                margin-bottom: 6px;
+                display: flex;
+                align-items: center;
+
+                & > span {
+                  margin-left: 13px;
+                  font-family: PingFangSC-Regular;
+                  color: rgba(1, 17, 61, 0.65);
+                  font-size: 16px;
+                }
+              }
+            }
+
+            &:last-child {
+              .progressStatus {
+                .line {
+                  display: none;
+                }
+              }
+            }
+
+            .delay {
+              color: #ff9c00;
+            }
+
+            .completed {
+              color: #5db202;
+            }
+
+            .refuse {
+              color: #e02020;
+            }
+
+            .delaybg {
+              background: #ff9c00 !important;
+            }
+
+            .completedbg {
+              background: #5db202 !important;
+            }
+
+            .refusebg {
+              background: #e02020 !important;
+            }
+          }
+        }
+      }
+
+      .btnBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .refuseBtn,
+        .agreeBtn {
+          padding: 9px 31px;
+          font-family: PingFangSC-Medium;
+          color: #515c7a;
+          font-size: 14px;
+          background: rgba(1, 17, 61, 0.1);
+          border-radius: 7px;
+          cursor: pointer;
+        }
+
+        .agreeBtn {
+          margin-left: 10px;
+          background: #0445fc;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .approveModal {
+    position: relative;
+
+    .modalTitle {
+      font-family: PingFangSC-Medium;
+      color: #01113d;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .closeBtn {
+      font-size: 18px;
+      position: absolute;
+      color: #999;
+      cursor: pointer;
+    }
+
+    .modalContent {
+      :global(.ant-input) {
+        height: 140px;
+      }
+    }
+
+    .operBtn {
+      text-align: right;
+      margin-top: 33px;
+
+      .modalBtn {
+        padding: 5px 19px;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 14px;
+        font-family: PingFangSC-Medium;
+        cursor: pointer;
+      }
+
+      .cancelBtn {
+        background-color: rgba(1, 17, 61, 0.07);
+        color: rgba(1, 17, 61, 0.65);
+        margin-right: 12px;
+      }
+
+      .confirmBtn {
+        background-color: #0445fc;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .revsedDetailBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      // height: 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0 2px 8px -2px rgba(1, 17, 61, 0.1);
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      .headerLeft {
+        font-family: PingFangSC-Semibold;
+        color: #01113d;
+        display: flex;
+        align-items: center;
+        padding: 5px 20px;
+
+        & > i {
+          margin: 0 20px 0 12px;
+          cursor: pointer;
+          display: none;
+        }
+
+        & > span {
+          font-size: 14px;
+          font-family: PingFangSC-Medium;
+          color: rgba(1, 17, 61, 0.45);
+          margin-left: 25px;
+          display: none;
+        }
+      }
+
+      .headerRight {
+        padding-left: 95px;
+        font-family: PingFangSC-Semibold;
+        color: #5db202;
+        display: none;
+      }
+    }
+
+    .content {
+      // height: calc(~'100% - 70px');
+      overflow-y: auto;
+      // padding: 23px 95px 0;
+      box-sizing: border-box;
+
+      .approvalContent,
+      .progressBox,
+      .btnBox {
+        width: 100%;
+        background: #fff;
+        border-radius: 8px;
+        padding: 17px 21px 16px;
+        margin-bottom: 11px;
+      }
+
+      .approvalContent {
+        .approvalItem {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 18px;
+          font-family: PingFangSC-Regular;
+          color: rgba(1, 17, 61, 0.85);
+
+          .approvalTitle {
+            width: 77px;
+            font-family: PingFangSC-Semibold;
+            color: #01113d;
+            font-size: 14px;
+            text-align: left;
+            margin-right: 10px;
+          }
+
+          &:first-child {
+            margin-bottom: 30px;
+
+            .approvalTitle {
+              font-size: 16px;
+              width: 90%;
+            }
+          }
+
+          .detailBox {
+            flex: 0.8;
+            max-width: 837px;
+            border: 1px solid rgba(1, 17, 61, 0.12);
+            border-bottom: none;
+
+            .questionId {
+              padding-left: 19px;
+              // width: 147px;
+              box-sizing: border-box;
+              font-size: 12px;
+            }
+
+            .studentNames {
+              max-width: 280px;
+              // padding-right: 10px;
+              padding: 5px;
+              font-size: 12px;
+            }
+
+            :global {
+              .ant-table-column-title {
+                font-family: PingFangSC-Regular;
+                color: rgba(0, 0, 0, 0.4);
+                font-size: 12px;
+              }
+
+              .ant-table-thead > tr > th {
+                background: #f0f0f0;
+              }
+
+              .ant-table-thead > tr,
+              .ant-table-tbody > tr {
+                font-family: PingFangSC-Regular;
+                color: rgba(1, 17, 61, 0.65);
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      .progressBox {
+        .progressTitle {
+          font-family: PingFangSC-Semibold;
+          color: #01113d;
+          font-size: 16px;
+          margin-bottom: 18px;
+        }
+
+        .progressContent {
+          .progressItem {
+            position: relative;
+            display: flex;
+            height: 90px;
+            padding-left: 60px;
+
+            .progressStatus {
+              position: absolute;
+              left: 35px;
+              top: 10px;
+
+              .round {
+                display: block;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #5db202;
+                margin-bottom: 3px;
+              }
+
+              .line {
+                display: block;
+                width: 4px;
+                height: 70px;
+                background: #5db202;
+                margin-left: 4px;
+              }
+            }
+
+            .itemLeft {
+              width: 40px;
+              height: 40px;
+              margin-right: 15px;
+
+              & > img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+              }
+            }
+
+            .itemRight {
+              .userName {
+                font-family: PingFangSC-Semibold;
+                color: #01113d;
+                font-size: 15px;
+                margin-bottom: 6px;
+                display: flex;
+                align-items: center;
+
+                & > span {
+                  margin-left: 13px;
+                  font-family: PingFangSC-Regular;
+                  color: rgba(1, 17, 61, 0.65);
+                  font-size: 16px;
+                }
+              }
+            }
+
+            &:last-child {
+              .progressStatus {
+                .line {
+                  display: none;
+                }
+              }
+            }
+
+            .delay {
+              color: #ff9c00;
+            }
+
+            .completed {
+              color: #5db202;
+            }
+
+            .refuse {
+              color: #e02020;
+            }
+
+            .delaybg {
+              background: #ff9c00 !important;
+            }
+
+            .completedbg {
+              background: #5db202 !important;
+            }
+
+            .refusebg {
+              background: #e02020 !important;
+            }
+          }
+        }
+      }
+
+      .btnBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .refuseBtn,
+        .agreeBtn {
+          padding: 9px 31px;
+          font-family: PingFangSC-Medium;
+          color: #515c7a;
+          font-size: 14px;
+          background: rgba(1, 17, 61, 0.1);
+          border-radius: 7px;
+          cursor: pointer;
+        }
+
+        .agreeBtn {
+          margin-left: 10px;
+          background: #0445fc;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .approveModal {
+    position: relative;
+
+    .modalTitle {
+      font-family: PingFangSC-Medium;
+      color: #01113d;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .closeBtn {
+      font-size: 18px;
+      position: absolute;
+      color: #999;
+      cursor: pointer;
+    }
+
+    .modalContent {
+      :global(.ant-input) {
+        height: 140px;
+      }
+    }
+
+    .operBtn {
+      text-align: right;
+      margin-top: 33px;
+
+      .modalBtn {
+        padding: 5px 19px;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 14px;
+        font-family: PingFangSC-Medium;
+        cursor: pointer;
+      }
+
+      .cancelBtn {
+        background-color: rgba(1, 17, 61, 0.07);
+        color: rgba(1, 17, 61, 0.65);
+        margin-right: 12px;
+      }
+
+      .confirmBtn {
+        background-color: #0445fc;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.noExamStudent {
+  position: relative;
+
+  .nameStyle {
+    width: 80%;
+    display: block;
+    font-style: normal;
+  }
+
+  .levelName {
+    position: absolute;
+    font-size: 12px;
+    font-style: normal;
+    transform: scale(0.8);
+    top: -5px;
+    right: 0;
+    border-radius: 8px;
+    background: #fe9d00;
+    color: #fff;
+    padding: 2px 4px;
+  }
+}

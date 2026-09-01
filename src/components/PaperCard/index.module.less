@@ -1,0 +1,122 @@
+@import "../../utils/global.less";
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 8px;
+  padding: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  column-gap: 24px;
+  align-items: center;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.title-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.exam-type-box {
+  font-family: PingFangSC-Medium, sans-serif;
+  font-size: 12px;
+  padding: 0 10px;
+  margin-right: 8px;
+  border-radius: 4px;
+  line-height: 20px;
+}
+
+.orange {
+  background: rgba(252, 131, 18, 0.12);
+  color: #fc8312;
+}
+
+.red {
+  background: rgba(254, 53, 5, 0.12);
+  color: #fe3505;
+}
+
+.blue {
+  background: rgba(18, 204, 252, 0.12);
+  color: #12ccfc;
+}
+
+.green {
+  background: rgba(5, 230, 87, 0.12);
+  color: #05e657;
+}
+
+.grey {
+  color: rgba(1, 17, 61, 0.55);
+  background: rgba(1, 17, 61, 0.07);
+}
+
+.header {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  font-family: PingFangSC-Medium, sans-serif;
+  color: #000;
+  font-size: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.secret-status {
+  color: #d82d04;
+  vertical-align: middle;
+  font-size: 22px;
+  line-height: 22px;
+  margin-left: 8px;
+}
+
+.meta-row {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.time {
+  display: inline-block;
+  font-family: PingFangSC-Regular, sans-serif;
+  color: #999;
+  margin-right: 22px;
+}
+
+.time i {
+  margin-right: 5px;
+  color: #000;
+  font-size: 14px;
+}
+
+.question-score {
+  color: rgba(1, 17, 61, 0.65);
+  font-size: 13px;
+  display: grid;
+  row-gap: 4px;
+  justify-items: center;
+  text-align: center;
+  justify-self: center;
+  white-space: nowrap;
+}
+
+.previewable {
+  cursor: pointer;
+}
+
+.preview-disabled {
+  cursor: default;
+}

@@ -1,0 +1,1103 @@
+@import "../../utils/global.less";
+
+.detailBox {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  overflow: hidden;
+
+  :global(.ant-modal-content) {
+    text-align: center;
+
+    .lineBox {
+      margin-bottom: 20px;
+    }
+
+    :global(.ant-btn-primary) {
+      margin-left: 20px;
+    }
+  }
+
+  .header {
+    height: 80px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+
+    .testHeaderRight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: right;
+      margin-right: 10px;
+      font-size: 12px;
+      font-family: PingFangSC-Regular;
+      color: #999999;
+
+      .timerWarp {
+        color: rgba(1, 17, 61, 0.65);
+      }
+
+      :global(.ant-popover) {
+        width: 420px;
+        top: 33px !important;
+        right: 0 !important;
+        margin-right: 20px;
+      }
+
+      .sureTile {
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        color: #333333;
+        letter-spacing: -1.1;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .stuSubContent {
+        font-family: PingFangSC-Regular;
+        color: #666666;
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        .noAnswerNum {
+          color: #dc3224;
+          margin: 0 2px;
+        }
+      }
+
+      .lineBox {
+        text-align: right;
+      }
+    }
+
+    .closeIcon {
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .viewTitle {
+      font-family: PingFangSC-Medium;
+      position: relative;
+      font-size: 20px;
+      flex: 1;
+      margin-left: 20px;
+
+      .switchQuest {
+        font-family: PingFangSC-Regular;
+        color: #0445fc;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .title {
+        margin-top: 4px;
+        overflow: hidden;
+        color: #01113d;
+        font-size: 18px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .headerMessage {
+        margin-top: 4px;
+        color: rgba(1, 17, 61, 0.65);
+
+        .message {
+          font-family: PingFangSC-Regular;
+          // color: #999999;
+          font-size: 12px;
+          margin-right: 20px;
+
+          i {
+            margin-right: 5px;
+            // color: #666;
+          }
+        }
+      }
+    }
+
+    .selStuBox {
+      margin-right: 20px;
+
+      .classStuName {
+        font-family: PingFangSC-Medium;
+        color: rgba(1, 17, 61, 0.85);
+        font-size: 16px;
+        background: rgba(4, 69, 252, 0.1);
+        box-shadow: 0 1px 4px -4px rgba(1, 17, 61, 0.12);
+        padding: 7px 8px;
+        border-radius: 8px;
+        margin-right: 18px;
+
+        i {
+          font-size: 16px;
+          // margin-right: 6px;
+        }
+      }
+
+      .switchStudents {
+        font-family: PingFangSC-Regular;
+        color: #0445fc;
+        font-size: 16px;
+        cursor: pointer;
+
+        i {
+          color: #0445fc;
+          font-size: 16px;
+        }
+      }
+
+      .switchStudentsBox {
+        :global(.ant-popover-inner-content) {
+          padding: 0 !important;
+        }
+      }
+
+      .sleStuBox {
+        width: 191px;
+        height: 600px;
+
+        .searchHeader {
+          padding: 16px;
+          border-bottom: 1px solid rgba(1, 17, 61, 0.15);
+
+          :global(.ant-select-selection-selected-value) {
+            font-family: PingFangSC-Regular;
+            color: rgba(1, 17, 61, 0.85);
+          }
+
+          :global(.ant-select-selection) {
+            border: 1px solid rgba(1, 17, 61, 0.08);
+            border-radius: 8px;
+          }
+
+          :global(.ant-input) {
+            border: 1px solid rgba(1, 17, 61, 0.08);
+            border-radius: 8px;
+          }
+        }
+
+        .stuList {
+          overflow-y: scroll;
+          height: 487px;
+
+          .stuNameList {
+            .stuClassName {
+              height: 36px;
+              font-family: PingFangSC-Regular;
+              color: rgba(1, 17, 61, 0.45);
+              line-height: 36px;
+              padding-left: 28px;
+            }
+
+            .stuName {
+              font-family: PingFangSC-Regular;
+              color: #01113d;
+              height: 36px;
+              line-height: 36px;
+              cursor: pointer;
+              padding-left: 28px;
+            }
+
+            .stuName:hover {
+              background: rgba(4, 69, 252, 0.03);
+              font-family: PingFangSC-Regular;
+              color: #0445fc;
+              height: 36px;
+              line-height: 36px;
+              cursor: pointer;
+              padding-left: 28px;
+            }
+          }
+        }
+      }
+    }
+
+    :global(.ant-btn-primary) {
+      margin: 0 20px;
+      background: #4d7fff;
+    }
+  }
+
+  .detailContent {
+    width: 100%;
+    height: calc(~"100% - 80px");
+    padding-top: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+
+    .ready {
+      width: calc(~"100% - 20px");
+      margin: 0 auto;
+      height: calc(~"100% - 20px");
+      border-radius: 20px;
+      // background: #fff;
+
+      .answerTimeNotice {
+        width: 520px;
+        min-height: 180px;
+        margin: 120px auto 0;
+        padding: 36px 40px;
+        background: #fff;
+        border-radius: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px 0 rgba(1, 17, 61, 0.08);
+
+        .answerTimeNoticeIcon {
+          flex-shrink: 0;
+          color: #faad14;
+          font-size: 40px;
+          margin-right: 20px;
+        }
+
+        .answerTimeNoticeContent {
+          min-width: 0;
+
+          .answerTimeNoticeTitle {
+            font-family: PingFangSC-Semibold;
+            color: #01113d;
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 12px;
+          }
+
+          .answerTimeNoticeTime {
+            font-family: PingFangSC-Regular;
+            color: rgba(1, 17, 61, 0.65);
+            font-size: 18px;
+            line-height: 28px;
+            word-break: break-word;
+          }
+        }
+      }
+
+      .redyContent {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        height: 100%;
+
+        .leftContent {
+          height: 100%;
+          flex-grow: 1;
+          background-color: #fff;
+          border-radius: 11px;
+          margin-right: 13px;
+          display: flex;
+          place-content: center center;
+          flex-wrap: wrap;
+          padding: 16px;
+
+          .title {
+            font-family: PingFangSC-Semibold;
+            font-size: 36px;
+            color: #01113d;
+            text-align: center;
+            line-height: 44px;
+            font-weight: 600;
+            margin-bottom: 28px;
+          }
+
+          .message {
+            font-family: PingFangSC-Semibold;
+            color: #01113d;
+            // margin: 20px auto;
+            margin-bottom: 48px;
+            font-size: 24px;
+            margin: 20px 0;
+            line-height: 26px;
+            display: inline-block;
+
+            i {
+              margin-right: 10px;
+              color: #666;
+              font-size: 20px;
+            }
+          }
+
+          .modeIll {
+            width: calc(~"54% + 16px");
+            min-height: 20px;
+            font-family: PingFangSC-Regular;
+            color: rgba(1, 17, 61, 0.85);
+            font-size: 14px;
+            margin: 10px auto;
+            white-space: pre-wrap;
+          }
+        }
+
+        .rightContent {
+          border-radius: 11px;
+          width: 328px;
+          padding: 12px;
+          height: 100%;
+          flex-shrink: 0;
+          background: #fff;
+          justify-content: center;
+          display: flex;
+          flex-wrap: wrap;
+
+          .continuityBox {
+            width: 100%;
+            // height: 204px;
+            border: 3px solid #fff;
+            background: rgba(1, 17, 61, 0.04);
+            text-align: center;
+            border-radius: 8px;
+            padding: 3%;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            .continuity {
+              font-family: PingFangSC-Semibold;
+              color: rgba(1, 17, 61, 0.85);
+              font-size: 20px;
+              margin-bottom: 2% !important;
+            }
+
+            .allTestSee {
+              font-family: PingFangSC-Regular;
+              color: rgba(1, 17, 61, 0.85);
+              font-size: 13px;
+              margin-bottom: 3% !important;
+            }
+
+            .singleQuestionImg {
+              display: inline-block;
+              height: 50%;
+              width: 25%;
+
+              img {
+                height: 100%;
+                width: 100%;
+              }
+            }
+
+            .continuityImg {
+              display: inline-block;
+              height: 50%;
+              width: 25%;
+
+              img {
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+
+          .border {
+            background: rgba(4, 69, 252, 0.05);
+            border: 3px solid rgba(4, 69, 252, 1);
+          }
+
+          :global(.ant-btn-primary) {
+            background: #0445fc !important;
+            width: 100%;
+            height: 12%;
+            max-height: 57px;
+            font-size: 24px;
+            box-shadow: 0 8px 12px 0 rgba(77, 127, 255, 0.12);
+            border-radius: 7px;
+            font-family: PingFangSC-Semibold;
+          }
+        }
+      }
+
+      .countContent {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: auto;
+
+        .countDown {
+          font-family: PingFangSC-Light;
+          color: #000000;
+          font-size: 30px;
+          height: calc(~"50% - 45px");
+          position: relative;
+
+          .countMessage {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            left: 0;
+          }
+        }
+
+        .num {
+          font-family: PingFangSC-Semibold;
+          color: #4d7fff;
+          font-size: 200px;
+          position: relative;
+
+          .numMessage {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            line-height: 200px;
+          }
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .contentLeft {
+      flex: 1;
+      padding-left: 30px;
+      overflow: scroll;
+      background: #fff;
+
+      .testName {
+        background: #fff;
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+
+        .testNameLeft {
+          font-family: PingFangSC-Regular;
+          width: 100px;
+          height: 100%;
+          line-height: 50px;
+          color: #666;
+          font-size: 14px;
+          border-right: 1px solid #ccc;
+          text-align: center;
+        }
+
+        .testNameRight {
+          flex: 1;
+
+          :global(.ant-input) {
+            width: calc(~"100% - 30px");
+            outline: none;
+            height: 99%;
+            border: none;
+            padding: 0;
+            padding-left: 20px;
+            box-shadow: 0 0 0 transparent;
+          }
+
+          h2 {
+            margin: 0 !important;
+            height: 50px;
+            line-height: 50px;
+          }
+        }
+      }
+
+      .oneTestBox {
+        height: calc(~"100% - 20px");
+        width: 100%;
+        background-color: #fff;
+        // margin-top: 10px;
+        border-radius: 10px;
+        position: relative;
+
+        .cutTopic {
+          background: #ffffff;
+          box-shadow: 0 2px 8px 0 rgba(1, 17, 61, 0.05);
+          width: 100%;
+          height: 54px;
+          position: absolute;
+          bottom: 0;
+
+          .previousQuestion {
+            display: inline-block;
+            width: 88px;
+            height: 36px;
+            line-height: 36px;
+            background: rgba(1, 17, 61, 0.07);
+            font-family: PingFangSC-Medium;
+            color: rgba(1, 17, 61, 0.65);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 9px;
+            margin-left: 15px;
+          }
+
+          .nextQuestion {
+            float: right;
+            width: 88px;
+            height: 36px;
+            line-height: 36px;
+            background: #0445fc;
+            font-family: PingFangSC-Medium;
+            color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 9px;
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .testList {
+        // margin-top: 10px;
+        padding: 22px 16px 10px;
+        // height: auto;
+        height: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+        img {
+          max-width: 400px !important;
+          max-height: 300px !important;
+          object-fit: contain;
+          cursor: pointer;
+        }
+      }
+
+      .deleteList {
+        background: #fff;
+        padding: 10px;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+        .deletedTitle {
+          font-family: PingFangSC-Medium;
+          color: #666666 100%;
+          font-size: 16px;
+        }
+
+        .deleteBox {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 10px;
+
+          .dleteOptionBox {
+            width: 40px;
+            height: 100%;
+          }
+
+          .deleteButton {
+            display: none;
+          }
+
+          .deleteContent {
+            flex: 1;
+            padding: 10px;
+          }
+        }
+
+        .deleteBox:hover {
+          .deleteButton {
+            width: 32px;
+            text-align: center;
+            display: block;
+            color: #666;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid rgba(230, 230, 230, 1);
+            cursor: pointer;
+          }
+
+          .deleteContent {
+            border: 1px solid rgba(77, 127, 255, 0.2);
+            border-radius: 10px;
+          }
+
+          .inline {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .contentRight {
+      width: 360px;
+      padding: 10px;
+      padding-top: 0;
+      overflow: auto;
+
+      .fraction {
+      }
+
+      .uplaodSpan {
+        color: #4d7fff;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .stuProcess {
+        margin-left: 10px;
+
+        a {
+          color: #666;
+        }
+      }
+
+      .cancelIcon {
+        margin-left: 10px;
+      }
+
+      .contentRightMessage {
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+        padding: 10px;
+        // margin-bottom: 12px;
+        font-family: "PingFang SC";
+
+        .timeMessage {
+          font-size: 13px;
+          font-weight: normal;
+          color: #27345a;
+          margin-left: 10px;
+        }
+
+        .testMessage {
+          display: flex;
+          flex-direction: row;
+          margin-top: 20px;
+          border-bottom: 1px solid #e5e7eb;
+
+          .messageBox {
+            height: 64px;
+            width: 80px;
+            text-align: center;
+            color: #666;
+
+            .explain {
+              font-size: 12px;
+              color: rgba(1, 17, 61, 0.85);
+            }
+          }
+
+          .rightNum {
+            .time {
+              color: #999;
+              font-size: 12px;
+              margin-top: 10px;
+
+              .right {
+                color: #67b251;
+                font-size: 18px;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        .score {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .title {
+            color: #01113d;
+            font-family: "PingFang SC";
+            font-size: 16px;
+            font-weight: 500;
+          }
+
+          .stuScore {
+            font-family: "PingFang SC";
+            font-weight: 400;
+            font-size: 12px;
+          }
+
+          .studentScore {
+          }
+
+          .fullScore {
+            font-family: "PingFang SC";
+            font-weight: 400;
+            font-size: 12px;
+          }
+
+          .totalScore {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .contentRightOption {
+        background: #fff;
+        border-radius: 0 0 10px 10px;
+        padding: 10px;
+
+        // margin-top: 10px;
+        .optionTitleBox {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 10px;
+
+          .optionTitleLeft {
+            font-family: PingFangSC-Medium;
+            color: #000000 100%;
+            font-size: 16px;
+          }
+
+          .optionTitleRight {
+            font-family: PingFangSC-Light;
+            color: #666666;
+            font-size: 16px;
+            cursor: pointer;
+
+            i {
+              font-size: 16px;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .moveList {
+          border-radius: 10px;
+          border: 1px solid rgba(230, 230, 230, 1);
+          margin-bottom: 12px;
+
+          .moveListTitle {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(230, 230, 230, 1);
+
+            .contentVisible {
+              display: inline-block;
+              max-width: 120px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              vertical-align: top;
+            }
+
+            .modultScore {
+              color: #4d7fff;
+
+              .score {
+                margin: 0 5px;
+                display: inline-block;
+              }
+            }
+          }
+
+          .moveListContent {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 10px;
+
+            .optionBox {
+              width: 32px;
+              height: 32px;
+              background: #ffffff;
+              border: 1px solid rgba(230, 230, 230, 1);
+              border-radius: 4px;
+              text-align: center;
+              line-height: 32px;
+              margin-right: 5px;
+              margin-bottom: 6px;
+              cursor: pointer;
+              position: relative;
+
+              i {
+                position: absolute;
+                right: 0;
+                bottom: -10px;
+              }
+            }
+
+            .daipigaiIcon {
+              position: absolute;
+              right: 1px;
+              bottom: 3px;
+              display: flex;
+
+              .point {
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                margin-right: 1px;
+                background: #2b75ff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.completeTest {
+  // display: inline-block;
+  // padding: 6px 12px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+  color: #0445fc;
+  font-size: 14px;
+  font-family: PingFangSC-Medium;
+  border-radius: 7px;
+  background: rgba(4, 69, 252, 0.1);
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.singleAnswering {
+  height: calc(~"100vh - 170px");
+  overflow-y: scroll;
+  padding: 24px 42px;
+
+  img {
+    max-width: 400px !important;
+    max-height: 300px !important;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  .Title {
+    font-family: PingFangSC-Regular;
+    color: #01113d;
+    font-size: 20px;
+    margin-bottom: 20px !important;
+
+    .bigQuestion {
+      font-family: PingFangSC-Medium;
+      // color: #01113D;
+      // font-size: 20px;
+    }
+  }
+
+  .stemBox {
+    font-family: PingFangSC-Regular;
+    color: #01113d;
+    font-size: 18px;
+    line-height: 26px;
+    vertical-align: middle;
+    margin-bottom: 20px !important;
+  }
+
+  .stuAnswerBox {
+    font-family: PingFangSC-Regular;
+    color: #0b1b45;
+    font-size: 18px;
+  }
+
+  .optionList {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid rgba(230, 230, 230, 1);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    // display: flex;
+    // flex-direction: row;
+    line-height: 40px;
+    overflow: hidden;
+    margin-right: 20px;
+
+    // min-width: 20%;
+    .trueValue {
+      background: #ffffff;
+      border: 1px solid rgba(103, 178, 81, 1) !important;
+
+      .opListLeft {
+        background: #67b251;
+
+        .optionIcon {
+          font-size: 20px;
+          color: #fff !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .noBorderLeft {
+      border-right: none !important;
+    }
+
+    .opListLeft {
+      width: 30px;
+      border-right: 1px solid #ccc;
+      text-align: center;
+      display: inline-block;
+
+      .optionIcon {
+        font-size: 20px;
+        color: #000;
+        opacity: 0.1;
+      }
+    }
+
+    .opListRight {
+      display: inline-block;
+      flex: 1;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      p:first-child {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      div:first-child {
+        display: inline-block;
+        margin-bottom: 0;
+        // width: 98%;
+      }
+
+      img {
+        max-width: 900px !important;
+        max-height: 300px !important;
+        object-fit: contain;
+        cursor: pointer;
+      }
+
+      p {
+        display: inline-block;
+      }
+
+      div {
+        display: inline-block;
+      }
+    }
+  }
+
+  .selectBlur {
+    border: 1px solid #4d7fff;
+
+    .opListLeft {
+      background: #4d7fff;
+
+      .optionIcon {
+        font-size: 20px;
+        color: #fff !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .judgeBox {
+    display: flex;
+
+    .judgeSelect {
+      width: 80px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 8px;
+      margin-right: 10px;
+      border: 1px solid rgba(93, 103, 137, 1);
+      text-align: center;
+      font-family: PingFangSC-Medium;
+      font-size: 14px;
+      color: #5d6789 100%;
+      cursor: pointer;
+
+      .judgeIcon {
+        margin-right: 5px;
+      }
+    }
+
+    .selectJudge {
+      border: 1px solid rgba(4, 69, 252, 1) !important;
+      color: rgba(4, 69, 252, 1) !important;
+    }
+  }
+
+  .gapfilling {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-right: 20px;
+    min-width: 150px;
+  }
+}
+
+.btn {
+  border: none;
+  font-family: "PingFang SC";
+  font-weight: 500;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.smallBtn {
+  // width: 68px;
+  padding: 0 10px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+}
+
+.mediumBtn {
+  // width: 80px;
+  padding: 0 12px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.cancelBtn {
+  color: rgba(1, 17, 61, 0.6477);
+  background: rgba(1, 17, 61, 0.07);
+}
+
+.cancelBtn:hover,
+.cancelBtn:focus {
+  border: 1px solid #0445fc;
+  color: #0445fc;
+}
+
+.confirmBtn {
+  background: #0445fc;
+  color: #ffffff;
+}
+
+.confirmBtn:hover {
+  background: #0337c9;
+  color: #ffffff;
+  border-color: #0337c9;
+}
+
+.mr18 {
+  margin-right: 18px;
+}
+
+.minor {
+  background: rgba(4, 69, 252, 0.1);
+  color: #0445fc;
+}
+
+.minor:hover,
+.minor:focus {
+  color: #0445fc;
+  background: rgba(4, 69, 252, 0.15);
+}
+
+.examOpenShowTimeBox {
+  width: 100%;
+  height: 100%;
+  font-family: PingFangSC-Medium;
+  font-size: 32px;
+  color: #01113d;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 500;
+}
