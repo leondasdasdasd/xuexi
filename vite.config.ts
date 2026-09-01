@@ -35,6 +35,12 @@ const scopeAdaptiveLearningSelector = (
     return selector;
   }
 
+  // CSS Modules 的类名已经由构建工具隔离，再追加应用前缀会把前缀也模块化，
+  // 最终生成页面中不存在的祖先类名，导致草稿纸等模块样式无法命中。
+  if (filePath.endsWith(".module.css")) {
+    return selector;
+  }
+
   // 自适应学习样式来自独立应用，这里把页面根选择器显式映射到模块容器。
   if ([":root", "html", "body", "#root"].includes(selector)) {
     return adaptiveLearningStyleRoot;

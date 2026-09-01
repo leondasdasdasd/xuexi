@@ -4265,6 +4265,9 @@ export default {
   "adaptiveLearning.quiz.cancelFormulaTarget": "Cancel formula field selection",
   "adaptiveLearning.quiz.selectFormulaTarget": "Choose a field for the formula",
   "adaptiveLearning.quiz.formula": "Formula",
+  "adaptiveLearning.quiz.selectBlankBeforeFormula": "Select a blank first",
+  "adaptiveLearning.quiz.formulaForSelectedBlank":
+    "Enter a formula in the selected blank",
   "adaptiveLearning.quiz.formulaTargetHint":
     "Choose the blank where you want to enter a formula",
   "adaptiveLearning.quiz.gradingUnavailable":

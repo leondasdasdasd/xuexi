@@ -3788,6 +3788,8 @@ export default {
   "adaptiveLearning.quiz.cancelFormulaTarget": "取消选择公式空格",
   "adaptiveLearning.quiz.selectFormulaTarget": "选择空格输入公式",
   "adaptiveLearning.quiz.formula": "公式",
+  "adaptiveLearning.quiz.selectBlankBeforeFormula": "请先选择一个填空",
+  "adaptiveLearning.quiz.formulaForSelectedBlank": "为所选填空输入公式",
   "adaptiveLearning.quiz.formulaTargetHint": "请选择要输入公式的空格",
   "adaptiveLearning.quiz.gradingUnavailable": "暂时没能完成批改",
   "adaptiveLearning.quiz.gradingUnavailableDetail":
